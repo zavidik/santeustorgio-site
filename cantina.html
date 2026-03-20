@@ -3,184 +3,616 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>La Cantina — Ristorante Sant'Eustorgio</title>
-  <meta name="description" content="La cantina del Ristorante Sant'Eustorgio: oltre 450 etichette italiane e internazionali, curata da Giulia Ferrario Master Sommelier.">
+  <title>Cantina – Ristorante Sant'Eustorgio · Milano</title>
+  <meta name="description" content="La cantina di Medolago Albani: 30 ettari vitati a Trescore Balneario, vini bergamaschi abbinati alla cucina milanese e piemontese di Sant'Eustorgio.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.ristorantesanteustorgio.it/cantina.html">
+  <meta property="og:title" content="Cantina Medolago Albani – Ristorante Sant'Eustorgio · Milano">
+  <meta property="og:description" content="Scopri la cantina Medolago Albani: 30 ettari vitati a Trescore Balneario (BG), vini studiati per accompagnare ogni piatto di Sant'Eustorgio.">
+  <meta property="og:url" content="https://www.ristorantesanteustorgio.it/cantina.html">
+  <meta property="og:image" content="https://www.ristorantesanteustorgio.it/img/og-image.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <meta name="theme-color" content="#A3B898">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>emailjs.init('YOUR_PUBLIC_KEY');</script>
+  <style>
+    /* ── CANTINA SPECIFIC ── */
+    .cantina-hero {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      background: #1a1208;
+    }
+    .cantina-hero-bg {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, #1a1208 0%, #2c1f0e 40%, #0d0d0d 100%);
+    }
+    .cantina-hero-bg::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url('img/cantina-hero.jpg') center/cover no-repeat;
+      opacity: .35;
+    }
+    .cantina-hero-content {
+      position: relative; z-index: 2;
+      padding: 2rem;
+    }
+    .cantina-hero-content .section-label { color: var(--sage); }
+    .cantina-hero-content h1 {
+      font-family: var(--ff-display);
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      font-weight: 300;
+      color: #fff;
+      letter-spacing: .04em;
+      margin: .5rem 0 1.5rem;
+      line-height: 1.1;
+    }
+    .cantina-hero-content p {
+      color: rgba(255,255,255,.7);
+      font-size: 1.05rem;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    /* ── INTRO ── */
+    .cantina-intro {
+      padding: var(--section-pad) 0;
+      background: var(--cream);
+    }
+    .cantina-intro .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .cantina-intro-text h2 {
+      font-family: var(--ff-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 300;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+    .cantina-intro-text p {
+      color: var(--mid);
+      line-height: 1.85;
+      margin-bottom: 1.2rem;
+    }
+    .cantina-intro-img {
+      position: relative;
+    }
+    .cantina-intro-img img {
+      width: 100%; border-radius: 2px;
+      display: block;
+    }
+    .cantina-intro-img-placeholder {
+      width: 100%; aspect-ratio: 4/5;
+      background: linear-gradient(160deg, #e8e0d4, #d4c9b8);
+      border-radius: 2px;
+      display: flex; align-items: center; justify-content: center;
+      color: #a89880; font-family: var(--ff-display); font-size: 1rem; letter-spacing: .1em;
+    }
+    .cantina-stat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+    .cantina-stat {
+      text-align: center;
+      padding: 1.8rem 1rem;
+      background: #fff;
+      border: 1px solid var(--border);
+    }
+    .cantina-stat-num {
+      font-family: var(--ff-display);
+      font-size: 3rem;
+      font-weight: 300;
+      color: var(--dark);
+      line-height: 1;
+    }
+    .cantina-stat-label {
+      font-size: .72rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--mid);
+      margin-top: .5rem;
+    }
+
+    /* ── LOGO CANTINA ── */
+    .cantina-logo-section {
+      padding: 5rem 0;
+      background: #fff;
+      text-align: center;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .cantina-logo-section p {
+      color: var(--mid);
+      font-size: .9rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 2.5rem;
+    }
+    .cantina-logo-link {
+      display: inline-block;
+      transition: opacity .3s;
+    }
+    .cantina-logo-link:hover { opacity: .7; }
+    .cantina-logo-link img {
+      max-width: 280px;
+      height: auto;
+    }
+    .cantina-logo-placeholder {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .5rem;
+      padding: 2.5rem 4rem;
+      border: 1.5px solid var(--border);
+      font-family: var(--ff-display);
+    }
+    .cantina-logo-placeholder span:first-child {
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: var(--dark);
+      letter-spacing: .08em;
+    }
+    .cantina-logo-placeholder span:last-child {
+      font-size: .7rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--mid);
+    }
+    .cantina-logo-cta {
+      margin-top: 2.5rem;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ── VINI ── */
+    .cantina-vini {
+      padding: var(--section-pad) 0;
+      background: var(--cream);
+    }
+    .cantina-vini .section-head { text-align: center; margin-bottom: 4rem; }
+    .cantina-vini .section-head h2 {
+      font-family: var(--ff-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 300;
+    }
+    .vini-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .vino-card {
+      background: #fff;
+      padding: 2.5rem 2rem;
+      border: 1px solid var(--border);
+      position: relative;
+      transition: box-shadow .3s;
+    }
+    .vino-card:hover { box-shadow: 0 8px 40px rgba(0,0,0,.08); }
+    .vino-tipo {
+      font-size: .65rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: .8rem;
+    }
+    .vino-nome {
+      font-family: var(--ff-display);
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--dark);
+      margin-bottom: .3rem;
+    }
+    .vino-denominazione {
+      font-size: .78rem;
+      color: var(--mid);
+      letter-spacing: .05em;
+      margin-bottom: 1.2rem;
+    }
+    .vino-divider {
+      width: 30px; height: 1px;
+      background: var(--sage);
+      margin-bottom: 1.2rem;
+    }
+    .vino-desc {
+      font-size: .9rem;
+      color: var(--mid);
+      line-height: 1.7;
+    }
+    .vino-abbinamento {
+      margin-top: 1.5rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--border);
+      font-size: .78rem;
+      color: var(--mid);
+    }
+    .vino-abbinamento strong {
+      display: block;
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--dark);
+      margin-bottom: .3rem;
+    }
+
+    /* ── TERRITORIO ── */
+    .cantina-territorio {
+      padding: var(--section-pad) 0;
+      background: #1a1208;
+      color: #fff;
+    }
+    .cantina-territorio .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .territorio-content .section-label { color: var(--sage); }
+    .territorio-content h2 {
+      font-family: var(--ff-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 300;
+      color: #fff;
+      line-height: 1.2;
+      margin: .5rem 0 1.5rem;
+    }
+    .territorio-content p {
+      color: rgba(255,255,255,.65);
+      line-height: 1.85;
+      margin-bottom: 1.2rem;
+    }
+    .territorio-img-placeholder {
+      width: 100%; aspect-ratio: 5/4;
+      background: linear-gradient(160deg, #2c1f0e, #1a1208);
+      border-radius: 2px;
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,.2); font-family: var(--ff-display);
+      font-size: .9rem; letter-spacing: .1em;
+      border: 1px solid rgba(255,255,255,.08);
+    }
+
+    /* ── CTA ── */
+    .cantina-cta {
+      padding: 7rem 0;
+      background: var(--cream);
+      text-align: center;
+    }
+    .cantina-cta .section-label { margin-bottom: 1rem; display: block; }
+    .cantina-cta h2 {
+      font-family: var(--ff-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 300;
+      margin-bottom: 1rem;
+    }
+    .cantina-cta p { color: var(--mid); margin-bottom: 2.5rem; }
+    .cantina-cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    @media (max-width: 1024px) {
+      .cantina-intro .container,
+      .cantina-territorio .container { grid-template-columns: 1fr; gap: 3rem; }
+      .vini-grid { grid-template-columns: 1fr 1fr; }
+      .cantina-stat-grid { grid-template-columns: repeat(3,1fr); }
+    }
+    @media (max-width: 768px) {
+      .vini-grid { grid-template-columns: 1fr; }
+      .cantina-stat-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .cantina-stat-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
-  <nav id="navbar">
-    <a href="index.html" class="nav-logo">
-      <span class="nav-logo-name">Sant'Eustorgio</span>
-      <span class="nav-logo-sub">Ristorante · Milano dal 1987</span>
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">
+    <img src="img/logo.svg" alt="Ristorante Sant'Eustorgio" onerror="this.style.display='none'">
+    <div class="logo-text-wrap">
+      <span class="logo-text">Sant'Eustorgio</span>
+      <span class="logo-sub">Ristorante · Milano</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+    <li><a href="chi-siamo.html" class="nav-link" data-i18n="nav_chisiamo">Chi Siamo</a></li>
+    <li><a href="cucina.html" class="nav-link" data-i18n="nav_cucina">Cucina</a></li>
+    <li><a href="menu.html" class="nav-link" data-i18n="nav_menu">Menù</a></li>
+    <li><a href="cantina.html" class="nav-link nav-link-active" data-i18n="nav_cantina">Cantina</a></li>
+    <li><a href="eventi.html" class="nav-link" data-i18n="nav_eventi">Eventi</a></li>
+    <li><a href="locale.html" class="nav-link" data-i18n="nav_locale">Il Locale</a></li>
+    <li><a href="contatti.html" class="nav-link" data-i18n="nav_contatti">Contatti</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="lang-switch" data-lang-toggle><span class="lang-it active">IT</span>&nbsp;/&nbsp;<span class="lang-en">EN</span></button>
+    <a href="#" class="btn-prenotazione" data-modal="prenota" data-i18n="nav_prenota">Prenota un tavolo</a>
+    <button class="hamburger" aria-label="Apri menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html" class="nav-link" data-i18n="nav_home">Home</a>
+  <a href="chi-siamo.html" class="nav-link" data-i18n="nav_chisiamo">Chi Siamo</a>
+  <a href="cucina.html" class="nav-link" data-i18n="nav_cucina">Cucina</a>
+  <a href="menu.html" class="nav-link" data-i18n="nav_menu">Menù</a>
+  <a href="cantina.html" class="nav-link" data-i18n="nav_cantina">Cantina</a>
+  <a href="eventi.html" class="nav-link" data-i18n="nav_eventi">Eventi</a>
+  <a href="locale.html" class="nav-link" data-i18n="nav_locale">Il Locale</a>
+  <a href="contatti.html" class="nav-link" data-i18n="nav_contatti">Contatti</a>
+  <a href="#" class="btn-prenotazione" data-modal="prenota" data-i18n="nav_prenota">Prenota un tavolo</a>
+  <button class="lang-switch" data-lang-toggle><span class="lang-it active">IT</span>&nbsp;/&nbsp;<span class="lang-en">EN</span></button>
+</div>
+
+<!-- HERO -->
+<div class="cantina-hero">
+  <div class="cantina-hero-bg"></div>
+  <div class="cantina-hero-content fade-in">
+    <span class="section-label" data-i18n="nav_cantina">Cantina</span>
+    <h1 data-i18n="cant_hero_title">Medolago Albani</h1>
+    <p data-i18n="cant_hero_sub">30 ettari vitati nel cuore della bergamasca, dove il vino nasce dalla stessa cura con cui nasce ogni piatto.</p>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section class="cantina-intro">
+  <div class="container">
+    <div class="cantina-intro-text fade-in">
+      <span class="section-label" data-i18n="cant_intro_label">La nostra cantina</span>
+      <h2 data-i18n="cant_intro_title">Vino e cucina:<br>un unico racconto</h2>
+      <p data-i18n="cant_intro_p1">Ogni piatto che arriva in tavola da Sant'Eustorgio è pensato con un vino in mente. La cantina Medolago Albani, con i suoi 30 ettari vitati sulle colline di Trescore Balneario, nella bergamasca, non è una semplice etichetta sul menù: è parte integrante della filosofia del ristorante.</p>
+      <p data-i18n="cant_intro_p2">I vini Medolago Albani esprimono il carattere del territorio lombardo: eleganti, sapidi, capaci di dialogare con la ricchezza della cucina milanese e con la struttura di quella piemontese. Chef Matteo Busso costruisce i suoi abbinamenti partendo proprio da queste bottiglie.</p>
+      <p data-i18n="cant_intro_p3">Un progetto agricolo e vitivinicolo che rispetta i tempi della natura, dal vigneto al bicchiere, stagione dopo stagione.</p>
+    </div>
+    <div class="cantina-intro-img fade-in">
+      <div class="cantina-intro-img-placeholder">
+        <img src="img/cantina-vigneto.jpg" alt="Vigneti Medolago Albani" loading="lazy" style="width:100%;border-radius:2px;" onerror="this.style.display='none'">
+      </div>
+      <div class="cantina-stat-grid">
+        <div class="cantina-stat">
+          <div class="cantina-stat-num">30</div>
+          <div class="cantina-stat-label" data-i18n="cant_stat1">Ettari vitati</div>
+        </div>
+        <div class="cantina-stat">
+          <div class="cantina-stat-num" data-i18n="cant_stat2_num">BG</div>
+          <div class="cantina-stat-label" data-i18n="cant_stat2">Bergamasca</div>
+        </div>
+        <div class="cantina-stat">
+          <div class="cantina-stat-num">∞</div>
+          <div class="cantina-stat-label" data-i18n="cant_stat3">Abbinamenti</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOGO CANTINA -->
+<section class="cantina-logo-section">
+  <div class="container" style="text-align:center;">
+    <p data-i18n="cant_logo_label">La cantina ufficiale del ristorante</p>
+    <a href="https://www.medolagoalbani.it" target="_blank" rel="noopener" class="cantina-logo-link" aria-label="Visita il sito di Medolago Albani">
+      <img src="img/logo-medolago-albani.png" alt="Cantina Medolago Albani" onerror="this.outerHTML='<div class=cantina-logo-placeholder><span>Medolago Albani</span><span>Cantina · Trescore Balneario</span></div>'">
     </a>
-    <ul class="nav-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="chi-siamo.html">Chi Siamo</a></li>
-      <li><a href="cucina.html">Cucina</a></li>
-      <li><a href="menu.html">Menù</a></li>
-      <li><a href="cantina.html" class="active">Cantina</a></li>
-      <li><a href="eventi.html">Eventi</a></li>
-      <li><a href="locale.html">Il Locale</a></li>
-      <li><a href="contatti.html">Contatti</a></li>
-    </ul>
-    <div class="nav-reservation"><a href="contatti.html#prenotazione" class="btn btn-primary">Prenota un Tavolo</a></div>
-    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
-  </nav>
-
-  <div class="nav-overlay">
-    <button class="nav-overlay-close">✕</button>
-    <a href="index.html">Home</a><a href="chi-siamo.html">Chi Siamo</a><a href="cucina.html">Cucina</a><a href="menu.html">Menù</a><a href="cantina.html">Cantina</a><a href="eventi.html">Eventi</a><a href="locale.html">Il Locale</a><a href="contatti.html">Contatti</a>
-  </div>
-
-  <!-- PAGE HERO -->
-  <div class="page-hero">
-    <div class="page-hero-bg" style="background-image: url('img/hero-cantina.jpg');"></div>
-    <div class="page-hero-overlay"></div>
-    <div class="container page-hero-content">
-      <span class="section-label">450+ Etichette</span>
-      <h1>La <em style="font-style:italic; color:var(--gold);">Cantina</em></h1>
+    <div class="cantina-logo-cta">
+      <a href="https://www.medolagoalbani.it" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="cant_logo_cta1">Visita il sito della cantina ↗</a>
+      <a href="menu.html" class="btn btn-outline" data-i18n="cant_logo_cta2">Scopri gli abbinamenti nel menù</a>
     </div>
   </div>
-  <div class="breadcrumb"><ul><li><a href="index.html">Home</a></li><li>La Cantina</li></ul></div>
+</section>
 
-  <!-- MAIN -->
-  <section id="cantina">
-    <div class="container">
-      <div class="cantina-layout">
-        <div class="cantina-image fade-in">
-          <img src="img/cantina-1.jpg" alt="La cantina del Sant'Eustorgio">
-          <div class="cantina-stat">
-            <div class="cantina-stat-num">450+</div>
-            <div class="cantina-stat-label">Etichette</div>
-          </div>
-        </div>
-        <div class="cantina-text fade-in fade-in-delay-2">
-          <span class="section-label">Una storia nel bicchiere</span>
-          <h2 class="section-title" style="color:var(--ivory);">La passione <em>del vino</em></h2>
-          <div class="ornament" style="margin-bottom:1.5rem;"><span class="ornament-icon">✦</span></div>
-          <p class="lead">"Un vino non è mai solo un vino. È un luogo, un'annata, una storia. Il mio compito è trovare il racconto giusto per ogni portata."</p>
-          <p style="text-align:right; font-size:0.85rem; color:rgba(255,255,255,0.35); margin-top:-0.5rem; margin-bottom:1.5rem;">— Giulia Ferrario, Sommelier</p>
-          <p>La cantina del Sant'Eustorgio è il progetto di una vita: iniziato da Giuseppe negli anni '90 con i grandi rossi lombardi e piemontesi, ampliato da Giulia fino a comprendere oltre 450 etichette provenienti da tutta Italia e dalle regioni più interessanti del mondo.</p>
-          <p>La filosofia è chiara: privilegiare i produttori artigianali, le agricolture biologiche e biodinamiche, i vini con carattere e identità. Nessuna lista pensata per far colpo: solo bottiglie che Giulia ama e che vuole condividere.</p>
-          <p>L'abbinamento con i piatti è sempre disponibile su richiesta: Giulia accompagna i menu degustazione con una selezione che racconta ogni portata attraverso il vino. Un'esperienza nell'esperienza.</p>
-
-          <div class="wine-regions">
-            <div class="wine-region">
-              <div class="wine-region-name">Piemonte</div>
-              <div class="wine-region-bottles">85 etichette · Barolo, Barbaresco, Dolcetto</div>
-            </div>
-            <div class="wine-region">
-              <div class="wine-region-name">Toscana</div>
-              <div class="wine-region-bottles">70 etichette · Brunello, Chianti Classico</div>
-            </div>
-            <div class="wine-region">
-              <div class="wine-region-name">Lombardia</div>
-              <div class="wine-region-bottles">55 etichette · Franciacorta, Valtellina</div>
-            </div>
-            <div class="wine-region">
-              <div class="wine-region-name">Champagne & Spumanti</div>
-              <div class="wine-region-bottles">60 etichette · Grandi Maison e Vigneron</div>
-            </div>
-            <div class="wine-region">
-              <div class="wine-region-name">Francia</div>
-              <div class="wine-region-bottles">45 etichette · Borgogna, Bordeaux, Alsazia</div>
-            </div>
-            <div class="wine-region">
-              <div class="wine-region-name">Resto del Mondo</div>
-              <div class="wine-region-bottles">85 etichette · Austria, Spagna, Nuova Zelanda</div>
-            </div>
-          </div>
-        </div>
-      </div>
+<!-- I VINI -->
+<section class="cantina-vini">
+  <div class="container">
+    <div class="section-head fade-in">
+      <span class="section-label" data-i18n="cant_vini_label">Selezione in carta</span>
+      <h2 data-i18n="cant_vini_title">I vini in carta</h2>
+      <p style="color:var(--mid);max-width:520px;margin:.8rem auto 0;line-height:1.75;" data-i18n="cant_vini_sub">Una selezione dei vini Medolago Albani proposti in abbinamento ai piatti di Sant'Eustorgio.</p>
     </div>
-  </section>
+    <div class="vini-grid">
 
-  <!-- SELEZIONE -->
-  <section style="background:var(--ivory); padding:6rem 0;">
-    <div class="container">
-      <div class="fade-in" style="text-align:center; margin-bottom:3rem;">
-        <span class="section-label">Le nostre proposte</span>
-        <h2 class="section-title">Qualche <em>suggerimento</em></h2>
-        <p class="section-subtitle" style="margin:0 auto; text-align:center;">Una piccola selezione di bottiglie che amiamo particolarmente. La carta completa è disponibile in sala.</p>
-      </div>
-
-      <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:1.5rem;" class="fade-in">
-        <div style="background:var(--dark); padding:2rem; border:1px solid rgba(200,169,110,0.15);">
-          <div style="font-size:0.62rem; letter-spacing:0.25em; text-transform:uppercase; color:var(--gold); margin-bottom:1rem;">Il Nostro Barolo</div>
-          <div style="font-family:var(--font-display); font-size:1.3rem; color:var(--ivory); margin-bottom:0.4rem;">Barolo Serralunga</div>
-          <div style="font-size:0.82rem; color:rgba(255,255,255,0.4); margin-bottom:1rem;">Giacomo Conterno · 2019</div>
-          <p style="font-size:0.85rem; color:rgba(255,255,255,0.5); line-height:1.7; margin-bottom:1rem;">Uno dei Barolo più longevi e austeri d'Italia. Tannini nobili, sentori di rosa, tabacco, liquirizia. Il vino ideale per l'ossobuco.</p>
-          <div style="font-family:var(--font-display); font-size:1.5rem; color:var(--gold);">€ 145</div>
-        </div>
-
-        <div style="background:var(--dark); padding:2rem; border:1px solid rgba(200,169,110,0.15);">
-          <div style="font-size:0.62rem; letter-spacing:0.25em; text-transform:uppercase; color:var(--gold); margin-bottom:1rem;">Franciacorta d'Autore</div>
-          <div style="font-family:var(--font-display); font-size:1.3rem; color:var(--ivory); margin-bottom:0.4rem;">Satèn Millesimato</div>
-          <div style="font-size:0.82rem; color:rgba(255,255,255,0.4); margin-bottom:1rem;">Bellavista · 2020</div>
-          <p style="font-size:0.85rem; color:rgba(255,255,255,0.5); line-height:1.7; margin-bottom:1rem;">L'eleganza della Franciacorta in versione Satèn: perlage fine, cremoso, con sentori di brioche, pesca bianca, fiori di acacia.</p>
-          <div style="font-family:var(--font-display); font-size:1.5rem; color:var(--gold);">€ 75</div>
-        </div>
-
-        <div style="background:var(--dark); padding:2rem; border:1px solid rgba(200,169,110,0.15);">
-          <div style="font-size:0.62rem; letter-spacing:0.25em; text-transform:uppercase; color:var(--gold); margin-bottom:1rem;">Bianco di Carattere</div>
-          <div style="font-family:var(--font-display); font-size:1.3rem; color:var(--ivory); margin-bottom:0.4rem;">Soave Classico Superiore</div>
-          <div style="font-size:0.82rem; color:rgba(255,255,255,0.4); margin-bottom:1rem;">Pieropan · 2022</div>
-          <p style="font-size:0.85rem; color:rgba(255,255,255,0.5); line-height:1.7; margin-bottom:1rem;">Il vino bianco più autentico del Veneto. Garganega pura, mandorla amara, fiori bianchi, mineralità basaltica. Perfetto con il lavarello.</p>
-          <div style="font-family:var(--font-display); font-size:1.5rem; color:var(--gold);">€ 55</div>
+      <div class="vino-card fade-in">
+        <div class="vino-tipo" data-i18n="cant_vino1_tipo">Bianco · Fermo</div>
+        <div class="vino-nome">Valcalepio Bianco</div>
+        <div class="vino-denominazione">DOC Valcalepio</div>
+        <div class="vino-divider"></div>
+        <div class="vino-desc" data-i18n="cant_vino1_desc">Note floreali e fruttate con fondo minerale sapido. Fresco, elegante, ideale per i crudi e i piatti più delicati della tradizione.</div>
+        <div class="vino-abbinamento">
+          <strong data-i18n="cant_abbinamento">Abbinamento consigliato</strong>
+          <span data-i18n="cant_vino1_abb">Vitello tonnato · Risotto alla milanese · Carpacci</span>
         </div>
       </div>
 
-      <div style="text-align:center; margin-top:3rem; color:var(--warm-gray); font-size:0.9rem; font-style:italic; font-family:var(--font-display);">
-        La carta dei vini completa è disponibile in sala. Giulia è felice di consigliarvi l'abbinamento perfetto.
+      <div class="vino-card fade-in">
+        <div class="vino-tipo" data-i18n="cant_vino2_tipo">Rosso · Strutturato</div>
+        <div class="vino-nome">Valcalepio Rosso</div>
+        <div class="vino-denominazione">DOC Valcalepio Riserva</div>
+        <div class="vino-divider"></div>
+        <div class="vino-desc" data-i18n="cant_vino2_desc">Rubino intenso, tannini morbidi e lunga persistenza. Frutti scuri, spezie dolci e un finale avvolgente che si apre con l'arieggiatura.</div>
+        <div class="vino-abbinamento">
+          <strong data-i18n="cant_abbinamento">Abbinamento consigliato</strong>
+          <span data-i18n="cant_vino2_abb">Brasato al Barolo · Ossobuco · Cotoletta alla milanese</span>
+        </div>
       </div>
+
+      <div class="vino-card fade-in">
+        <div class="vino-tipo" data-i18n="cant_vino3_tipo">Rosso · Giovane</div>
+        <div class="vino-nome">Moscato di Scanzo</div>
+        <div class="vino-denominazione">DOCG Moscato di Scanzorosciate</div>
+        <div class="vino-divider"></div>
+        <div class="vino-desc" data-i18n="cant_vino3_desc">Una delle rarità d'Italia. Dolce, passito, con profumi di rosa, amarena e miele. Complessità aromatica straordinaria in ogni sorso.</div>
+        <div class="vino-abbinamento">
+          <strong data-i18n="cant_abbinamento">Abbinamento consigliato</strong>
+          <span data-i18n="cant_vino3_abb">Bonet · Formaggi stagionati · Dessert al cioccolato</span>
+        </div>
+      </div>
+
+      <div class="vino-card fade-in">
+        <div class="vino-tipo" data-i18n="cant_vino4_tipo">Rosato · Secco</div>
+        <div class="vino-nome">Rosato</div>
+        <div class="vino-denominazione">IGT Bergamasca</div>
+        <div class="vino-divider"></div>
+        <div class="vino-desc" data-i18n="cant_vino4_desc">Rosa tenue con riflessi ramati, bouquet di piccoli frutti rossi e agrumi. Bevibile, fresco, versatile in tutto il pasto.</div>
+        <div class="vino-abbinamento">
+          <strong data-i18n="cant_abbinamento">Abbinamento consigliato</strong>
+          <span data-i18n="cant_vino4_abb">Bagna cauda · Salumi · Tajarin al burro</span>
+        </div>
+      </div>
+
+      <div class="vino-card fade-in">
+        <div class="vino-tipo" data-i18n="cant_vino5_tipo">Bollicine · Brut</div>
+        <div class="vino-nome">Spumante Brut</div>
+        <div class="vino-denominazione">Metodo Charmat · Bergamasca</div>
+        <div class="vino-divider"></div>
+        <div class="vino-desc" data-i18n="cant_vino5_desc">Perlage fine e persistente, sentori di pane tostato e frutta a polpa bianca. Un benvenuto elegante per ogni occasione speciale.</div>
+        <div class="vino-abbinamento">
+          <strong data-i18n="cant_abbinamento">Abbinamento consigliato</strong>
+          <span data-i18n="cant_vino5_abb">Aperitivo · Antipasti leggeri · Frutti di mare</span>
+        </div>
+      </div>
+
+      <div class="vino-card fade-in">
+        <div class="vino-tipo" data-i18n="cant_vino6_tipo">Bianco · Fermo</div>
+        <div class="vino-nome">Pinot Grigio</div>
+        <div class="vino-denominazione">IGT Bergamasca</div>
+        <div class="vino-divider"></div>
+        <div class="vino-desc" data-i18n="cant_vino6_desc">Profilo aromatico delicato con note di pesca e fiori bianchi. Acidità vivace e finale pulito, espressione autentica del terroir collinare bergamasco.</div>
+        <div class="vino-abbinamento">
+          <strong data-i18n="cant_abbinamento">Abbinamento consigliato</strong>
+          <span data-i18n="cant_vino6_abb">Agnolotti del plin · Pesce · Risotti delicati</span>
+        </div>
+      </div>
+
     </div>
-  </section>
-
-  <!-- GIULIA -->
-  <section style="background:var(--cream); padding:6rem 0;">
-    <div class="container">
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center;" class="fade-in">
-        <div>
-          <img src="img/giulia-cantina.jpg" alt="Giulia Ferrario — Sommelier" style="width:100%; aspect-ratio:4/5; object-fit:cover;">
-        </div>
-        <div>
-          <span class="section-label">Il Sommelier</span>
-          <h2 class="section-title">Giulia <em>Ferrario</em></h2>
-          <div class="ornament"><span class="ornament-icon">✦</span></div>
-          <p style="color:var(--warm-gray); line-height:1.9; margin-bottom:1.4rem;">
-            Giulia Ferrario ha trascorso anni a formarsi nei migliori ristoranti del mondo prima di tornare a casa, al Sant'Eustorgio, portando con sé un bagaglio di conoscenze e una visione del vino che sfugge alla convenzione.
-          </p>
-          <p style="color:var(--warm-gray); line-height:1.9; margin-bottom:1.4rem;">
-            Diplomata al Court of Master Sommeliers, ha costruito la cantina del Sant'Eustorgio come se stesse curando una collezione d'arte: ogni bottiglia ha una ragione per essere lì, un momento ideale per essere aperta, un piatto pensato per accompagnarla.
-          </p>
-          <p style="font-family:var(--font-display); font-size:1.2rem; font-style:italic; color:var(--charcoal); line-height:1.6; margin-bottom:2rem;">
-            "Il vino è l'unico ingrediente che non cucino. Ma è quello che, più di ogni altro, cambia il sapore della serata."
-          </p>
-          <a href="eventi.html" class="btn btn-dark">Wine Experience con Giulia →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- QUOTE -->
-  <div class="quote-banner">
-    <blockquote>"Tre Bicchieri al Gambero Rosso per la cantina dell'anno. Una selezione audace, poetica, coerente. Un viaggio nel vino italiano."</blockquote>
-    <cite>— Gambero Rosso, Ristoranti d'Italia 2024</cite>
   </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand"><span class="nav-logo-name">Sant'Eustorgio</span><span class="nav-logo-sub">Ristorante · Milano dal 1987</span><p>Una cucina milanese d'autore nel cuore del quartiere Ticinese.</p><div class="social-links"><a href="#" class="social-link">ig</a><a href="#" class="social-link">fb</a><a href="#" class="social-link">ta</a></div></div>
-        <div class="footer-col"><h4>Navigazione</h4><ul><li><a href="chi-siamo.html">Chi Siamo</a></li><li><a href="cucina.html">La Cucina</a></li><li><a href="menu.html">Il Menù</a></li><li><a href="cantina.html">La Cantina</a></li><li><a href="eventi.html">Eventi</a></li><li><a href="locale.html">Il Locale</a></li><li><a href="contatti.html">Contatti</a></li></ul></div>
-        <div class="footer-col"><h4>Orari</h4><p>Mar–Ven: 12:30–14:30 · 19:30–23:00</p><br><p>Sab–Dom: 12:30–15:00 · 19:30–23:30</p></div>
-        <div class="footer-col"><h4>Contatti</h4><address>Piazza Sant'Eustorgio, 1<br>20122 Milano (MI)<br><br><a href="tel:+390289400000">+39 02 8940 0000</a><br><a href="mailto:info@santeustorgio.it">info@santeustorgio.it</a></address></div>
-      </div>
-      <div class="footer-bottom"><p>© 2025 Ristorante Sant'Eustorgio · P.IVA 01234567890</p><p>Realizzato con ♥ a Milano</p></div>
+<!-- TERRITORIO -->
+<section class="cantina-territorio">
+  <div class="container">
+    <div class="territorio-content fade-in">
+      <span class="section-label" data-i18n="cant_terr_label">Trescore Balneario · BG</span>
+      <h2 data-i18n="cant_terr_title">Un territorio<br>da scoprire</h2>
+      <p data-i18n="cant_terr_p1">Trescore Balneario sorge nel cuore delle colline bergamasche, in quella Val Cavallina che da secoli ospita una delle viticolture più interessanti della Lombardia. È qui che Medolago Albani coltiva i propri 30 ettari, con uve che maturano lentamente grazie all'escursione termica tra il giorno e la notte.</p>
+      <p data-i18n="cant_terr_p2">Il territorio dona ai vini una mineralità distinta, un'acidità naturale che li rende vivaci e longevi. Caratteristiche che ben si sposano con la cucina ricca e avvolgente della tradizione milanese e piemontese, trovando il punto di equilibrio perfetto.</p>
+      <a href="https://www.medolagoalbani.it" target="_blank" rel="noopener" class="btn btn-outline-light" style="margin-top:1rem;" data-i18n="cant_terr_cta">Scopri la cantina sul sito ufficiale ↗</a>
     </div>
-  </footer>
-  <script src="js/main.js"></script>
+    <div class="fade-in">
+      <div class="territorio-img-placeholder">
+        <img src="img/cantina-territorio.jpg" alt="Territorio Trescore Balneario" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:2px;opacity:.8;" onerror="this.style.display='none'">
+        <span style="position:absolute;font-family:var(--ff-display);color:rgba(255,255,255,.15);font-size:1rem;letter-spacing:.2em;text-transform:uppercase;">Trescore Balneario</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cantina-cta">
+  <div class="container fade-in">
+    <span class="section-label" data-i18n="cant_cta_label">A tavola con noi</span>
+    <h2 data-i18n="cant_cta_title">Vieni a scoprirli di persona</h2>
+    <p data-i18n="cant_cta_sub">I nostri vini si raccontano meglio in un bicchiere, abbinati a un piatto. Prenota il tuo tavolo.</p>
+    <div class="cantina-cta-btns">
+      <a href="#" class="btn btn-primary" data-modal="prenota" data-i18n="nav_prenota">Prenota un tavolo</a>
+      <a href="menu.html" class="btn btn-outline" data-i18n="cant_cta_menu">Consulta il menù</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="img/logo-white.svg" alt="Sant'Eustorgio" class="footer-logo-img" onerror="this.style.display='none'">
+        <div class="logo-text-wrap"><span class="logo-text">Ristorante Sant'Eustorgio</span><span class="logo-sub">Milano</span></div>
+        <p>Cucina milanese e piemontese rivisitata in chiave contemporanea.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/ristorantesanteustorgio" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-title" data-i18n="ft_nav">Navigazione</p>
+        <ul class="footer-links">
+          <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+          <li><a href="chi-siamo.html" data-i18n="nav_chisiamo">Chi Siamo</a></li>
+          <li><a href="cucina.html" data-i18n="nav_cucina">Cucina</a></li>
+          <li><a href="menu.html" data-i18n="nav_menu">Menù</a></li>
+          <li><a href="cantina.html" data-i18n="nav_cantina">Cantina</a></li>
+          <li><a href="eventi.html" data-i18n="nav_eventi">Eventi</a></li>
+          <li><a href="locale.html" data-i18n="nav_locale">Il Locale</a></li>
+          <li><a href="contatti.html" data-i18n="nav_contatti">Contatti</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-title" data-i18n="ft_orari">Orari</p>
+        <div class="footer-hours">
+          <div class="footer-hours-row"><span data-i18n="ft_everyday">Tutti i giorni</span><span data-i18n="ft_hours">12:00 – 23:00</span></div>
+        </div>
+        <p class="footer-title" style="margin-top:2rem;" data-i18n="ft_contatti">Contatti</p>
+        <div class="footer-info">
+          <p><strong>📍</strong> Piazza Sant'Eustorgio, Milano</p>
+          <p><strong>📞</strong> <a href="tel:+390200000000">+39 02 0000 0000</a></p>
+          <p><strong>✉</strong> <a href="mailto:info@ristorantesanteustorgio.it">info@ristorantesanteustorgio.it</a></p>
+        </div>
+      </div>
+      <div>
+        <p class="footer-title">Cantina</p>
+        <p style="font-size:.82rem;color:rgba(255,255,255,.45);line-height:2;">Medolago Albani<br>Trescore Balneario, BG<br>30 ettari vitati</p>
+        <a href="https://www.medolagoalbani.it" target="_blank" rel="noopener" class="btn btn-outline-light" style="margin-top:1rem;font-size:.68rem;padding:.55rem 1.2rem;">Visita il sito ↗</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy" data-i18n="ft_copy">© 2025 Ristorante Sant'Eustorgio. Tutti i diritti riservati.</p>
+      <p class="footer-copy"><a href="#">Privacy Policy</a> &middot; <a href="#">Cookie Policy</a></p>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Torna in cima">↑</button>
+
+<!-- MODAL PRENOTAZIONE -->
+<div class="modal-overlay" id="modal-prenota" role="dialog" aria-modal="true">
+  <div class="modal">
+    <button class="modal-close" aria-label="Chiudi">&times;</button>
+    <span class="section-label">Ristorante Sant'Eustorgio</span>
+    <h3 data-i18n="modal_title">Prenota un tavolo</h3>
+    <p data-i18n="modal_sub">Compila il modulo e ti ricontatteremo entro 24 ore.</p>
+    <form id="form-prenota" autocomplete="on" novalidate>
+      <div class="form-row">
+        <div class="form-group"><label data-i18n="modal_name">Nome</label><input type="text" name="name" required autocomplete="given-name"></div>
+        <div class="form-group"><label data-i18n="modal_surname">Cognome</label><input type="text" name="surname" required autocomplete="family-name"></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label data-i18n="modal_date">Data</label><input type="date" name="date" required></div>
+        <div class="form-group"><label data-i18n="modal_time">Orario</label>
+          <select name="time" required><option value="">--</option><option>12:00</option><option>12:30</option><option>13:00</option><option>13:30</option><option>14:00</option><option>19:00</option><option>19:30</option><option>20:00</option><option>20:30</option><option>21:00</option><option>21:30</option><option>22:00</option></select>
+        </div>
+      </div>
+      <div class="form-group"><label data-i18n="modal_guests">Numero ospiti</label>
+        <select name="guests" required><option value="">--</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10+</option></select>
+      </div>
+      <div class="form-group"><label data-i18n="modal_notes">Note</label><textarea name="notes" rows="3"></textarea></div>
+      <div class="form-submit"><button type="submit" class="btn btn-primary" style="width:100%;" data-i18n="modal_send">Invia richiesta</button></div>
+    </form>
+    <div class="form-success"><h4>✓ Richiesta inviata!</h4><p>Ti contatteremo a breve.</p></div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
 </body>
 </html>

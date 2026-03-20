@@ -3,213 +3,642 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Il Locale — Ristorante Sant'Eustorgio</title>
-  <meta name="description" content="Gli spazi del Ristorante Sant'Eustorgio: un palazzo ottocentesco nel Ticinese milanese, 60 coperti, sala privata, terrazza estiva.">
+  <title>Il Locale – Ristorante Sant'Eustorgio · Milano</title>
+  <meta name="description" content="Scopri gli spazi del Ristorante Sant'Eustorgio: due sale intime per 60 coperti e un magnifico dehors estivo su Piazza Sant'Eustorgio, Milano.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.ristorantesanteustorgio.it/locale.html">
+  <meta property="og:title" content="Il Locale – Ristorante Sant'Eustorgio · Milano">
+  <meta property="og:description" content="Due sale accoglienti e un dehors su piazza Sant'Eustorgio: un locale intimo e raccolto nel cuore di Milano.">
+  <meta property="og:url" content="https://www.ristorantesanteustorgio.it/locale.html">
+  <meta property="og:image" content="https://www.ristorantesanteustorgio.it/img/og-image.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <meta name="theme-color" content="#A3B898">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>emailjs.init('YOUR_PUBLIC_KEY');</script>
+  <style>
+    /* ── LOCALE SPECIFIC ── */
+    .locale-hero {
+      position: relative;
+      min-height: 65vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      background: var(--dark);
+    }
+    .locale-hero-bg {
+      position: absolute; inset: 0;
+      background: url('img/sala-principale.jpg') center/cover no-repeat;
+      opacity: .35;
+    }
+    .locale-hero-content {
+      position: relative; z-index: 2;
+      padding: 2rem;
+    }
+    .locale-hero-content .section-label { color: var(--sage); }
+    .locale-hero-content h1 {
+      font-family: var(--ff-display);
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      font-weight: 300;
+      color: #fff;
+      letter-spacing: .04em;
+      margin: .5rem 0 1.5rem;
+      line-height: 1.1;
+    }
+    .locale-hero-content p {
+      color: rgba(255,255,255,.7);
+      font-size: 1.05rem;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    /* ── INTRO ── */
+    .locale-intro {
+      padding: var(--section-pad) 0;
+      background: var(--cream);
+    }
+    .locale-intro .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .locale-intro-text .section-label { margin-bottom: .5rem; display: block; }
+    .locale-intro-text h2 {
+      font-family: var(--ff-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 300;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+    .locale-intro-text p {
+      color: var(--mid);
+      line-height: 1.85;
+      margin-bottom: 1.2rem;
+      font-size: .95rem;
+    }
+    .locale-intro-img img {
+      width: 100%; border-radius: 2px;
+      display: block;
+    }
+    .locale-intro-img-ph {
+      width: 100%; aspect-ratio: 5/4;
+      background: linear-gradient(135deg, #e8e0d4, #d4c9b8);
+      border-radius: 2px;
+    }
+
+    /* ── PIANTA ── */
+    .locale-pianta {
+      padding: 5rem 0;
+      background: #fff;
+    }
+    .locale-pianta .section-head { text-align: center; margin-bottom: 4rem; }
+    .locale-pianta .section-head h2 {
+      font-family: var(--ff-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 300;
+    }
+    .pianta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: var(--border);
+    }
+    .pianta-cell {
+      background: var(--cream);
+      padding: 3rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .pianta-cell.featured {
+      background: var(--dark);
+      color: #fff;
+    }
+    .pianta-icon {
+      font-size: 2rem;
+    }
+    .pianta-name {
+      font-family: var(--ff-display);
+      font-size: 1.4rem;
+      font-weight: 400;
+    }
+    .pianta-cell.featured .pianta-name { color: #fff; }
+    .pianta-num {
+      font-size: 3rem;
+      font-family: var(--ff-display);
+      font-weight: 300;
+      color: var(--sage);
+      line-height: 1;
+    }
+    .pianta-label {
+      font-size: .7rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--mid);
+    }
+    .pianta-cell.featured .pianta-label { color: rgba(255,255,255,.5); }
+    .pianta-desc {
+      font-size: .85rem;
+      color: var(--mid);
+      line-height: 1.7;
+      margin-top: .5rem;
+    }
+    .pianta-cell.featured .pianta-desc { color: rgba(255,255,255,.6); }
+
+    /* ── GALLERY LOCALE ── */
+    .locale-gallery {
+      padding: var(--section-pad) 0;
+      background: var(--cream);
+    }
+    .locale-gallery .section-head {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .locale-gallery .section-head h2 {
+      font-family: var(--ff-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 300;
+    }
+    .locale-gallery-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 2px;
+    }
+    .locale-gallery-item {
+      overflow: hidden;
+      background: #d4c9b8;
+    }
+    .locale-gallery-item:first-child {
+      grid-row: span 2;
+    }
+    .locale-gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .6s ease;
+    }
+    .locale-gallery-item:hover img { transform: scale(1.04); }
+    .locale-gallery-item-ph {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: linear-gradient(160deg, #d4c9b8, #c2b8a5);
+      display: flex; align-items: center; justify-content: center;
+      color: #a89880; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase;
+    }
+    .locale-gallery-item:first-child .locale-gallery-item-ph {
+      aspect-ratio: 3/4;
+    }
+
+    /* ── ATMOSFERA ── */
+    .locale-atmosfera {
+      padding: var(--section-pad) 0;
+      background: var(--dark);
+      color: #fff;
+    }
+    .locale-atmosfera .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .atmosfera-content .section-label { color: var(--sage); }
+    .atmosfera-content h2 {
+      font-family: var(--ff-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 300;
+      color: #fff;
+      margin: .5rem 0 1.5rem;
+    }
+    .atmosfera-content p {
+      color: rgba(255,255,255,.65);
+      line-height: 1.85;
+      font-size: .95rem;
+      margin-bottom: 1.2rem;
+    }
+    .atmosfera-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem;
+      margin-top: 2rem;
+    }
+    .atmosfera-tag {
+      padding: .4rem 1rem;
+      border: 1px solid rgba(163,184,152,.4);
+      color: var(--sage);
+      font-size: .7rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .atmosfera-img-ph {
+      width: 100%; aspect-ratio: 4/3;
+      background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .atmosfera-img-ph img {
+      width: 100%; height: 100%; object-fit: cover; opacity: .7;
+    }
+
+    /* ── POSIZIONE ── */
+    .locale-posizione {
+      padding: var(--section-pad) 0;
+      background: var(--cream);
+    }
+    .locale-posizione .section-head { text-align: center; margin-bottom: 3rem; }
+    .locale-posizione .section-head h2 {
+      font-family: var(--ff-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 300;
+    }
+    .posizione-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    .posizione-map {
+      background: #d4c9b8;
+      border-radius: 2px;
+      overflow: hidden;
+      aspect-ratio: 16/9;
+    }
+    .posizione-map iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .posizione-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .posizione-info-item {
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .posizione-info-item:last-child { border-bottom: none; }
+    .posizione-info-label {
+      font-size: .65rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--mid);
+      margin-bottom: .4rem;
+    }
+    .posizione-info-value {
+      font-family: var(--ff-display);
+      font-size: 1.05rem;
+      color: var(--dark);
+      line-height: 1.4;
+    }
+    .posizione-info-note {
+      font-size: .78rem;
+      color: var(--mid);
+      margin-top: .3rem;
+      line-height: 1.5;
+    }
+
+    /* ── CTA ── */
+    .locale-cta {
+      padding: 6rem 0;
+      text-align: center;
+      background: #fff;
+    }
+    .locale-cta .section-label { display: block; margin-bottom: 1rem; }
+    .locale-cta h2 {
+      font-family: var(--ff-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 300;
+      margin-bottom: 1rem;
+    }
+    .locale-cta p { color: var(--mid); margin-bottom: 2.5rem; }
+    .locale-cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    @media (max-width: 1024px) {
+      .locale-intro .container,
+      .locale-atmosfera .container { grid-template-columns: 1fr; gap: 3rem; }
+      .pianta-grid { grid-template-columns: 1fr; }
+      .locale-gallery-grid { grid-template-columns: 1fr 1fr; }
+      .locale-gallery-item:first-child { grid-row: span 1; }
+      .posizione-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .locale-gallery-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
-  <nav id="navbar">
-    <a href="index.html" class="nav-logo">
-      <span class="nav-logo-name">Sant'Eustorgio</span>
-      <span class="nav-logo-sub">Ristorante · Milano dal 1987</span>
-    </a>
-    <ul class="nav-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="chi-siamo.html">Chi Siamo</a></li>
-      <li><a href="cucina.html">Cucina</a></li>
-      <li><a href="menu.html">Menù</a></li>
-      <li><a href="cantina.html">Cantina</a></li>
-      <li><a href="eventi.html">Eventi</a></li>
-      <li><a href="locale.html" class="active">Il Locale</a></li>
-      <li><a href="contatti.html">Contatti</a></li>
-    </ul>
-    <div class="nav-reservation"><a href="contatti.html#prenotazione" class="btn btn-primary">Prenota un Tavolo</a></div>
-    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
-  </nav>
-
-  <div class="nav-overlay">
-    <button class="nav-overlay-close">✕</button>
-    <a href="index.html">Home</a><a href="chi-siamo.html">Chi Siamo</a><a href="cucina.html">Cucina</a><a href="menu.html">Menù</a><a href="cantina.html">Cantina</a><a href="eventi.html">Eventi</a><a href="locale.html">Il Locale</a><a href="contatti.html">Contatti</a>
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">
+    <img src="img/logo.svg" alt="Ristorante Sant'Eustorgio" onerror="this.style.display='none'">
+    <div class="logo-text-wrap">
+      <span class="logo-text">Sant'Eustorgio</span>
+      <span class="logo-sub">Ristorante · Milano</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+    <li><a href="chi-siamo.html" class="nav-link" data-i18n="nav_chisiamo">Chi Siamo</a></li>
+    <li><a href="cucina.html" class="nav-link" data-i18n="nav_cucina">Cucina</a></li>
+    <li><a href="menu.html" class="nav-link" data-i18n="nav_menu">Menù</a></li>
+    <li><a href="cantina.html" class="nav-link" data-i18n="nav_cantina">Cantina</a></li>
+    <li><a href="eventi.html" class="nav-link" data-i18n="nav_eventi">Eventi</a></li>
+    <li><a href="locale.html" class="nav-link nav-link-active" data-i18n="nav_locale">Il Locale</a></li>
+    <li><a href="contatti.html" class="nav-link" data-i18n="nav_contatti">Contatti</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="lang-switch" data-lang-toggle><span class="lang-it active">IT</span>&nbsp;/&nbsp;<span class="lang-en">EN</span></button>
+    <a href="#" class="btn-prenotazione" data-modal="prenota" data-i18n="nav_prenota">Prenota un tavolo</a>
+    <button class="hamburger" aria-label="Apri menu"><span></span><span></span><span></span></button>
   </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html" class="nav-link" data-i18n="nav_home">Home</a>
+  <a href="chi-siamo.html" class="nav-link" data-i18n="nav_chisiamo">Chi Siamo</a>
+  <a href="cucina.html" class="nav-link" data-i18n="nav_cucina">Cucina</a>
+  <a href="menu.html" class="nav-link" data-i18n="nav_menu">Menù</a>
+  <a href="cantina.html" class="nav-link" data-i18n="nav_cantina">Cantina</a>
+  <a href="eventi.html" class="nav-link" data-i18n="nav_eventi">Eventi</a>
+  <a href="locale.html" class="nav-link" data-i18n="nav_locale">Il Locale</a>
+  <a href="contatti.html" class="nav-link" data-i18n="nav_contatti">Contatti</a>
+  <a href="#" class="btn-prenotazione" data-modal="prenota" data-i18n="nav_prenota">Prenota un tavolo</a>
+  <button class="lang-switch" data-lang-toggle><span class="lang-it active">IT</span>&nbsp;/&nbsp;<span class="lang-en">EN</span></button>
+</div>
 
-  <!-- LOCALE HERO — full bleed gallery + content side by side -->
-  <section id="locale" style="padding:0; padding-top:0;">
-    <div class="locale-hero" style="padding-top:0;">
-      <div class="locale-gallery">
-        <img src="img/locale-sala.jpg" alt="La sala principale">
-        <div class="locale-gallery-sub">
-          <img src="img/locale-detail1.jpg" alt="Dettaglio della sala">
-          <img src="img/locale-terrazza.jpg" alt="La terrazza estiva">
+<!-- HERO -->
+<div class="locale-hero">
+  <div class="locale-hero-bg"></div>
+  <div class="locale-hero-content fade-in">
+    <span class="section-label" data-i18n="nav_locale">Il Locale</span>
+    <h1 data-i18n="loc_hero_title">Un rifugio nel cuore di Milano</h1>
+    <p data-i18n="loc_hero_sub">Intimo, raccolto, tranquillo. Affacciato su una delle piazze più belle della città.</p>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section class="locale-intro">
+  <div class="container">
+    <div class="locale-intro-text fade-in">
+      <span class="section-label" data-i18n="loc_intro_label">La nostra casa</span>
+      <h2 data-i18n="loc_intro_title">Un locale che racconta Milano</h2>
+      <p data-i18n="loc_intro_p1">Sant'Eustorgio non è solo un ristorante: è un'esperienza che inizia già dall'esterno. Affacciato sulla piazza che prende il nome dall'omonima basilica medievale, il locale occupa il piano terra di un edificio storico, con gli spazi che si aprono verso la piazza attraverso grandi vetrate.</p>
+      <p data-i18n="loc_intro_p2">Gli interni sono stati pensati per creare un'atmosfera raccolta e intima: materiali naturali, luci calde, tavoli ben distanziati che garantiscono privacy e tranquillità. Non troverete musica invadente né confusione: solo la conversazione e il buon cibo.</p>
+      <p data-i18n="loc_intro_p3">È un posto dove si torna volentieri, che sia per una cena romantica, un pranzo di lavoro o una serata in famiglia.</p>
+    </div>
+    <div class="locale-intro-img fade-in">
+      <div class="locale-intro-img-ph">
+        <img src="img/sala-principale.jpg" alt="Sala principale Sant'Eustorgio" loading="lazy" onerror="this.style.display='none'">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PIANTA LOGICA -->
+<section class="locale-pianta">
+  <div class="container">
+    <div class="section-head fade-in">
+      <span class="section-label" data-i18n="loc_pianta_label">Gli spazi</span>
+      <h2 data-i18n="loc_pianta_title">Tre ambienti distinti</h2>
+    </div>
+    <div class="pianta-grid">
+      <div class="pianta-cell fade-in">
+        <span class="pianta-icon">🍽️</span>
+        <div class="pianta-name" data-i18n="loc_sala1_name">Sala Principale</div>
+        <div class="pianta-num">36</div>
+        <div class="pianta-label" data-i18n="loc_coperti">coperti</div>
+        <p class="pianta-desc" data-i18n="loc_sala1_desc">La sala più grande, affacciata sulla piazza attraverso le vetrate. Atmosfera elegante con materiali naturali, illuminazione calda e una disposizione dei tavoli che privilegia la privacy.</p>
+      </div>
+      <div class="pianta-cell featured fade-in">
+        <span class="pianta-icon">🕯️</span>
+        <div class="pianta-name" data-i18n="loc_sala2_name">Sala Riservata</div>
+        <div class="pianta-num">24</div>
+        <div class="pianta-label" data-i18n="loc_coperti">coperti</div>
+        <p class="pianta-desc" data-i18n="loc_sala2_desc">Una seconda sala più raccolta, perfetta per cene private, riunioni aziendali o serate riservate. È disponibile anche come ambiente esclusivo per eventi su prenotazione.</p>
+      </div>
+      <div class="pianta-cell fade-in">
+        <span class="pianta-icon">🌿</span>
+        <div class="pianta-name" data-i18n="loc_dehors_name">Dehors Estivo</div>
+        <div class="pianta-num">50</div>
+        <div class="pianta-label" data-i18n="loc_coperti">coperti</div>
+        <p class="pianta-desc" data-i18n="loc_dehors_desc">Dalla primavera all'autunno, il dehors si affaccia direttamente su Piazza Sant'Eustorgio. Un'esperienza unica: mangiare bene all'aperto in uno dei luoghi più suggestivi di Milano.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="locale-gallery">
+  <div class="container">
+    <div class="section-head fade-in">
+      <span class="section-label" data-i18n="loc_gallery_label">Atmosfera</span>
+      <h2 data-i18n="loc_gallery_title">Gli spazi in immagini</h2>
+    </div>
+    <div class="locale-gallery-grid fade-in">
+      <div class="locale-gallery-item">
+        <div class="locale-gallery-item-ph">
+          <img src="img/sala-principale.jpg" alt="Sala principale" loading="lazy">
         </div>
       </div>
-      <div class="locale-content" style="padding-top:8rem;">
-        <span class="section-label" style="color:var(--gold);">Il nostro spazio</span>
-        <h1 style="font-family:var(--font-display); font-size:clamp(2.5rem,5vw,4rem); font-weight:300; color:var(--ivory); margin-bottom:1.5rem; line-height:1.1;">Un palazzo <em style="font-style:italic; color:var(--gold);">ottocentesco</em><br>nel Ticinese</h1>
-        <div style="width:60px; height:1px; background:var(--gold); margin:1.5rem 0; opacity:0.6;"></div>
-        <p class="lead">Il Sant'Eustorgio occupa il piano nobile di un palazzo neoclassico del 1820, affacciato sulla piazza omonima. Il restauro del 2015 ha restituito agli spazi la loro eleganza originale senza tradire lo spirito contemporaneo del ristorante.</p>
-        <p>Soffitti affrescati, parquet in rovere massello, caminetti originali in marmo di Carrara: ogni angolo racconta una storia. La sala principale ospita 40 coperti; la saletta privata, ricavata dall'antica biblioteca del palazzo, ne accoglie altri 16.</p>
-        <p>In estate, la terrazza sul cortile interno diventa il cuore del ristorante: 24 posti all'aperto, ombreggiati da un glicine centenario, per cene sotto le stelle milanesi.</p>
-
-        <div class="locale-features">
-          <div class="locale-feature">
-            <span class="locale-feature-icon">⬡</span>
-            <div class="locale-feature-text">
-              <h4>60 Coperti</h4>
-              <p>Sala principale + saletta privata</p>
-            </div>
-          </div>
-          <div class="locale-feature">
-            <span class="locale-feature-icon">⬡</span>
-            <div class="locale-feature-text">
-              <h4>Terrazza Estiva</h4>
-              <p>24 posti nel cortile interno</p>
-            </div>
-          </div>
-          <div class="locale-feature">
-            <span class="locale-feature-icon">⬡</span>
-            <div class="locale-feature-text">
-              <h4>Sala Privata</h4>
-              <p>16 posti · perfetta per eventi</p>
-            </div>
-          </div>
-          <div class="locale-feature">
-            <span class="locale-feature-icon">⬡</span>
-            <div class="locale-feature-text">
-              <h4>Accessibile</h4>
-              <p>Ingresso e servizi accessibili</p>
-            </div>
-          </div>
+      <div class="locale-gallery-item">
+        <div class="locale-gallery-item-ph">
+          <img src="img/sala-secondaria.jpg" alt="Sala riservata" loading="lazy">
         </div>
-
-        <div style="margin-top:2.5rem;">
-          <a href="contatti.html#prenotazione" class="btn btn-primary">Prenota un Tavolo →</a>
+      </div>
+      <div class="locale-gallery-item">
+        <div class="locale-gallery-item-ph">
+          <img src="img/dehor.jpg" alt="Dehors" loading="lazy">
+        </div>
+      </div>
+      <div class="locale-gallery-item">
+        <div class="locale-gallery-item-ph">
+          <img src="img/gallery-1.jpg" alt="Dettaglio sala" loading="lazy">
+        </div>
+      </div>
+      <div class="locale-gallery-item">
+        <div class="locale-gallery-item-ph">
+          <img src="img/gallery-2.jpg" alt="Dettaglio tavolo" loading="lazy">
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- STORIA DELLO SPAZIO -->
-  <section style="background:var(--ivory); padding:7rem 0;">
-    <div class="container">
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:start;" class="fade-in">
-        <div>
-          <span class="section-label">Architettura e storia</span>
-          <h2 class="section-title">Un luogo che <em>parla</em></h2>
-          <div class="ornament"><span class="ornament-icon">✦</span></div>
-          <p style="color:var(--warm-gray); line-height:1.9; margin-bottom:1.4rem;">
-            Il palazzo fu costruito nel 1820 dall'architetto Luigi Canonica, allievo di Giuseppe Piermarini, per conto di una famiglia nobile milanese. La facciata neoclassica, le cornici in gesso e i soffitti a cassettoni originali sono stati restaurati con cura certosina nel 2015.
-          </p>
-          <p style="color:var(--warm-gray); line-height:1.9; margin-bottom:1.4rem;">
-            L'intervento di restauro è stato affidato allo studio Bianchi Architettura di Milano, con l'obiettivo di conservare ogni elemento storico pur introducendo elementi contemporanei: l'illuminazione a LED integrata nelle cornici, il sistema di climatizzazione invisibile, le cucine completamente nuove.
-          </p>
-          <p style="color:var(--warm-gray); line-height:1.9; margin-bottom:1.4rem;">
-            Il risultato è uno spazio che vive in perfetto equilibrio tra passato e presente: antico abbastanza da essere autentico, contemporaneo abbastanza da essere confortevole.
-          </p>
-          <p style="font-family:var(--font-display); font-size:1.15rem; font-style:italic; color:var(--charcoal); line-height:1.6;">
-            "Volevamo che le persone si sentissero ospiti in una casa privata, non clienti in un ristorante. Credo che ci siamo riusciti."
-          </p>
-          <p style="font-size:0.82rem; color:var(--warm-gray); margin-top:0.5rem;">— Marco Ferrario</p>
+<!-- ATMOSFERA -->
+<section class="locale-atmosfera">
+  <div class="container">
+    <div class="atmosfera-content fade-in">
+      <span class="section-label" data-i18n="loc_atm_label">Il carattere del luogo</span>
+      <h2 data-i18n="loc_atm_title">Elegante.<br>Tranquillo.<br>Autentico.</h2>
+      <p data-i18n="loc_atm_p1">C'è una differenza tra un locale che cerca di essere elegante e uno che lo è naturalmente. Sant'Eustorgio appartiene alla seconda categoria: non ci sono dettagli esasperati, non c'è ricerca dell'effetto. Solo cura, qualità, sobrietà.</p>
+      <p data-i18n="loc_atm_p2">I materiali sono scelti per durare e per raccontare una storia: legni caldi, tessuti naturali, ceramiche artigianali. La luce è sempre calibrata per creare la giusta atmosfera, dal pranzo alla sera.</p>
+      <div class="atmosfera-tags">
+        <span class="atmosfera-tag" data-i18n="loc_tag1">Piano terra</span>
+        <span class="atmosfera-tag" data-i18n="loc_tag2">Affacciato sulla piazza</span>
+        <span class="atmosfera-tag" data-i18n="loc_tag3">Intimo e raccolto</span>
+        <span class="atmosfera-tag" data-i18n="loc_tag4">No musica invadente</span>
+        <span class="atmosfera-tag" data-i18n="loc_tag5">Totale: 110 coperti</span>
+        <span class="atmosfera-tag" data-i18n="loc_tag6">Accessibile</span>
+      </div>
+    </div>
+    <div class="atmosfera-img-ph fade-in">
+      <img src="img/gallery-3.jpg" alt="Atmosfera Sant'Eustorgio" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- POSIZIONE -->
+<section class="locale-posizione">
+  <div class="container">
+    <div class="section-head fade-in">
+      <span class="section-label" data-i18n="loc_pos_label">Come raggiungerci</span>
+      <h2 data-i18n="loc_pos_title">Siamo qui</h2>
+    </div>
+    <div class="posizione-grid fade-in">
+      <div class="posizione-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2799.3!2d9.178!3d45.459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c3f7c4d5a8c1%3A0x1234!2sPiazza+Sant'Eustorgio%2C+Milano!5e0!3m2!1sit!2sit!4v1234567890"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Mappa Ristorante Sant'Eustorgio"
+          aria-label="Mappa di Piazza Sant'Eustorgio, Milano">
+        </iframe>
+      </div>
+      <div class="posizione-info">
+        <div class="posizione-info-item">
+          <div class="posizione-info-label" data-i18n="loc_indirizzo">Indirizzo</div>
+          <div class="posizione-info-value">Piazza Sant'Eustorgio<br>Milano, MI</div>
+          <div class="posizione-info-note" data-i18n="loc_indirizzo_note">Zona Ticinese – Porta Ticinese</div>
         </div>
-        <div>
-          <img src="img/locale-storico.jpg" alt="Un angolo storico del locale" style="width:100%; aspect-ratio:3/4; object-fit:cover; margin-bottom:1.5rem;">
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
-            <img src="img/locale-camino.jpg" alt="Il camino" style="width:100%; aspect-ratio:1; object-fit:cover;">
-            <img src="img/locale-biblioteca.jpg" alt="La saletta privata" style="width:100%; aspect-ratio:1; object-fit:cover;">
-          </div>
+        <div class="posizione-info-item">
+          <div class="posizione-info-label" data-i18n="ft_orari">Orari</div>
+          <div class="posizione-info-value" data-i18n="ft_everyday">Tutti i giorni</div>
+          <div class="posizione-info-note" data-i18n="ft_hours">12:00 – 23:00</div>
+        </div>
+        <div class="posizione-info-item">
+          <div class="posizione-info-label" data-i18n="loc_metro">Metro</div>
+          <div class="posizione-info-value" data-i18n="loc_metro_val">MM2 Porta Genova</div>
+          <div class="posizione-info-note" data-i18n="loc_metro_note">Circa 10 minuti a piedi</div>
+        </div>
+        <div class="posizione-info-item">
+          <div class="posizione-info-label" data-i18n="loc_parcheggio">Parcheggio</div>
+          <div class="posizione-info-value" data-i18n="loc_parcheggio_val">Zone di sosta nelle vicinanze</div>
+          <div class="posizione-info-note" data-i18n="loc_parcheggio_note">Consigliamo di verificare la disponibilità prima della visita</div>
+        </div>
+        <div class="posizione-info-item">
+          <div class="posizione-info-label">Telefono</div>
+          <div class="posizione-info-value"><a href="tel:+390200000000" style="color:var(--dark);text-decoration:none;">+39 02 0000 0000</a></div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- SPAZI -->
-  <section style="background:var(--cream); padding:6rem 0;">
-    <div class="container">
-      <div class="fade-in" style="text-align:center; margin-bottom:3rem;">
-        <span class="section-label">Gli ambienti</span>
-        <h2 class="section-title">Ogni angolo <em>racconta</em></h2>
+<!-- CTA -->
+<section class="locale-cta">
+  <div class="container fade-in">
+    <span class="section-label" data-i18n="loc_cta_label">Vieni a trovarci</span>
+    <h2 data-i18n="loc_cta_title">Prenota il tuo tavolo</h2>
+    <p data-i18n="loc_cta_sub">Tutti i giorni dalle 12:00 alle 23:00. Ti aspettiamo su Piazza Sant'Eustorgio.</p>
+    <div class="locale-cta-btns">
+      <a href="#" class="btn btn-primary" data-modal="prenota" data-i18n="nav_prenota">Prenota un tavolo</a>
+      <a href="eventi.html" class="btn btn-outline" data-i18n="loc_cta_eventi">Organizza un evento</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="img/logo-white.svg" alt="Sant'Eustorgio" class="footer-logo-img" onerror="this.style.display='none'">
+        <div class="logo-text-wrap"><span class="logo-text">Ristorante Sant'Eustorgio</span><span class="logo-sub">Milano</span></div>
+        <p>Cucina milanese e piemontese rivisitata in chiave contemporanea.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/ristorantesanteustorgio" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+        </div>
       </div>
-      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:2rem;" class="fade-in">
-        <div style="background:var(--ivory); border:1px solid var(--border); overflow:hidden; transition:var(--transition);" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='rgba(200,169,110,0.25)'">
-          <img src="img/locale-sala-main.jpg" alt="Sala Principale" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
-          <div style="padding:1.8rem;">
-            <h3 style="font-family:var(--font-display); font-size:1.4rem; color:var(--charcoal); margin-bottom:0.5rem; font-weight:400;">Sala Principale</h3>
-            <p style="font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:0.8rem;">40 coperti · Soffitti affrescati</p>
-            <p style="font-size:0.9rem; color:var(--warm-gray); line-height:1.7;">Il cuore del ristorante. Sei tavoli grandi e otto piccoli, parquet in rovere, due caminetti. La luce cambia con le stagioni attraverso le alte finestre sul cortile.</p>
-          </div>
+      <div>
+        <p class="footer-title" data-i18n="ft_nav">Navigazione</p>
+        <ul class="footer-links">
+          <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+          <li><a href="chi-siamo.html" data-i18n="nav_chisiamo">Chi Siamo</a></li>
+          <li><a href="cucina.html" data-i18n="nav_cucina">Cucina</a></li>
+          <li><a href="menu.html" data-i18n="nav_menu">Menù</a></li>
+          <li><a href="cantina.html" data-i18n="nav_cantina">Cantina</a></li>
+          <li><a href="eventi.html" data-i18n="nav_eventi">Eventi</a></li>
+          <li><a href="locale.html" data-i18n="nav_locale">Il Locale</a></li>
+          <li><a href="contatti.html" data-i18n="nav_contatti">Contatti</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-title" data-i18n="ft_orari">Orari</p>
+        <div class="footer-hours">
+          <div class="footer-hours-row"><span data-i18n="ft_everyday">Tutti i giorni</span><span data-i18n="ft_hours">12:00 – 23:00</span></div>
         </div>
-        <div style="background:var(--ivory); border:1px solid var(--border); overflow:hidden; transition:var(--transition);" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='rgba(200,169,110,0.25)'">
-          <img src="img/locale-privata.jpg" alt="Saletta Privata" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
-          <div style="padding:1.8rem;">
-            <h3 style="font-family:var(--font-display); font-size:1.4rem; color:var(--charcoal); margin-bottom:0.5rem; font-weight:400;">Saletta Privata</h3>
-            <p style="font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:0.8rem;">16 coperti · Biblioteca storica</p>
-            <p style="font-size:0.9rem; color:var(--warm-gray); line-height:1.7;">Ricavata nell'antica biblioteca del palazzo, con scaffali originali in noce e una selezione di volumi di enogastronomia. Ideale per cene private, presentazioni e celebrazioni.</p>
-          </div>
+        <p class="footer-title" style="margin-top:2rem;" data-i18n="ft_contatti">Contatti</p>
+        <div class="footer-info">
+          <p><strong>📍</strong> Piazza Sant'Eustorgio, Milano</p>
+          <p><strong>📞</strong> <a href="tel:+390200000000">+39 02 0000 0000</a></p>
+          <p><strong>✉</strong> <a href="mailto:info@ristorantesanteustorgio.it">info@ristorantesanteustorgio.it</a></p>
         </div>
-        <div style="background:var(--ivory); border:1px solid var(--border); overflow:hidden; transition:var(--transition);" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='rgba(200,169,110,0.25)'">
-          <img src="img/locale-terrazza-main.jpg" alt="Terrazza" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
-          <div style="padding:1.8rem;">
-            <h3 style="font-family:var(--font-display); font-size:1.4rem; color:var(--charcoal); margin-bottom:0.5rem; font-weight:400;">Terrazza sul Cortile</h3>
-            <p style="font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:0.8rem;">24 coperti · Aperta maggio–settembre</p>
-            <p style="font-size:0.9rem; color:var(--warm-gray); line-height:1.7;">Il cortile interno, ombreggiato da un glicine centenario e illuminato da candele la sera. In estate è il posto più ambito di Milano. Prenotazione essenziale.</p>
-          </div>
-        </div>
+      </div>
+      <div>
+        <p class="footer-title">Cantina</p>
+        <p style="font-size:.82rem;color:rgba(255,255,255,.45);line-height:2;">Medolago Albani<br>Trescore Balneario, BG<br>30 ettari vitati</p>
+        <a href="https://www.medolagoalbani.it" target="_blank" rel="noopener" class="btn btn-outline-light" style="margin-top:1rem;font-size:.68rem;padding:.55rem 1.2rem;">Visita il sito ↗</a>
       </div>
     </div>
-  </section>
+    <div class="footer-bottom">
+      <p class="footer-copy" data-i18n="ft_copy">© 2025 Ristorante Sant'Eustorgio. Tutti i diritti riservati.</p>
+      <p class="footer-copy"><a href="#">Privacy Policy</a> &middot; <a href="#">Cookie Policy</a></p>
+    </div>
+  </div>
+</footer>
 
-  <!-- ACCESSIBILITÀ E ARRIVO -->
-  <section style="background:var(--dark); color:var(--ivory); padding:5rem 0;">
-    <div class="container">
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:5rem;" class="fade-in">
-        <div>
-          <span class="section-label">Come arrivare</span>
-          <h3 style="font-family:var(--font-display); font-size:1.8rem; color:var(--ivory); margin-bottom:1.5rem; font-weight:400;">Trovaci <em style="color:var(--gold);">facilmente</em></h3>
-          <div style="display:flex; flex-direction:column; gap:1.2rem;">
-            <div style="display:flex; gap:1rem;">
-              <span style="color:var(--gold); width:24px; flex-shrink:0;">🚇</span>
-              <div><strong style="color:var(--ivory);">Metro</strong><br><span style="color:rgba(255,255,255,0.5); font-size:0.9rem;">Linea 2 (verde) — Fermata Porta Genova · 8 minuti a piedi</span></div>
-            </div>
-            <div style="display:flex; gap:1rem;">
-              <span style="color:var(--gold); width:24px; flex-shrink:0;">🚋</span>
-              <div><strong style="color:var(--ivory);">Tram</strong><br><span style="color:rgba(255,255,255,0.5); font-size:0.9rem;">Linee 3 e 9 — Fermata Sant'Eustorgio</span></div>
-            </div>
-            <div style="display:flex; gap:1rem;">
-              <span style="color:var(--gold); width:24px; flex-shrink:0;">🚗</span>
-              <div><strong style="color:var(--ivory);">Auto</strong><br><span style="color:rgba(255,255,255,0.5); font-size:0.9rem;">Parcheggio pubblico in via Molino delle Armi · 200 m</span></div>
-            </div>
-            <div style="display:flex; gap:1rem;">
-              <span style="color:var(--gold); width:24px; flex-shrink:0;">🚲</span>
-              <div><strong style="color:var(--ivory);">BikeMi</strong><br><span style="color:rgba(255,255,255,0.5); font-size:0.9rem;">Stazione BikeMi in piazza Sant'Eustorgio</span></div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <span class="section-label">Accessibilità</span>
-          <h3 style="font-family:var(--font-display); font-size:1.8rem; color:var(--ivory); margin-bottom:1.5rem; font-weight:400;">Per tutti i <em style="color:var(--gold);">nostri ospiti</em></h3>
-          <p style="color:rgba(255,255,255,0.5); line-height:1.9; margin-bottom:1.2rem;">Il Sant'Eustorgio è pienamente accessibile alle persone con mobilità ridotta. L'ingresso è dotato di rampa di accesso, la sala principale è a piano terra e i servizi igienici sono attrezzati.</p>
-          <p style="color:rgba(255,255,255,0.5); line-height:1.9; margin-bottom:1.2rem;">Per ospiti con allergie o intolleranze, il nostro team di cucina è disponibile a personalizzare i piatti. Vi invitiamo a comunicare eventuali esigenze al momento della prenotazione.</p>
-          <p style="color:rgba(255,255,255,0.5); line-height:1.9;">Per i bambini è disponibile un menù dedicato su richiesta.</p>
-          <div style="margin-top:2rem; padding:1.5rem; border:1px solid rgba(200,169,110,0.2);">
-            <p style="font-size:0.85rem; color:rgba(255,255,255,0.4);">Per qualsiasi necessità specifica, contattateci prima della visita:<br><a href="tel:+390289400000" style="color:var(--gold);">+39 02 8940 0000</a></p>
-          </div>
+<button class="back-to-top" aria-label="Torna in cima">↑</button>
+
+<!-- MODAL PRENOTAZIONE -->
+<div class="modal-overlay" id="modal-prenota" role="dialog" aria-modal="true">
+  <div class="modal">
+    <button class="modal-close" aria-label="Chiudi">&times;</button>
+    <span class="section-label">Ristorante Sant'Eustorgio</span>
+    <h3 data-i18n="modal_title">Prenota un tavolo</h3>
+    <p data-i18n="modal_sub">Compila il modulo e ti ricontatteremo entro 24 ore.</p>
+    <form id="form-prenota" autocomplete="on" novalidate>
+      <div class="form-row">
+        <div class="form-group"><label data-i18n="modal_name">Nome</label><input type="text" name="name" required autocomplete="given-name"></div>
+        <div class="form-group"><label data-i18n="modal_surname">Cognome</label><input type="text" name="surname" required autocomplete="family-name"></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label data-i18n="modal_date">Data</label><input type="date" name="date" required></div>
+        <div class="form-group"><label data-i18n="modal_time">Orario</label>
+          <select name="time" required><option value="">--</option><option>12:00</option><option>12:30</option><option>13:00</option><option>13:30</option><option>14:00</option><option>19:00</option><option>19:30</option><option>20:00</option><option>20:30</option><option>21:00</option><option>21:30</option><option>22:00</option></select>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand"><span class="nav-logo-name">Sant'Eustorgio</span><span class="nav-logo-sub">Ristorante · Milano dal 1987</span><p>Una cucina milanese d'autore nel cuore del quartiere Ticinese.</p><div class="social-links"><a href="#" class="social-link">ig</a><a href="#" class="social-link">fb</a><a href="#" class="social-link">ta</a></div></div>
-        <div class="footer-col"><h4>Navigazione</h4><ul><li><a href="chi-siamo.html">Chi Siamo</a></li><li><a href="cucina.html">La Cucina</a></li><li><a href="menu.html">Il Menù</a></li><li><a href="cantina.html">La Cantina</a></li><li><a href="eventi.html">Eventi</a></li><li><a href="locale.html">Il Locale</a></li><li><a href="contatti.html">Contatti</a></li></ul></div>
-        <div class="footer-col"><h4>Orari</h4><p>Mar–Ven: 12:30–14:30 · 19:30–23:00</p><br><p>Sab–Dom: 12:30–15:00 · 19:30–23:30</p></div>
-        <div class="footer-col"><h4>Contatti</h4><address>Piazza Sant'Eustorgio, 1<br>20122 Milano (MI)<br><br><a href="tel:+390289400000">+39 02 8940 0000</a><br><a href="mailto:info@santeustorgio.it">info@santeustorgio.it</a></address></div>
+      <div class="form-group"><label data-i18n="modal_guests">Numero ospiti</label>
+        <select name="guests" required><option value="">--</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10+</option></select>
       </div>
-      <div class="footer-bottom"><p>© 2025 Ristorante Sant'Eustorgio · P.IVA 01234567890</p><p>Realizzato con ♥ a Milano</p></div>
-    </div>
-  </footer>
-  <script src="js/main.js"></script>
+      <div class="form-group"><label data-i18n="modal_notes">Note</label><textarea name="notes" rows="3"></textarea></div>
+      <div class="form-submit"><button type="submit" class="btn btn-primary" style="width:100%;" data-i18n="modal_send">Invia richiesta</button></div>
+    </form>
+    <div class="form-success"><h4>✓ Richiesta inviata!</h4><p>Ti contatteremo a breve.</p></div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
 </body>
 </html>
