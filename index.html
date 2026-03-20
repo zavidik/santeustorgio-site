@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ristorante Sant'Eustorgio — Milano</title>
+  <meta name="description" content="Ristorante Sant'Eustorgio, cucina milanese d'autore nel cuore del Ticinese. Sapori autentici, cantina d'eccellenza, atmosfera senza tempo.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/favicon.ico">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════ -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-name">Sant'Eustorgio</span>
+      <span class="nav-logo-sub">Ristorante · Milano dal 1987</span>
+    </a>
+
+    <ul class="nav-menu">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="chi-siamo.html">Chi Siamo</a></li>
+      <li><a href="cucina.html">Cucina</a></li>
+      <li><a href="menu.html">Menù</a></li>
+      <li><a href="cantina.html">Cantina</a></li>
+      <li><a href="eventi.html">Eventi</a></li>
+      <li><a href="locale.html">Il Locale</a></li>
+      <li><a href="contatti.html">Contatti</a></li>
+    </ul>
+
+    <div class="nav-reservation">
+      <a href="contatti.html#prenotazione" class="btn btn-primary">Prenota un Tavolo</a>
+    </div>
+
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Overlay -->
+  <div class="nav-overlay">
+    <button class="nav-overlay-close" aria-label="Chiudi">✕</button>
+    <a href="index.html">Home</a>
+    <a href="chi-siamo.html">Chi Siamo</a>
+    <a href="cucina.html">Cucina</a>
+    <a href="menu.html">Menù</a>
+    <a href="cantina.html">Cantina</a>
+    <a href="eventi.html">Eventi</a>
+    <a href="locale.html">Il Locale</a>
+    <a href="contatti.html">Contatti</a>
+    <a href="contatti.html#prenotazione" class="btn btn-primary" style="margin-top:1rem;">Prenota un Tavolo</a>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">Milano · Piazza Sant'Eustorgio · Dal 1987</p>
+      <h1 class="hero-title">Sant'Eustorgio</h1>
+      <p class="hero-title-small">La cucina milanese nel cuore del Ticinese</p>
+      <div class="hero-divider"></div>
+      <p class="hero-desc">
+        Dove la tradizione incontra la creatività contemporanea. Ogni piatto racconta una storia, ogni vino è un viaggio, ogni sera è un ricordo indelebile.
+      </p>
+      <div class="hero-actions">
+        <a href="menu.html" class="btn btn-primary">Scopri il Menù</a>
+        <a href="contatti.html#prenotazione" class="btn btn-outline">Prenota un Tavolo</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll">Scorri</div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       WELCOME STRIP
+  ═══════════════════════════════════════════ -->
+  <div id="welcome-strip">
+    <div class="container">
+      <div class="welcome-strip-inner">
+        <div class="strip-item">
+          <div class="strip-item-number">37</div>
+          <div class="strip-item-label">Anni di Storia</div>
+        </div>
+        <div class="strip-divider"></div>
+        <div class="strip-item">
+          <div class="strip-item-number">450+</div>
+          <div class="strip-item-label">Etichette in Cantina</div>
+        </div>
+        <div class="strip-divider"></div>
+        <div class="strip-item">
+          <div class="strip-item-number">60</div>
+          <div class="strip-item-label">Coperti</div>
+        </div>
+        <div class="strip-divider"></div>
+        <div class="strip-item">
+          <div class="strip-item-number">12</div>
+          <div class="strip-item-label">Proposte di Stagione</div>
+        </div>
+        <div class="strip-divider"></div>
+        <div class="strip-item">
+          <div class="strip-item-number">1</div>
+          <div class="strip-item-label">Stella Michelin</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       INTRO
+  ═══════════════════════════════════════════ -->
+  <section id="home-intro">
+    <div class="container">
+      <div class="home-intro-grid">
+        <div class="home-intro-image fade-in">
+          <img src="img/intro-chef.jpg" alt="Lo chef al lavoro">
+          <div class="home-intro-badge">
+            <div class="home-intro-badge-year">★</div>
+            <div class="home-intro-badge-text">Stella Michelin</div>
+          </div>
+        </div>
+
+        <div class="fade-in fade-in-delay-2">
+          <span class="section-label">La nostra storia</span>
+          <h2 class="section-title">Una cucina <em>milanese</em> che non dimentica le radici</h2>
+          <div class="ornament"><span class="ornament-icon">✦</span></div>
+          <p class="section-subtitle" style="margin-bottom:1.5rem;">
+            Fondato nel 1987 in un antico palazzo del Ticinese, Sant'Eustorgio è diventato uno dei punti di riferimento della ristorazione milanese. La famiglia Ferrario porta avanti con passione una cucina che celebra il territorio lombardo, reinterpretato con sensibilità moderna.
+          </p>
+          <p class="section-subtitle" style="margin-bottom:2.5rem; font-style:italic; font-family: var(--font-display); font-size:1.1rem; color: var(--charcoal);">
+            "La cucina è memoria. Ogni piatto è un racconto di chi siamo e di dove veniamo."
+          </p>
+          <a href="chi-siamo.html" class="btn btn-dark">La nostra storia →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       HIGHLIGHTS
+  ═══════════════════════════════════════════ -->
+  <section id="home-highlights">
+    <div class="container">
+      <div class="fade-in" style="text-align:center; margin-bottom: 0.5rem;">
+        <span class="section-label">Esplora</span>
+        <h2 class="section-title">Il mondo di <em>Sant'Eustorgio</em></h2>
+      </div>
+    </div>
+    <div class="highlights-grid">
+      <a href="cucina.html" class="highlight-card">
+        <img src="img/highlight-cucina.jpg" alt="La Cucina">
+        <div class="highlight-overlay">
+          <div class="highlight-tag">Filosofia</div>
+          <h3 class="highlight-title">La Cucina</h3>
+          <div class="highlight-link">Scopri →</div>
+        </div>
+      </a>
+      <a href="cantina.html" class="highlight-card">
+        <img src="img/highlight-cantina.jpg" alt="La Cantina">
+        <div class="highlight-overlay">
+          <div class="highlight-tag">450+ Etichette</div>
+          <h3 class="highlight-title">La Cantina</h3>
+          <div class="highlight-link">Scopri →</div>
+        </div>
+      </a>
+      <a href="locale.html" class="highlight-card">
+        <img src="img/highlight-locale.jpg" alt="Il Locale">
+        <div class="highlight-overlay">
+          <div class="highlight-tag">1800 · Palazzo storico</div>
+          <h3 class="highlight-title">Il Locale</h3>
+          <div class="highlight-link">Scopri →</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       QUOTE
+  ═══════════════════════════════════════════ -->
+  <div class="quote-banner">
+    <blockquote>
+      "Un luogo dove il tempo si ferma e il palato si stupisce. La Milano che non ti aspetti, autentica e raffinata come i suoi migliori anni."
+    </blockquote>
+    <cite>— Guida Michelin Italia</cite>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       MENU PREVIEW
+  ═══════════════════════════════════════════ -->
+  <section style="background: var(--dark); color: var(--ivory); padding: 7rem 0;">
+    <div class="container">
+      <div class="fade-in" style="display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center;">
+        <div>
+          <span class="section-label">La tavola</span>
+          <h2 class="section-title" style="color:var(--ivory);">Il nostro <em>Menù</em> di Stagione</h2>
+          <div class="ornament"><span class="ornament-icon">✦</span></div>
+          <p style="color:rgba(255,255,255,0.55); line-height:1.9; margin-bottom:2rem;">
+            Ogni stagione porta con sé nuovi ingredienti, nuovi profumi, nuove storie da raccontare. Il nostro menù cambia con il ritmo della natura, privilegiando i produttori locali e le eccellenze del territorio lombardo.
+          </p>
+          <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+            <a href="menu.html" class="btn btn-primary">Sfoglia il Menù</a>
+            <a href="contatti.html#prenotazione" class="btn btn-outline">Prenota Ora</a>
+          </div>
+        </div>
+        <div>
+          <div style="border:1px solid rgba(200,169,110,0.2); padding:2.5rem;">
+            <div class="menu-section-title" style="font-family:var(--font-body); font-size:0.65rem; letter-spacing:0.25em; color:var(--gold); text-transform:uppercase; margin-bottom:1.5rem;">Antipasti · Selezione</div>
+            <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Vitello Tonnato</div><div class="menu-item-desc">Salsa tonnata, capperi di Pantelleria, rucola selvatica</div></div><div class="menu-item-price">€ 22</div></div>
+            <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Carpaccio di Manzo</div><div class="menu-item-desc">Rucola, parmigiano 36 mesi, olio EVO del Garda</div></div><div class="menu-item-price">€ 24</div></div>
+            <div class="menu-section-title" style="font-family:var(--font-body); font-size:0.65rem; letter-spacing:0.25em; color:var(--gold); text-transform:uppercase; margin:2rem 0 1.5rem;">Primi · Selezione</div>
+            <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Risotto alla Milanese</div><div class="menu-item-desc">Zafferano DOP, ossobuco, gremolata</div></div><div class="menu-item-price">€ 26</div></div>
+            <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Tagliatelle al Ragù</div><div class="menu-item-desc">Carne bovina e suina, pomodoro San Marzano, 5 ore di cottura</div></div><div class="menu-item-price">€ 22</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       EVENTI PREVIEW
+  ═══════════════════════════════════════════ -->
+  <section style="background: var(--cream); padding: 7rem 0;">
+    <div class="container">
+      <div class="fade-in" style="text-align:center; margin-bottom:3rem;">
+        <span class="section-label">Agenda</span>
+        <h2 class="section-title">Prossimi <em>Eventi</em></h2>
+      </div>
+      <div class="eventi-grid fade-in">
+        <div class="evento-card">
+          <img src="img/evento-vino.jpg" alt="Serata di Degustazione" class="evento-card-img">
+          <div class="evento-card-body">
+            <div class="evento-date">Venerdì 14 Febbraio 2025</div>
+            <h3 class="evento-title">Cena di San Valentino</h3>
+            <p class="evento-desc">Una serata di romanticismo e sapori. Menù esclusivo a quattro portate con abbinamento vini selezionati dalla nostra cantina.</p>
+            <a href="eventi.html" class="evento-link">Scopri di più →</a>
+          </div>
+        </div>
+        <div class="evento-card">
+          <img src="img/evento-chef.jpg" alt="Chef's Table" class="evento-card-img">
+          <div class="evento-card-body">
+            <div class="evento-date">Sabato 22 Marzo 2025</div>
+            <h3 class="evento-title">Chef's Table — Primavera</h3>
+            <p class="evento-desc">Un percorso gastronomico esclusivo di 7 portate direttamente in cucina, con lo chef Marco Ferrario.</p>
+            <a href="eventi.html" class="evento-link">Scopri di più →</a>
+          </div>
+        </div>
+        <div class="evento-card">
+          <img src="img/evento-cantina.jpg" alt="Wine Experience" class="evento-card-img">
+          <div class="evento-card-body">
+            <div class="evento-date">Giovedì 3 Aprile 2025</div>
+            <h3 class="evento-title">Wine Experience — Barolo</h3>
+            <p class="evento-desc">Verticale esclusiva di Barolo. Sei annate straordinarie con la guida del nostro Sommelier.</p>
+            <a href="eventi.html" class="evento-link">Scopri di più →</a>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:3rem;">
+        <a href="eventi.html" class="btn btn-dark">Tutti gli eventi →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="nav-logo-name">Sant'Eustorgio</span>
+          <span class="nav-logo-sub">Ristorante · Milano dal 1987</span>
+          <p>Una cucina milanese d'autore nel cuore del quartiere Ticinese. Ogni sera, un'esperienza indimenticabile.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram">ig</a>
+            <a href="#" class="social-link" aria-label="Facebook">fb</a>
+            <a href="#" class="social-link" aria-label="TripAdvisor">ta</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigazione</h4>
+          <ul>
+            <li><a href="chi-siamo.html">Chi Siamo</a></li>
+            <li><a href="cucina.html">La Cucina</a></li>
+            <li><a href="menu.html">Il Menù</a></li>
+            <li><a href="cantina.html">La Cantina</a></li>
+            <li><a href="eventi.html">Eventi</a></li>
+            <li><a href="locale.html">Il Locale</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Orari</h4>
+          <p>Martedì – Venerdì<br>12:30 – 14:30 · 19:30 – 23:00</p>
+          <br>
+          <p>Sabato – Domenica<br>12:30 – 15:00 · 19:30 – 23:30</p>
+          <br>
+          <p style="color:rgba(255,255,255,0.25);">Lunedì chiuso</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contatti</h4>
+          <address>
+            Piazza Sant'Eustorgio, 1<br>
+            20122 Milano (MI)<br><br>
+            <a href="tel:+390289400000">+39 02 8940 0000</a><br>
+            <a href="mailto:info@santeustorgio.it">info@santeustorgio.it</a>
+          </address>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Ristorante Sant'Eustorgio · P.IVA 01234567890 · <a href="#" style="color:inherit;">Privacy Policy</a></p>
+        <p>Realizzato con ♥ a Milano</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

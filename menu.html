@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Il Menù — Ristorante Sant'Eustorgio</title>
+  <meta name="description" content="Il menù del Ristorante Sant'Eustorgio: antipasti, primi piatti, secondi, dessert e menu degustazione. Cucina milanese d'autore.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-name">Sant'Eustorgio</span>
+      <span class="nav-logo-sub">Ristorante · Milano dal 1987</span>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="chi-siamo.html">Chi Siamo</a></li>
+      <li><a href="cucina.html">Cucina</a></li>
+      <li><a href="menu.html" class="active">Menù</a></li>
+      <li><a href="cantina.html">Cantina</a></li>
+      <li><a href="eventi.html">Eventi</a></li>
+      <li><a href="locale.html">Il Locale</a></li>
+      <li><a href="contatti.html">Contatti</a></li>
+    </ul>
+    <div class="nav-reservation"><a href="contatti.html#prenotazione" class="btn btn-primary">Prenota un Tavolo</a></div>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="nav-overlay">
+    <button class="nav-overlay-close">✕</button>
+    <a href="index.html">Home</a><a href="chi-siamo.html">Chi Siamo</a><a href="cucina.html">Cucina</a><a href="menu.html">Menù</a><a href="cantina.html">Cantina</a><a href="eventi.html">Eventi</a><a href="locale.html">Il Locale</a><a href="contatti.html">Contatti</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-bg" style="background-image: url('img/hero-menu.jpg');"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="container page-hero-content">
+      <span class="section-label">Stagione Primavera–Estate 2025</span>
+      <h1>Il <em style="font-style:italic; color:var(--gold);">Menù</em></h1>
+    </div>
+  </div>
+  <div class="breadcrumb"><ul><li><a href="index.html">Home</a></li><li>Il Menù</li></ul></div>
+
+  <!-- MENU SECTION -->
+  <section id="menu" style="padding: 5rem 0 7rem;">
+    <div class="container menu-inner">
+
+      <div style="display:grid; grid-template-columns:2fr 1fr; gap:4rem; align-items:start; margin-bottom:3rem;">
+        <div class="fade-in">
+          <span class="section-label">La nostra proposta</span>
+          <h2 class="section-title" style="color:var(--ivory);">Sapori di <em>stagione</em></h2>
+          <p style="color:rgba(255,255,255,0.5); max-width:520px; line-height:1.9;">
+            Il menù cambia con le stagioni. Quello che state leggendo è la proposta per la stagione Primavera–Estate 2025. Tutti i prezzi sono IVA inclusa. Il pane è fatto in casa quotidianamente. ⓥ indica piatti vegetariani.
+          </p>
+        </div>
+        <div style="background:rgba(200,169,110,0.08); border:1px solid rgba(200,169,110,0.2); padding:2rem; text-align:center;" class="fade-in fade-in-delay-2">
+          <div style="font-family:var(--font-display); font-size:1.3rem; color:var(--gold); margin-bottom:0.5rem;">Menu Degustazione</div>
+          <div style="font-size:0.72rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(255,255,255,0.4); margin-bottom:1rem;">7 portate · abbinamento vini disponibile</div>
+          <div style="font-family:var(--font-display); font-size:2.5rem; color:var(--ivory);">€ 120</div>
+          <div style="font-size:0.78rem; color:rgba(255,255,255,0.35); margin-bottom:1.5rem;">+ € 65 abbinamento vini</div>
+          <a href="contatti.html#prenotazione" class="btn btn-primary" style="width:100%; justify-content:center;">Prenota</a>
+        </div>
+      </div>
+
+      <div class="menu-tabs">
+        <button class="menu-tab active" data-tab="antipasti">Antipasti</button>
+        <button class="menu-tab" data-tab="primi">Primi Piatti</button>
+        <button class="menu-tab" data-tab="secondi">Secondi</button>
+        <button class="menu-tab" data-tab="dessert">Dessert</button>
+        <button class="menu-tab" data-tab="degustazione">Degustazione</button>
+      </div>
+
+      <!-- ANTIPASTI -->
+      <div class="menu-panel active" id="antipasti">
+        <div class="menu-section-title">Antipasti — Primavera / Estate 2025</div>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Vitello Tonnato ⓥ</div>
+              <div class="menu-item-desc">Salsa di tonno del Mediterraneo, capperi di Pantelleria, rucola selvatica, uova di quaglia</div>
+            </div>
+            <div class="menu-item-price">€ 22</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Carpaccio di Manzo</div>
+              <div class="menu-item-desc">Fassona piemontese, rucola, parmigiano 36 mesi, tartufo estivo, olio del Garda</div>
+            </div>
+            <div class="menu-item-price">€ 26</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Asparagi Bianchi di Bassano ⓥ</div>
+              <div class="menu-item-desc">Maionese all'aglio orsino, uovo poché, bottarga di muggine, pane tostato</div>
+            </div>
+            <div class="menu-item-price">€ 24</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Burrata di Puglia ⓥ</div>
+              <div class="menu-item-desc">Pomodori di Pachino, basilico del nostro orto, olio EVO Sicilia, pane carasau</div>
+            </div>
+            <div class="menu-item-price">€ 20</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Tartare di Lavarello</div>
+              <div class="menu-item-desc">Lavarello del Lago Maggiore, cetriolo, aneto, crema di avocado, chips di polenta</div>
+            </div>
+            <div class="menu-item-price">€ 28</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Terrina di Fegatini</div>
+              <div class="menu-item-desc">Fegatini di pollo della Brianza, gelatina al Marsala, mostarda di Cremona, brioche</div>
+            </div>
+            <div class="menu-item-price">€ 22</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRIMI -->
+      <div class="menu-panel" id="primi">
+        <div class="menu-section-title">Primi Piatti — Primavera / Estate 2025</div>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Risotto alla Milanese</div>
+              <div class="menu-item-desc">Riso Carnaroli, zafferano DOP, midollo di manzo, parmigiano reggiano 30 mesi, burro di montagna</div>
+            </div>
+            <div class="menu-item-price">€ 26</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Tagliatelle al Ragù Bianco</div>
+              <div class="menu-item-desc">Pasta fresca all'uovo, ragù di vitello e maiale, tartufo estivo, parmigiano</div>
+            </div>
+            <div class="menu-item-price">€ 24</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Casoncelli alla Bergamasca</div>
+              <div class="menu-item-desc">Ripieno di carne, uvetta e amaretti, burro fuso, salvia, pancetta croccante</div>
+            </div>
+            <div class="menu-item-price">€ 23</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Spaghetti alle Vongole</div>
+              <div class="menu-item-desc">Vongole veraci di Goro, pomodorini Datterini, prezzemolo, olio piccante</div>
+            </div>
+            <div class="menu-item-price">€ 24</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Minestrone alla Milanese ⓥ</div>
+              <div class="menu-item-desc">Verdure di stagione, riso, pesto di basilico, parmigiano. La ricetta del 1987</div>
+            </div>
+            <div class="menu-item-price">€ 18</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Tortelli di Ricotta e Spinaci ⓥ</div>
+              <div class="menu-item-desc">Pasta fresca, ricotta di pecora, spinaci dell'orto, burro nocciola, salvia fritta</div>
+            </div>
+            <div class="menu-item-price">€ 22</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECONDI -->
+      <div class="menu-panel" id="secondi">
+        <div class="menu-section-title">Secondi Piatti — Primavera / Estate 2025</div>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Cotoletta alla Milanese</div>
+              <div class="menu-item-desc">Vitello di latte, panatura al burro chiarificato, insalata di pomodori e rucola</div>
+            </div>
+            <div class="menu-item-price">€ 38</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Ossobuco con Gremolata</div>
+              <div class="menu-item-desc">Stinco di vitello, risotto alla milanese, gremolata di limone e prezzemolo</div>
+            </div>
+            <div class="menu-item-price">€ 42</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Filetto di Manzo</div>
+              <div class="menu-item-desc">Fassona piemontese, patate arrosto, riduzione al Barolo, crema di porcini</div>
+            </div>
+            <div class="menu-item-price">€ 46</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Branzino in Crosta di Sale</div>
+              <div class="menu-item-desc">Branzino intero, erbe aromatiche, capperi, olive taggiasche, patate novelle</div>
+            </div>
+            <div class="menu-item-price">€ 44</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Petto d'Anatra Laccato</div>
+              <div class="menu-item-desc">Anatra della Lomellina, laccatura al miele e aceto balsamico, ciliegie, purè di sedano rapa</div>
+            </div>
+            <div class="menu-item-price">€ 40</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Tagliata di Controfiletto</div>
+              <div class="menu-item-desc">Angus irlandese, rucola, parmigiano, pomodorini, olio EVO, sale di Maldon</div>
+            </div>
+            <div class="menu-item-price">€ 42</div>
+          </div>
+        </div>
+        <div style="margin-top:2rem; padding-bottom:0.5rem; border-bottom:1px solid rgba(200,169,110,0.15);">
+          <div class="menu-section-title">Contorni</div>
+        </div>
+        <div class="menu-items">
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Patate Arrosto al Rosmarino ⓥ</div></div><div class="menu-item-price">€ 8</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Verdure di Stagione Grigliate ⓥ</div></div><div class="menu-item-price">€ 8</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Insalata Mista dell'Orto ⓥ</div></div><div class="menu-item-price">€ 7</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Spinaci Saltati al Burro ⓥ</div></div><div class="menu-item-price">€ 8</div></div>
+        </div>
+      </div>
+
+      <!-- DESSERT -->
+      <div class="menu-panel" id="dessert">
+        <div class="menu-section-title">Dessert — La pasticceria di Sofia Bianchi</div>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Tiramisù alla Milanese ⓥ</div>
+              <div class="menu-item-desc">La nostra versione classica con caffè Lavazza, mascarpone, savoiardi artigianali, cacao</div>
+            </div>
+            <div class="menu-item-price">€ 14</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Panna Cotta al Fieno ⓥ</div>
+              <div class="menu-item-desc">Panna di alpeggio, coulis di fragole di Tortona, pistacchio di Bronte</div>
+            </div>
+            <div class="menu-item-price">€ 13</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Tortino al Cioccolato Fondente ⓥ</div>
+              <div class="menu-item-desc">Cioccolato Valrhona 70%, cuore fondente, gelato alla vaniglia del Madagascar</div>
+            </div>
+            <div class="menu-item-price">€ 15</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Semifreddo ai Marron Glacés ⓥ</div>
+              <div class="menu-item-desc">Crema di castagne, Pan di Spagna, salsa al caramello, panna montata</div>
+            </div>
+            <div class="menu-item-price">€ 14</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Selezione di Formaggi Lombardi</div>
+              <div class="menu-item-desc">Taleggio, Gorgonzola Dolce, Bagoss, Branzi. Confetture artigianali e miele di tiglio</div>
+            </div>
+            <div class="menu-item-price">€ 22</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-name">Piccola Pasticceria ⓥ</div>
+              <div class="menu-item-desc">Mignon assortiti: macaron, tartufini al cioccolato, bignè alla crema, cantucci</div>
+            </div>
+            <div class="menu-item-price">€ 12</div>
+          </div>
+        </div>
+        <div style="margin-top:2rem; padding-bottom:0.5rem; border-bottom:1px solid rgba(200,169,110,0.15);">
+          <div class="menu-section-title">Caffetteria & Liquori</div>
+        </div>
+        <div class="menu-items">
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Caffè espresso Lavazza ⓥ</div></div><div class="menu-item-price">€ 4</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Grappa Selezione Poli</div></div><div class="menu-item-price">€ 10</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Amaro del Carmine (ricetta 1872) ⓥ</div></div><div class="menu-item-price">€ 9</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Selezione di Whisky Invecchiati</div></div><div class="menu-item-price">da € 14</div></div>
+        </div>
+      </div>
+
+      <!-- DEGUSTAZIONE -->
+      <div class="menu-panel" id="degustazione">
+        <div class="menu-section-title">Menu Degustazione — La nostra proposta</div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:start;">
+          <div>
+            <div style="margin-bottom:2.5rem; padding:2rem; border:1px solid rgba(200,169,110,0.2);">
+              <div style="font-family:var(--font-display); font-size:1.4rem; color:var(--gold); margin-bottom:0.3rem;">Menu Sant'Eustorgio</div>
+              <div style="font-size:0.7rem; color:rgba(255,255,255,0.4); letter-spacing:0.15em; text-transform:uppercase; margin-bottom:1.5rem;">7 portate · Classici della casa</div>
+              <div class="menu-item" style="padding:0.8rem 0;"><div class="menu-item-info"><div class="menu-item-name" style="font-size:1rem;">Benvenuto della cucina</div></div></div>
+              <div class="menu-item" style="padding:0.8rem 0;"><div class="menu-item-info"><div class="menu-item-name" style="font-size:1rem;">Vitello tonnato contemporaneo</div></div></div>
+              <div class="menu-item" style="padding:0.8rem 0;"><div class="menu-item-info"><div class="menu-item-name" style="font-size:1rem;">Risotto alla milanese</div></div></div>
+              <div class="menu-item" style="padding:0.8rem 0;"><div class="menu-item-info"><div class="menu-item-name" style="font-size:1rem;">Casoncelli alla bergamasca</div></div></div>
+              <div class="menu-item" style="padding:0.8rem 0;"><div class="menu-item-info"><div class="menu-item-name" style="font-size:1rem;">Cotoletta alla milanese</div></div></div>
+              <div class="menu-item" style="padding:0.8rem 0;"><div class="menu-item-info"><div class="menu-item-name" style="font-size:1rem;">Selezione di formaggi lombardi</div></div></div>
+              <div class="menu-item" style="padding:0.8rem 0; border:none;"><div class="menu-item-info"><div class="menu-item-name" style="font-size:1rem;">Tiramisù alla milanese</div></div></div>
+              <div style="border-top:1px solid rgba(200,169,110,0.2); margin-top:1rem; padding-top:1rem; display:flex; justify-content:space-between; align-items:center;">
+                <span style="color:rgba(255,255,255,0.5); font-size:0.85rem;">Prezzo per persona</span>
+                <span style="font-family:var(--font-display); font-size:1.8rem; color:var(--gold);">€ 120</span>
+              </div>
+              <div style="color:rgba(255,255,255,0.35); font-size:0.78rem; margin-top:0.5rem;">+ € 65 abbinamento vini con Giulia</div>
+            </div>
+          </div>
+
+          <div>
+            <div style="margin-bottom:2.5rem; padding:2rem; border:1px solid rgba(200,169,110,0.2);">
+              <div style="font-family:var(--font-display); font-size:1.4rem; color:var(--gold); margin-bottom:0.3rem;">Menu Territorio</div>
+              <div style="font-size:0.7rem; color:rgba(255,255,255,0.4); letter-spacing:0.15em; text-transform:uppercase; margin-bottom:1.5rem;">5 portate · La Lombardia in tavola</div>
+              <div class="menu-item" style="padding:0.8rem 0;"><div class="menu-item-info"><div class="menu-item-name" style="font-size:1rem;">Benvenuto della cucina</div></div></div>
+              <div class="menu-item" style="padding:0.8rem 0;"><div class="menu-item-info"><div class="menu-item-name" style="font-size:1rem;">Asparagi di Bassano e bottarga</div></div></div>
+              <div class="menu-item" style="padding:0.8rem 0;"><div class="menu-item-info"><div class="menu-item-name" style="font-size:1rem;">Minestrone alla milanese (1987)</div></div></div>
+              <div class="menu-item" style="padding:0.8rem 0;"><div class="menu-item-info"><div class="menu-item-name" style="font-size:1rem;">Ossobuco con risotto giallo</div></div></div>
+              <div class="menu-item" style="padding:0.8rem 0; border:none;"><div class="menu-item-info"><div class="menu-item-name" style="font-size:1rem;">Panna cotta al fieno</div></div></div>
+              <div style="border-top:1px solid rgba(200,169,110,0.2); margin-top:1rem; padding-top:1rem; display:flex; justify-content:space-between; align-items:center;">
+                <span style="color:rgba(255,255,255,0.5); font-size:0.85rem;">Prezzo per persona</span>
+                <span style="font-family:var(--font-display); font-size:1.8rem; color:var(--gold);">€ 95</span>
+              </div>
+              <div style="color:rgba(255,255,255,0.35); font-size:0.78rem; margin-top:0.5rem;">+ € 45 abbinamento vini</div>
+            </div>
+
+            <div style="padding:1.5rem; border:1px solid rgba(200,169,110,0.15); background:rgba(200,169,110,0.05);">
+              <p style="font-size:0.85rem; color:rgba(255,255,255,0.5); line-height:1.7; margin-bottom:1rem;">I menu degustazione vengono serviti all'intero tavolo. Si prega di comunicare eventuali intolleranze o allergie al momento della prenotazione.</p>
+              <a href="contatti.html#prenotazione" class="btn btn-primary" style="width:100%; justify-content:center;">Prenota il tuo tavolo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-note fade-in">
+        <span class="menu-note-icon">ⓘ</span>
+        <p>Il pane è sfornato quotidianamente in casa: pane di farro, focaccia al rosmarino, grissini torinesi. Il coperto è di € 4 per persona e include pane, acqua naturale o frizzante. Informiamo i nostri ospiti che alcuni piatti possono contenere allergeni. Per informazioni dettagliate, il personale è a vostra disposizione.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><span class="nav-logo-name">Sant'Eustorgio</span><span class="nav-logo-sub">Ristorante · Milano dal 1987</span><p>Una cucina milanese d'autore nel cuore del quartiere Ticinese.</p><div class="social-links"><a href="#" class="social-link">ig</a><a href="#" class="social-link">fb</a><a href="#" class="social-link">ta</a></div></div>
+        <div class="footer-col"><h4>Navigazione</h4><ul><li><a href="chi-siamo.html">Chi Siamo</a></li><li><a href="cucina.html">La Cucina</a></li><li><a href="menu.html">Il Menù</a></li><li><a href="cantina.html">La Cantina</a></li><li><a href="eventi.html">Eventi</a></li><li><a href="locale.html">Il Locale</a></li><li><a href="contatti.html">Contatti</a></li></ul></div>
+        <div class="footer-col"><h4>Orari</h4><p>Mar–Ven: 12:30–14:30 · 19:30–23:00</p><br><p>Sab–Dom: 12:30–15:00 · 19:30–23:30</p></div>
+        <div class="footer-col"><h4>Contatti</h4><address>Piazza Sant'Eustorgio, 1<br>20122 Milano (MI)<br><br><a href="tel:+390289400000">+39 02 8940 0000</a><br><a href="mailto:info@santeustorgio.it">info@santeustorgio.it</a></address></div>
+      </div>
+      <div class="footer-bottom"><p>© 2025 Ristorante Sant'Eustorgio · P.IVA 01234567890</p><p>Realizzato con ♥ a Milano</p></div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
