@@ -20,7 +20,7 @@ const translations = {
     hero_cta1: 'Scopri il menù',
     hero_cta2: 'Prenota un tavolo',
     hero_scroll: 'Scorri',
-    intro_quote: '«Ogni piatto racconta una storia: le radici di una tradizione secolare, il coraggio di reinventarla.»',
+    intro_quote: '«Nel cuore di Milano, a pochi passi dalla Basilica di Sant’Eustorgio, la nostra osteria custodisce i sapori autentici della tradizione lombarda e piemontese. La nuova gestione 2025 rinnova un luogo amato, mantenendo l’anima conviviale e inserendo una vena contemporanea nei piatti e nell’atmosfera.»',
     about_label: 'Chi Siamo',
     about_title: 'Un incontro tra Milano e il Piemonte',
     about_text: 'Affacciato sulla suggestiva Piazza Sant\'Eustorgio, il nostro ristorante nasce dall\'incontro tra la grande tradizione culinaria milanese e le radici piemontesi del nostro chef. Un luogo intimo e raccolto, dove ogni cena diventa un\'esperienza autentica.',
