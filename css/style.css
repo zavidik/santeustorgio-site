@@ -6,8 +6,8 @@
 
 /* ── CSS Variables ── */
 :root {
-  --sage:        #A3B898;
-  --sage-dark:   #7a9070;
+  --mid-grey:    #A3B898;;
+  --sage-dark:   #A3B898;
   --sage-light:  #c8d8c2;
   --sage-pale:   #f0f4ee;
   --cream:       #faf8f4;
@@ -146,7 +146,7 @@ p { font-size: 1rem; color: var(--mid-grey); }
   justify-content: space-between;
   padding: 0 2rem;
   height: 80px;
-  background: rgba(250,248,244,0.95);
+  background: lab(97.63% -0.03 2.14 / 0.95);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid transparent;
@@ -157,8 +157,8 @@ p { font-size: 1rem; color: var(--mid-grey); }
   box-shadow: var(--shadow-sm);
 }
 .navbar.dark {
-  background: rgba(44,44,44,0.97);
-  border-bottom-color: rgba(255,255,255,0.08);
+  background: #A3B898;
+  border-bottom-color: rgba(223, 8, 8, 0.08);
 }
 .navbar.dark .nav-link { color: rgba(255,255,255,0.85); }
 .navbar.dark .nav-link:hover { color: var(--sage-light); }
@@ -182,7 +182,10 @@ p { font-size: 1rem; color: var(--mid-grey); }
   font-weight: 500;
   display: block;
   color: var(--charcoal);
-  white-space: nowrap;
+  white-space: normal;
+  word-break: break-word;
+  max-width: 160px;
+  line-height: 1.2;
 }
 .logo-sub {
   font-family: var(--font-sans);
@@ -250,8 +253,8 @@ p { font-size: 1rem; color: var(--mid-grey); }
 .btn-prenotazione {
   font-size: 0.72rem;
   padding: 0.65rem 1.4rem;
-  background: var(--sage);
-  color: #fff;
+  background: #A3B898;
+  color: #000000;
   border: 1.5px solid var(--sage);
   border-radius: var(--radius);
   font-family: var(--font-sans);
@@ -284,7 +287,7 @@ p { font-size: 1rem; color: var(--mid-grey); }
 .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
 .hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
-.navbar.dark .hamburger span { background: #fff; }
+.navbar.dark .hamburger span { background: #a81919; }
 
 .mobile-menu {
   display: none;
@@ -1396,7 +1399,7 @@ p { font-size: 1rem; color: var(--mid-grey); }
   .menu-badge { left: auto; right: 1rem; }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
   .nav-links, .nav-right .btn-prenotazione { display: none; }
   .hamburger { display: flex; }
   .nav-right .lang-switch { display: none; }
