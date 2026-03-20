@@ -365,7 +365,7 @@ p { font-size: 1rem; color: var(--mid-grey); }
   opacity: 0;
   transition: opacity 1.5s ease;
 }
-.hero-slide.active { opacity: 1; }
+.hero-slide.active { opacity: 0.5; }
 
 .hero-content {
   position: relative;

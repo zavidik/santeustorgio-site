@@ -5,6 +5,8 @@
 /* ── Translations ── */
 const translations = {
   it: {
+    logo: "Ristorante Sant'Eustorgio",
+    città: 'Milano',
     nav_home: 'Home',
     nav_chisiamo: 'Chi Siamo',
     nav_cucina: 'Cucina',
@@ -247,8 +249,12 @@ const translations = {
     con_social_label: 'Seguici',
     con_social_title: 'Trovaci sui social',
     con_social_desc: 'Segui Sant\'Eustorgio per restare aggiornato su menu stagionali, eventi e momenti dal ristorante.',
+    
+    //cucina
+    cucina_tradizione_testo: 'prova',
   },
   en: {
+    logo: "Sant'Eustorgio Restaurant",
     nav_home: 'Home',
     nav_chisiamo: 'About Us',
     nav_cucina: 'Cuisine',
@@ -268,6 +274,7 @@ const translations = {
     about_label: 'About Us',
     about_title: 'Where Milan meets Piedmont',
     about_text: 'Overlooking the stunning Piazza Sant\'Eustorgio, our restaurant was born from the encounter between the great Milanese culinary tradition and the Piedmontese roots of our chef. An intimate, welcoming place where every dinner becomes an authentic experience.',
+    about_text1: 'ciao',
     about_cta: 'Our story',
     highlights_label: 'Our Strengths',
     highlights_title: 'A complete experience',
@@ -489,6 +496,9 @@ const translations = {
     con_social_label: 'Follow us',
     con_social_title: 'Find us on social media',
     con_social_desc: 'Follow Sant\'Eustorgio for seasonal menu updates, events and moments from the restaurant.',
+
+    //cucina
+    cucina_tradizione_testo: 'try',
   }
 };
 
