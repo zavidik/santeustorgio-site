@@ -4,23 +4,36 @@
    CSS VARIABLES & RESET
    ============================================ */
 :root {
-  --gold:       #C8A96E;
-  --gold-light: #E2C99A;
-  --gold-dark:  #9A7840;
-  --cream:      #F5F0E8;
-  --ivory:      #FAF7F2;
-  --dark:       #1A1610;
-  --charcoal:   #2E2820;
-  --warm-gray:  #7A7268;
-  --border:     rgba(200, 169, 110, 0.25);
+  /* Palette principale — verde salvia #A3B898 */
+  --sage:       #2A2E28;        /* colore brand principale */
+  --sage-light: #C2CFBB;        /* tono chiaro */
+  --sage-dark:  #758F6A;        /* tono scuro / hover */
+  --sage-deep:  #4A6642;        /* verde profondo */
+
+  /* Neutri caldi */
+  --cream:      #F4F1EC;        /* sfondo chiaro principale */
+  --ivory:      #FAF8F4;        /* sfondo ancora più chiaro */
+  --linen:      #EDE9E1;        /* crema media */
+
+  /* Scuri */
+  --dark:       #1C1F1A;        /* quasi-nero verdastro */
+  --charcoal:   #A3B898;       /* sfondo scuro sezioni */
+  --moss:       #3D4A38;        /* verde scuro ricco */
+
+  /* Testo */
+  --warm-gray:  #7A7870;
+  --text:       #2A2E28;
+
+  /* Bordi */
+  --border:     rgba(163, 184, 152, 0.3);
 
   --font-display: 'Cormorant Garamond', serif;
   --font-body:    'Jost', sans-serif;
 
   --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  --shadow-sm:  0 2px 20px rgba(0,0,0,0.08);
-  --shadow-md:  0 8px 40px rgba(0,0,0,0.12);
-  --shadow-lg:  0 20px 80px rgba(0,0,0,0.2);
+  --shadow-sm:  0 2px 20px rgba(28, 31, 26, 0.08);
+  --shadow-md:  0 8px 40px rgba(28, 31, 26, 0.12);
+  --shadow-lg:  0 20px 80px rgba(28, 31, 26, 0.2);
 }
 
 *, *::before, *::after {
@@ -37,7 +50,7 @@ html {
 body {
   font-family: var(--font-body);
   background-color: var(--ivory);
-  color: var(--dark);
+  color: var(--text);
   font-weight: 300;
   line-height: 1.7;
   overflow-x: hidden;
@@ -62,7 +75,7 @@ h1, h2, h3, h4 {
   font-weight: 500;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--sage-dark);
   display: block;
   margin-bottom: 1rem;
 }
@@ -77,7 +90,7 @@ h1, h2, h3, h4 {
 
 .section-title em {
   font-style: italic;
-  color: var(--gold);
+  color: var(--sage-deep);
 }
 
 .section-subtitle {
@@ -106,7 +119,7 @@ h1, h2, h3, h4 {
 }
 
 .ornament-icon {
-  color: var(--gold);
+  color: var(--sage);
   font-size: 1.1rem;
   opacity: 0.8;
 }
@@ -132,15 +145,15 @@ h1, h2, h3, h4 {
 }
 
 .btn-primary {
-  background: var(--gold);
+  background: var(--sage);
   color: var(--dark);
 }
 
 .btn-primary:hover {
-  background: var(--gold-dark);
+  background: var(--sage-dark);
   color: var(--ivory);
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(200, 169, 110, 0.35);
+  box-shadow: 0 8px 30px rgba(163, 184, 152, 0.4);
 }
 
 .btn-outline {
@@ -151,19 +164,19 @@ h1, h2, h3, h4 {
 
 .btn-outline:hover {
   background: rgba(255,255,255,0.08);
-  border-color: var(--gold);
-  color: var(--gold);
+  border-color: var(--sage-light);
+  color: var(--sage-light);
 }
 
 .btn-dark {
   background: var(--charcoal);
-  color: var(--gold);
+  color: var(--sage-light);
   border: 1px solid var(--border);
 }
 
 .btn-dark:hover {
   background: var(--dark);
-  border-color: var(--gold);
+  border-color: var(--sage);
   transform: translateY(-2px);
 }
 
@@ -184,7 +197,7 @@ h1, h2, h3, h4 {
 }
 
 #navbar.scrolled {
-  background: rgba(26, 22, 16, 0.97);
+  background: rgba(28, 31, 26, 0.97);
   backdrop-filter: blur(20px);
   padding: 1rem 3rem;
   box-shadow: 0 4px 30px rgba(0,0,0,0.3);
@@ -210,7 +223,7 @@ h1, h2, h3, h4 {
   font-size: 0.6rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--sage-light);
   font-weight: 400;
 }
 
@@ -237,13 +250,13 @@ h1, h2, h3, h4 {
   left: 0;
   width: 0;
   height: 1px;
-  background: var(--gold);
+  background: var(--sage);
   transition: width 0.3s;
 }
 
 .nav-menu a:hover,
 .nav-menu a.active {
-  color: var(--gold);
+  color: var(--sage-light);
 }
 
 .nav-menu a:hover::after,
@@ -294,7 +307,7 @@ h1, h2, h3, h4 {
   background-image: url('../img/hero.jpg');
   background-size: cover;
   background-position: center;
-  opacity: 0.45;
+  opacity: 0.4;
   transform: scale(1.05);
   transition: transform 8s ease-out;
 }
@@ -306,9 +319,9 @@ h1, h2, h3, h4 {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(26,22,16,0.2) 0%,
-    rgba(26,22,16,0.3) 50%,
-    rgba(26,22,16,0.7) 100%
+    rgba(28,31,26,0.25) 0%,
+    rgba(28,31,26,0.35) 50%,
+    rgba(28,31,26,0.72) 100%
   );
 }
 
@@ -329,7 +342,7 @@ h1, h2, h3, h4 {
   font-size: 0.7rem;
   letter-spacing: 0.4em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--sage-light);
   margin-bottom: 1.5rem;
   font-weight: 400;
 }
@@ -348,7 +361,7 @@ h1, h2, h3, h4 {
   font-size: clamp(1rem, 2.5vw, 1.6rem);
   font-weight: 300;
   font-style: italic;
-  color: var(--gold-light);
+  color: var(--sage-light);
   letter-spacing: 0.05em;
   margin-bottom: 2rem;
 }
@@ -356,7 +369,7 @@ h1, h2, h3, h4 {
 .hero-divider {
   width: 80px;
   height: 1px;
-  background: var(--gold);
+  background: var(--sage);
   margin: 0 auto 2rem;
   opacity: 0.7;
 }
@@ -398,7 +411,7 @@ h1, h2, h3, h4 {
   content: '';
   width: 1px;
   height: 40px;
-  background: linear-gradient(to bottom, var(--gold), transparent);
+  background: linear-gradient(to bottom, var(--sage), transparent);
 }
 
 @keyframes bounce {
@@ -450,7 +463,7 @@ section {
   font-family: var(--font-display);
   font-size: 2.2rem;
   font-weight: 300;
-  color: var(--gold);
+  color: var(--sage);
   line-height: 1;
   margin-bottom: 0.3rem;
 }
@@ -459,14 +472,14 @@ section {
   font-size: 0.65rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.4);
   font-weight: 400;
 }
 
 .strip-divider {
   width: 1px;
   height: 50px;
-  background: rgba(200,169,110,0.2);
+  background: rgba(163,184,152,0.2);
 }
 
 /* ============================================
@@ -508,7 +521,7 @@ section {
   position: absolute;
   bottom: -20px;
   right: -20px;
-  background: var(--dark);
+  background: var(--moss);
   padding: 1.5rem 2rem;
   text-align: center;
 }
@@ -516,7 +529,7 @@ section {
 .home-intro-badge-year {
   font-family: var(--font-display);
   font-size: 2.5rem;
-  color: var(--gold);
+  color: var(--sage-light);
   line-height: 1;
 }
 
@@ -563,7 +576,7 @@ section {
 .highlight-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(26,22,16,0.85) 0%, rgba(26,22,16,0.1) 60%);
+  background: linear-gradient(to top, rgba(28,31,26,0.88) 0%, rgba(28,31,26,0.08) 60%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -574,7 +587,7 @@ section {
   font-size: 0.62rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--sage-light);
   margin-bottom: 0.6rem;
   font-weight: 400;
 }
@@ -592,7 +605,7 @@ section {
   font-size: 0.68rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--sage-light);
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -660,7 +673,7 @@ section {
 .info-block h4 {
   font-family: var(--font-display);
   font-size: 1.1rem;
-  color: var(--gold);
+  color: var(--sage-deep);
   margin-bottom: 0.8rem;
   font-weight: 400;
 }
@@ -704,7 +717,7 @@ section {
   font-size: 0.68rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--sage-dark);
   margin-top: 0.3rem;
 }
 
@@ -780,7 +793,7 @@ section {
 }
 
 .stagione-card:hover {
-  border-color: var(--gold);
+  border-color: var(--sage);
   transform: translateY(-4px);
   box-shadow: var(--shadow-sm);
 }
@@ -822,7 +835,7 @@ section {
   width: 40%;
   height: 100%;
   background: url('../img/menu-bg.jpg') center/cover;
-  opacity: 0.08;
+  opacity: 0.06;
 }
 
 .menu-inner { position: relative; z-index: 1; }
@@ -831,7 +844,7 @@ section {
   display: flex;
   gap: 0;
   margin: 3rem 0 0;
-  border-bottom: 1px solid rgba(200,169,110,0.2);
+  border-bottom: 1px solid rgba(163,184,152,0.2);
 }
 
 .menu-tab {
@@ -839,7 +852,7 @@ section {
   font-size: 0.72rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.4);
   cursor: pointer;
   border-bottom: 2px solid transparent;
   margin-bottom: -1px;
@@ -854,8 +867,8 @@ section {
 
 .menu-tab.active,
 .menu-tab:hover {
-  color: var(--gold);
-  border-bottom-color: var(--gold);
+  color: var(--sage-light);
+  border-bottom-color: var(--sage);
 }
 
 .menu-panel { display: none; padding: 3rem 0; }
@@ -866,7 +879,7 @@ section {
   font-size: 0.8rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--sage);
   margin-bottom: 1.5rem;
   font-weight: 400;
 }
@@ -882,11 +895,11 @@ section {
   justify-content: space-between;
   align-items: baseline;
   padding: 1.4rem 0;
-  border-bottom: 1px solid rgba(200,169,110,0.1);
+  border-bottom: 1px solid rgba(163,184,152,0.1);
   gap: 1rem;
 }
 
-.menu-item:hover .menu-item-name { color: var(--gold-light); }
+.menu-item:hover .menu-item-name { color: var(--sage-light); }
 
 .menu-item-info { flex: 1; }
 
@@ -901,7 +914,7 @@ section {
 
 .menu-item-desc {
   font-size: 0.82rem;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.38);
   line-height: 1.5;
   font-style: italic;
   font-family: var(--font-display);
@@ -910,7 +923,7 @@ section {
 .menu-item-price {
   font-family: var(--font-display);
   font-size: 1.05rem;
-  color: var(--gold);
+  color: var(--sage);
   white-space: nowrap;
   font-weight: 300;
 }
@@ -918,16 +931,16 @@ section {
 .menu-note {
   margin-top: 3rem;
   padding: 1.5rem 2rem;
-  border: 1px solid rgba(200,169,110,0.2);
+  border: 1px solid rgba(163,184,152,0.2);
   font-size: 0.85rem;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.4);
   line-height: 1.7;
   display: flex;
   gap: 1rem;
   align-items: flex-start;
 }
 
-.menu-note-icon { color: var(--gold); flex-shrink: 0; margin-top: 2px; }
+.menu-note-icon { color: var(--sage); flex-shrink: 0; margin-top: 2px; }
 
 /* ============================================
    CANTINA
@@ -958,7 +971,7 @@ section {
   position: absolute;
   bottom: 2rem;
   right: -2rem;
-  background: var(--gold);
+  background: var(--sage);
   color: var(--dark);
   padding: 1.5rem 2rem;
   text-align: center;
@@ -999,7 +1012,7 @@ section {
   grid-template-columns: 1fr 1fr;
   gap: 1px;
   margin-top: 2.5rem;
-  background: rgba(200,169,110,0.1);
+  background: rgba(163,184,152,0.1);
 }
 
 .wine-region {
@@ -1010,8 +1023,8 @@ section {
 }
 
 .wine-region:hover {
-  border-left-color: var(--gold);
-  background: rgba(200,169,110,0.05);
+  border-left-color: var(--sage);
+  background: rgba(163,184,152,0.05);
 }
 
 .wine-region-name {
@@ -1023,7 +1036,7 @@ section {
 
 .wine-region-bottles {
   font-size: 0.72rem;
-  color: var(--gold);
+  color: var(--sage-light);
   letter-spacing: 0.1em;
 }
 
@@ -1051,7 +1064,7 @@ section {
 .evento-card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-md);
-  border-color: var(--gold);
+  border-color: var(--sage);
 }
 
 .evento-card-img {
@@ -1068,7 +1081,7 @@ section {
   font-size: 0.65rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--sage-dark);
   font-weight: 500;
   margin-bottom: 0.6rem;
 }
@@ -1092,7 +1105,7 @@ section {
   font-size: 0.68rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--sage-dark);
   display: flex;
   align-items: center;
   gap: 0.4rem;
@@ -1169,7 +1182,7 @@ section {
 }
 
 .locale-feature-icon {
-  color: var(--gold);
+  color: var(--sage);
   font-size: 1.2rem;
   flex-shrink: 0;
   margin-top: 2px;
@@ -1222,7 +1235,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--gold);
+  color: var(--sage-dark);
   flex-shrink: 0;
   font-size: 1rem;
 }
@@ -1241,7 +1254,7 @@ section {
   line-height: 1.7;
 }
 
-.contact-detail a:hover { color: var(--gold); }
+.contact-detail a:hover { color: var(--sage-dark); }
 
 .orari-table {
   width: 100%;
@@ -1327,7 +1340,7 @@ section {
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-  border-color: var(--gold);
+  border-color: var(--sage);
 }
 
 .form-group textarea {
@@ -1357,7 +1370,7 @@ section {
    QUOTE BANNER
    ============================================ */
 .quote-banner {
-  background: var(--gold);
+  background: var(--moss);
   padding: 5rem 3rem;
   text-align: center;
 }
@@ -1366,7 +1379,7 @@ section {
   font-family: var(--font-display);
   font-size: clamp(1.6rem, 3vw, 2.4rem);
   font-style: italic;
-  color: var(--dark);
+  color: var(--ivory);
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.4;
@@ -1379,8 +1392,8 @@ section {
   font-size: 0.7rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--dark);
-  opacity: 0.6;
+  color: var(--sage-light);
+  opacity: 0.8;
   margin-top: 1.5rem;
   font-style: normal;
   font-weight: 400;
@@ -1410,7 +1423,7 @@ footer {
 
 .footer-brand p {
   font-size: 0.88rem;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.4);
   line-height: 1.8;
   margin-top: 1.2rem;
   max-width: 280px;
@@ -1421,7 +1434,7 @@ footer {
   font-size: 0.65rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--sage);
   margin-bottom: 1.5rem;
   font-weight: 500;
 }
@@ -1430,11 +1443,11 @@ footer {
 
 .footer-col ul a {
   font-size: 0.88rem;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.45);
   transition: color 0.3s;
 }
 
-.footer-col ul a:hover { color: var(--gold); }
+.footer-col ul a:hover { color: var(--sage-light); }
 
 .footer-col p, .footer-col address {
   font-size: 0.88rem;
@@ -1452,22 +1465,22 @@ footer {
 .social-link {
   width: 38px;
   height: 38px;
-  border: 1px solid rgba(200,169,110,0.25);
+  border: 1px solid rgba(163,184,152,0.25);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.4);
   font-size: 0.85rem;
   transition: var(--transition);
 }
 
 .social-link:hover {
-  border-color: var(--gold);
-  color: var(--gold);
+  border-color: var(--sage);
+  color: var(--sage-light);
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(200,169,110,0.1);
+  border-top: 1px solid rgba(163,184,152,0.1);
   padding: 1.8rem 0;
   display: flex;
   justify-content: space-between;
@@ -1476,7 +1489,7 @@ footer {
 
 .footer-bottom p {
   font-size: 0.78rem;
-  color: rgba(255,255,255,0.25);
+  color: rgba(255,255,255,0.22);
 }
 
 /* ============================================
@@ -1504,7 +1517,7 @@ footer {
 .page-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(26,22,16,0.8) 0%, transparent 60%);
+  background: linear-gradient(to top, rgba(28,31,26,0.82) 0%, transparent 60%);
 }
 
 .page-hero-content {
@@ -1513,7 +1526,7 @@ footer {
   color: var(--ivory);
 }
 
-.page-hero-content .section-label { color: var(--gold); }
+.page-hero-content .section-label { color: var(--sage-light); }
 
 .page-hero-content h1 {
   font-size: clamp(3rem, 6vw, 5rem);
@@ -1554,7 +1567,7 @@ footer {
 
 .breadcrumb li:last-child::after { display: none; }
 .breadcrumb li a { color: var(--warm-gray); }
-.breadcrumb li a:hover { color: var(--gold); }
+.breadcrumb li a:hover { color: var(--sage-dark); }
 .breadcrumb li:last-child { color: var(--charcoal); }
 
 /* ============================================
@@ -1582,7 +1595,7 @@ footer {
 .nav-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(26,22,16,0.98);
+  background: rgba(28,31,26,0.98);
   z-index: 999;
   display: flex;
   flex-direction: column;
@@ -1604,21 +1617,21 @@ footer {
   transition: color 0.3s;
 }
 
-.nav-overlay a:hover { color: var(--gold); }
+.nav-overlay a:hover { color: var(--sage-light); }
 
 .nav-overlay-close {
   position: absolute;
   top: 2rem;
   right: 2rem;
   font-size: 1.5rem;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.45);
   cursor: pointer;
   background: none;
   border: none;
   transition: color 0.3s;
 }
 
-.nav-overlay-close:hover { color: var(--gold); }
+.nav-overlay-close:hover { color: var(--sage-light); }
 
 /* ============================================
    RESPONSIVE
