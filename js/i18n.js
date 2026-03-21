@@ -55,8 +55,9 @@ const translations = {
     footer_phone: "02 5810 1396",
     footer_email: "ristorante@santeustorgiomilano.it",
     footer_instagram: " ",
-    footer_rights: "© 2025 Ristorante Sant'Eustorgio. Tutti i diritti riservati.",
-
+    footer_rights_reserved: "Tutti i diritti riservati",
+    footer_privacy: "Informativa Privacy",
+    footer_cookie: "Cookie Policy",
     // BOOKING MODAL
     modal_title: "Prenota un tavolo",
     modal_name: "Nome e cognome",
@@ -330,7 +331,9 @@ const translations = {
     footer_phone: "+39 02 0000000",
     footer_email: "ristorante@santeustorgiomilano.it",
     footer_instagram: "ristorante_sant'eustorgiomilano",
-    footer_rights: "© 2025 Ristorante Sant'Eustorgio. All rights reserved.",
+    footer_rights_reserved: "All rights reserved",
+    footer_privacy: "Privacy Policy",
+    footer_cookie: "Cookie Policy",
 
     // BOOKING MODAL
     modal_title: "Book a table",
