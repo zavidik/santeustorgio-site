@@ -216,6 +216,23 @@ const translations = {
     page_contacts_title: "Contatti",
     coming_soon: "Pagina in costruzione. Torna presto!",
 
+    // LOCALE PAGE
+    locale_hero_title: "Il locale",
+
+    locale_intro_title: "Il nostro locale",
+    locale_intro_subtitle: "Un luogo che profuma di casa, nel cuore della città.",
+    locale_intro_text: "Il Sant'Eustorgio è più di un ristorante: è un rifugio di sapori e convivialità nel centro di Milano. Situato in Piazza Sant'Eustorgio, affacciato sulla storica basilica, offre un ambiente curato ma informale, dove la cucina milanese e piemontese incontra un'atmosfera autentica e senza tempo.",
+
+    locale_rooms_title: "Due sale interne, due esperienze diverse",
+    locale_rooms_subtitle: "Ogni spazio racconta un modo di vivere la città.",
+    locale_rooms_text: "All'interno, il ristorante accoglie 60 coperti divisi in due sale. La prima, più ampia e luminosa, ospita pranzi e cene di gruppo con il calore della tradizione; la seconda, più intima, è pensata per incontri riservati o cene romantiche. I mattoni a vista, le luci morbide e i dettagli in legno creano un equilibrio tra semplicità e raffinatezza, rendendo l'ambiente accogliente in ogni momento della giornata.",
+
+    locale_dehor_title: "Dehors con vista sulla piazza",
+    locale_dehor_subtitle: "Un angolo all'aperto dove il tempo rallenta.",
+    locale_dehor_text: "Il dehors del Sant'Eustorgio Milano, con i suoi 50 coperti spaziosi, è il cuore pulsante del locale durante la bella stagione. Affacciato direttamente sulla piazza, regala una prospettiva unica sulla città: l'atmosfera viva di Milano si fonde con la tranquillità di un pranzo o una cena all'aperto. Ideale per un aperitivo estivo, un pranzo di lavoro o una cena tra amici, il dehors mantiene l'eleganza semplice e il servizio attento che da sempre caratterizzano il ristorante.",
+
+    locale_gallery_title: "Scorci del locale",
+
     // EVENTI PAGE
     eventi_hero_title: "Eventi",
 
@@ -458,6 +475,23 @@ const translations = {
     page_venue_title: "The venue",
     page_contacts_title: "Contacts",
     coming_soon: "Page under construction. Come back soon!",
+
+    // LOCALE PAGE
+    locale_hero_title: "The Venue",
+
+    locale_intro_title: "Our venue",
+    locale_intro_subtitle: "A place that feels like home, in the heart of the city.",
+    locale_intro_text: "Sant'Eustorgio is more than a restaurant: it is a haven of flavours and conviviality in central Milan. Located in Piazza Sant'Eustorgio, overlooking the historic basilica, it offers a refined yet informal setting where Milanese and Piedmontese cuisine meets an authentic and timeless atmosphere.",
+
+    locale_rooms_title: "Two indoor rooms, two different experiences",
+    locale_rooms_subtitle: "Each space tells a different way of experiencing the city.",
+    locale_rooms_text: "Inside, the restaurant seats 60 guests across two rooms. The first, larger and brighter, hosts group lunches and dinners with the warmth of tradition; the second, more intimate, is designed for private meetings or romantic dinners. Exposed brick, soft lighting and wooden details create a balance between simplicity and refinement, making the space welcoming at any time of day.",
+
+    locale_dehor_title: "Outdoor terrace overlooking the square",
+    locale_dehor_subtitle: "An open-air corner where time slows down.",
+    locale_dehor_text: "The Sant'Eustorgio terrace, with its 50 spacious seats, is the beating heart of the venue during the warmer months. Directly overlooking the square, it offers a unique perspective on the city: the lively atmosphere of Milan blends with the calm of an outdoor lunch or dinner. Perfect for a summer aperitivo, a working lunch or a dinner with friends, the terrace maintains the simple elegance and attentive service that have always defined the restaurant.",
+
+    locale_gallery_title: "Glimpses of the venue",
 
     // EVENTI PAGE
     eventi_hero_title: "Events",

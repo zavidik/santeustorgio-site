@@ -3,20 +3,171 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Il Locale — Ristorante Sant'Eustorgio</title>
+  <meta name="description" content="Scopri gli spazi del Ristorante Sant'Eustorgio: due sale interne per 60 coperti e un dehors da 50 posti su Piazza Sant'Eustorgio a Milano." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
-<main>
-  <div class="page-hero"><h1><span data-i18n="page_locale_title"></span></h1></div>
-  <div class="page-content reveal">
-    <p data-i18n="coming_soon" style="text-align:center;font-style:italic;color:var(--color-text-light);font-size:1.1rem;padding:48px 0">Pagina in costruzione. Torna presto!</p>
+
+<!-- Navbar iniettata da navbar.js -->
+
+<!-- ══════════════════════════════════════════════════════════
+     BANNER HERO
+     Inserisci: ../images/locale-hero.jpg (min 1600x700px)
+     ══════════════════════════════════════════════════════════ -->
+<header class="page-banner" role="banner">
+  <div class="page-banner-bg"
+       style="background-image: url('../images/locale-hero.jpg'),
+              url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600&q=80');">
   </div>
-</main>
+  <div class="page-banner-overlay"></div>
+  <div class="page-banner-content">
+    <h1 data-i18n="locale_hero_title">Il locale</h1>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════════════════════
+     IL NOSTRO LOCALE — foto sx | testo centro | foto dx
+     Inserisci: ../images/locale-intro-sx.jpg (min 600x800px)
+                ../images/locale-intro-dx.jpg (min 600x800px)
+     ══════════════════════════════════════════════════════════ -->
+<section class="locale-intro" aria-labelledby="locale-intro-title">
+  <div class="locale-intro-grid">
+
+    <div class="locale-intro-img reveal">
+      <img
+        src="../images/locale-intro-sx.jpg"
+        alt="Sala del Ristorante Sant'Eustorgio"
+        loading="lazy"
+        onerror="this.src='https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80'; this.onerror=null;"
+      />
+    </div>
+
+    <div class="locale-intro-text reveal delay-1">
+      <span class="feature-label" data-i18n="locale_intro_title">Il nostro locale</span>
+      <h2 id="locale-intro-title" data-i18n="locale_intro_title">Il nostro locale</h2>
+      <p class="subtitle" data-i18n="locale_intro_subtitle">Un luogo che profuma di casa, nel cuore della città.</p>
+      <p data-i18n="locale_intro_text">Il Sant'Eustorgio è più di un ristorante: è un rifugio di sapori e convivialità nel centro di Milano. Situato in Piazza Sant'Eustorgio, affacciato sulla storica basilica, offre un ambiente curato ma informale, dove la cucina milanese e piemontese incontra un'atmosfera autentica e senza tempo.</p>
+    </div>
+
+    <div class="locale-intro-img reveal delay-2">
+      <img
+        src="../images/locale-intro-dx.jpg"
+        alt="Atmosfera del Ristorante Sant'Eustorgio"
+        loading="lazy"
+        onerror="this.src='https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80'; this.onerror=null;"
+      />
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     DUE SALE INTERNE — foto sx | testo dx
+     Inserisci: ../images/locale-sale.jpg (min 800x600px)
+     ══════════════════════════════════════════════════════════ -->
+<section class="locale-section" aria-labelledby="locale-rooms-title">
+  <div class="cantina-grid reveal">
+
+    <div class="cantina-img-wrap">
+      <img
+        src="../images/locale-sale.jpg"
+        alt="Le sale interne del Ristorante Sant'Eustorgio"
+        loading="lazy"
+        onerror="this.src='https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=800&q=80'; this.onerror=null;"
+      />
+    </div>
+
+    <div class="cantina-text">
+      <span class="feature-label">●</span>
+      <h2 id="locale-rooms-title" data-i18n="locale_rooms_title">Due sale interne, due esperienze diverse</h2>
+      <p class="cantina-subtitle" data-i18n="locale_rooms_subtitle">Ogni spazio racconta un modo di vivere la città.</p>
+      <p data-i18n="locale_rooms_text">All'interno, il ristorante accoglie 60 coperti divisi in due sale. La prima, più ampia e luminosa, ospita pranzi e cene di gruppo con il calore della tradizione; la seconda, più intima, è pensata per incontri riservati o cene romantiche. I mattoni a vista, le luci morbide e i dettagli in legno creano un equilibrio tra semplicità e raffinatezza, rendendo l'ambiente accogliente in ogni momento della giornata.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     DEHORS — testo sx | foto dx
+     Inserisci: ../images/locale-dehor.jpg (min 800x600px)
+     ══════════════════════════════════════════════════════════ -->
+<section class="locale-section" aria-labelledby="locale-dehor-title">
+  <div class="cantina-grid reverse reveal">
+
+    <div class="cantina-img-wrap">
+      <img
+        src="../images/locale-dehor.jpg"
+        alt="Dehors del Ristorante Sant'Eustorgio su Piazza Sant'Eustorgio"
+        loading="lazy"
+        onerror="this.src='https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=800&q=80'; this.onerror=null;"
+      />
+    </div>
+
+    <div class="cantina-text">
+      <span class="feature-label">●</span>
+      <h2 id="locale-dehor-title" data-i18n="locale_dehor_title">Dehors con vista sulla piazza</h2>
+      <p class="cantina-subtitle" data-i18n="locale_dehor_subtitle">Un angolo all'aperto dove il tempo rallenta.</p>
+      <p data-i18n="locale_dehor_text">Il dehors del Sant'Eustorgio Milano, con i suoi 50 coperti spaziosi, è il cuore pulsante del locale durante la bella stagione. Affacciato direttamente sulla piazza, regala una prospettiva unica sulla città: l'atmosfera viva di Milano si fonde con la tranquillità di un pranzo o una cena all'aperto. Ideale per un aperitivo estivo, un pranzo di lavoro o una cena tra amici, il dehors mantiene l'eleganza semplice e il servizio attento che da sempre caratterizzano il ristorante.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     GALLERY — stessa della home
+     Le immagini sono prese dalla cartella images/gallery-*.jpg
+     già usata nella homepage. Puoi aggiungere o sostituire le
+     immagini direttamente nella cartella images/.
+     ══════════════════════════════════════════════════════════ -->
+<section class="locale-gallery" aria-labelledby="locale-gallery-title">
+  <div class="gallery-header">
+    <h2 id="locale-gallery-title" data-i18n="locale_gallery_title">Scorci del locale</h2>
+  </div>
+
+  <div class="gallery-carousel">
+    <div id="gallery-track" role="list" aria-label="Galleria immagini del locale">
+      <div class="gallery-item" role="listitem">
+        <img src="../images/gallery-1.jpg" alt="Sala ristorante" loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=560&q=75'; this.onerror=null;" />
+      </div>
+      <div class="gallery-item" role="listitem">
+        <img src="../images/gallery-2.jpg" alt="Interno del locale" loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=560&q=75'; this.onerror=null;" />
+      </div>
+      <div class="gallery-item" role="listitem">
+        <img src="../images/gallery-3.jpg" alt="Tavoli apparecchiati" loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=560&q=75'; this.onerror=null;" />
+      </div>
+      <div class="gallery-item" role="listitem">
+        <img src="../images/gallery-4.jpg" alt="Dettagli del locale" loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=560&q=75'; this.onerror=null;" />
+      </div>
+      <div class="gallery-item" role="listitem">
+        <img src="../images/gallery-5.jpg" alt="Dehors" loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=560&q=75'; this.onerror=null;" />
+      </div>
+      <div class="gallery-item" role="listitem">
+        <img src="../images/gallery-6.jpg" alt="Piazza Sant'Eustorgio" loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=560&q=75'; this.onerror=null;" />
+      </div>
+    </div>
+  </div>
+
+  <div class="gallery-controls">
+    <button id="gallery-prev" class="gallery-btn" aria-label="Immagine precedente">&#8592;</button>
+    <button id="gallery-next" class="gallery-btn" aria-label="Immagine successiva">&#8594;</button>
+  </div>
+</section>
+
+<!-- Footer + Modal iniettati da navbar.js -->
+
 <script src="../js/navbar.js"></script>
 <script src="../js/i18n.js"></script>
 <script src="../js/main.js"></script>
+
 </body>
 </html>
