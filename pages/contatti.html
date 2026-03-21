@@ -3,20 +3,147 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contatti — Ristorante Sant'Eustorgio</title>
+  <meta name="description" content="Contatta il Ristorante Sant'Eustorgio: Piazza Sant'Eustorgio 6, Milano. Tel. 02 5810 1396." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
-<main>
-  <div class="page-hero"><h1><span data-i18n="page_contatti_title"></span></h1></div>
-  <div class="page-content reveal">
-    <p data-i18n="coming_soon" style="text-align:center;font-style:italic;color:var(--color-text-light);font-size:1.1rem;padding:48px 0">Pagina in costruzione. Torna presto!</p>
+
+<!-- Navbar iniettata da navbar.js -->
+
+<!-- ══════════════════════════════════════════════════════════
+     BANNER HERO
+     ══════════════════════════════════════════════════════════ -->
+<header class="page-banner" role="banner">
+  <div class="page-banner-bg"
+       style="background-image: url('../images/contatti-hero.jpg'),
+              url('https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=1600&q=80');">
   </div>
-</main>
+  <div class="page-banner-overlay"></div>
+  <div class="page-banner-content">
+    <h1 data-i18n="contatti_hero_title">Contatti</h1>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════════════════════
+     CONTATTI + MAPPA
+     ══════════════════════════════════════════════════════════ -->
+<section class="contatti-section" aria-label="Informazioni di contatto">
+  <div class="contatti-inner">
+
+    <!-- Colonna sinistra: card info -->
+    <div class="contatti-info reveal">
+
+      <!-- Indirizzo -->
+      <div class="contatti-card">
+        <div class="contatti-card-icon" aria-hidden="true">📍</div>
+        <div class="contatti-card-body">
+          <span class="contatti-card-label" data-i18n="contatti_address_title">Dove siamo</span>
+          <div class="contatti-card-value">
+            <a href="https://maps.app.goo.gl/G2XTDJQzzFDLv1jw5"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Apri in Google Maps"
+               data-i18n="contatti_address">
+              Piazza Sant'Eustorgio, 6, 20122 Milano MI
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Telefono -->
+      <div class="contatti-card">
+        <div class="contatti-card-icon" aria-hidden="true">📞</div>
+        <div class="contatti-card-body">
+          <span class="contatti-card-label" data-i18n="contatti_phone_title">Telefono</span>
+          <div class="contatti-card-value">
+            <a href="tel:+390258101396" aria-label="Chiama il ristorante"
+               data-i18n="contatti_phone">02 5810 1396</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="contatti-card">
+        <div class="contatti-card-icon" aria-hidden="true">✉️</div>
+        <div class="contatti-card-body">
+          <span class="contatti-card-label" data-i18n="contatti_email_title">Email</span>
+          <div class="contatti-card-value">
+            <a href="mailto:ristorante@santeustorgiomilano.it"
+               data-i18n="contatti_email">
+              ristorante@santeustorgiomilano.it
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Instagram -->
+      <div class="contatti-card">
+        <div class="contatti-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+          </svg>
+        </div>
+        <div class="contatti-card-body">
+          <span class="contatti-card-label" data-i18n="contatti_instagram_title">Instagram</span>
+          <div class="contatti-card-value">
+            <a href="https://www.instagram.com/ristorante_sant_eustorgiomilano"
+               target="_blank" rel="noopener noreferrer"
+               data-i18n="contatti_instagram">
+              @ristorante_sant_eustorgiomilano
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Orari -->
+      <div class="contatti-card">
+        <div class="contatti-card-icon" aria-hidden="true">🕐</div>
+        <div class="contatti-card-body">
+          <span class="contatti-card-label" data-i18n="contatti_hours_title">Orari</span>
+          <div class="contatti-card-value">
+            <span data-i18n="contatti_hours">Tutti i giorni 12:00 – 23:00</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /contatti-info -->
+
+    <!-- Colonna destra: mappa -->
+    <div class="contatti-map-wrap reveal delay-1">
+      <!--
+        La mappa usa OpenStreetMap tramite iframe — nessuna API key necessaria.
+        Il segnalino è posizionato sulle coordinate di Piazza Sant'Eustorgio, Milano.
+        Usa i controlli +/- sulla mappa per ingrandire/ridurre.
+      -->
+      <iframe
+        src="https://www.openstreetmap.org/export/embed.html?bbox=9.178%2C45.455%2C9.186%2C45.460&layer=mapnik&marker=45.4575%2C9.1820"
+        title="Mappa Ristorante Sant'Eustorgio"
+        loading="lazy"
+        allowfullscreen
+        aria-label="Mappa della posizione del ristorante">
+      </iframe>
+      <div class="contatti-map-footer">
+        <span data-i18n="contatti_map_title">Trovaci su Google Maps</span>
+        <a href="https://maps.app.goo.gl/G2XTDJQzzFDLv1jw5"
+           target="_blank" rel="noopener noreferrer"
+           class="contatti-map-link"
+           aria-label="Apri in Google Maps">
+          ↗ <span data-i18n="contatti_map_open">Apri in Google Maps</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer + Modal iniettati da navbar.js -->
+
 <script src="../js/navbar.js"></script>
 <script src="../js/i18n.js"></script>
 <script src="../js/main.js"></script>
+
 </body>
 </html>

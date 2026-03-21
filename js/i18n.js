@@ -233,7 +233,22 @@ const translations = {
 
     locale_gallery_title: "Scorci del locale",
 
-    // EVENTI PAGE
+    // CONTATTI PAGE
+    contatti_hero_title: "Contatti",
+    contatti_address_title: "Dove siamo",
+    contatti_address: "Piazza Sant'Eustorgio, 6, 20122 Milano MI",
+    contatti_phone_title: "Telefono",
+    contatti_phone: "02 5810 1396",
+    contatti_email_title: "Email",
+    contatti_email: "ristorante@santeustorgiomilano.it",
+    contatti_instagram_title: "Instagram",
+    contatti_instagram: "@ristorante_sant_eustorgiomilano",
+    contatti_map_title: "Trovaci su Google Maps",
+    contatti_map_open: "Apri in Google Maps",
+    contatti_hours_title: "Orari",
+    contatti_hours: "Tutti i giorni 12:00 – 23:00",
+
+    // LOCALE PAGE
     eventi_hero_title: "Eventi",
 
     eventi_private_title: "Eventi privati",
@@ -492,6 +507,21 @@ const translations = {
     locale_dehor_text: "The Sant'Eustorgio terrace, with its 50 spacious seats, is the beating heart of the venue during the warmer months. Directly overlooking the square, it offers a unique perspective on the city: the lively atmosphere of Milan blends with the calm of an outdoor lunch or dinner. Perfect for a summer aperitivo, a working lunch or a dinner with friends, the terrace maintains the simple elegance and attentive service that have always defined the restaurant.",
 
     locale_gallery_title: "Glimpses of the venue",
+
+    // CONTATTI PAGE
+    contatti_hero_title: "Contacts",
+    contatti_address_title: "Where we are",
+    contatti_address: "Piazza Sant'Eustorgio, 6, 20122 Milan MI",
+    contatti_phone_title: "Phone",
+    contatti_phone: "02 5810 1396",
+    contatti_email_title: "Email",
+    contatti_email: "ristorante@santeustorgiomilano.it",
+    contatti_instagram_title: "Instagram",
+    contatti_instagram: "@ristorante_sant_eustorgiomilano",
+    contatti_map_title: "Find us on Google Maps",
+    contatti_map_open: "Open in Google Maps",
+    contatti_hours_title: "Hours",
+    contatti_hours: "Every day 12:00 – 23:00",
 
     // EVENTI PAGE
     eventi_hero_title: "Events",
