@@ -1326,3 +1326,95 @@ footer {
     gap: 32px;
   }
 }
+
+/* ════════════════════════════════════════════════════════════
+   CANTINA PAGE
+   ════════════════════════════════════════════════════════════ */
+.cantina-section {
+  padding: 72px 24px;
+}
+.cantina-section:nth-child(odd)  { background: var(--color-bg); }
+.cantina-section:nth-child(even) { background: var(--color-surface); }
+
+.cantina-grid {
+  max-width:   1100px;
+  margin:      0 auto;
+  display:     grid;
+  grid-template-columns: 1fr 1fr;
+  gap:         56px;
+  align-items: center;
+}
+.cantina-grid.reverse { direction: rtl; }
+.cantina-grid.reverse > * { direction: ltr; }
+
+.cantina-img-wrap {
+  border-radius: var(--radius);
+  overflow:      hidden;
+  box-shadow:    var(--shadow-lg);
+  aspect-ratio:  4/3;
+}
+.cantina-img-wrap img {
+  width:      100%;
+  height:     100%;
+  object-fit: cover;
+  transition: transform .6s ease;
+}
+.cantina-img-wrap:hover img { transform: scale(1.05); }
+
+.cantina-title-row {
+  display:       flex;
+  align-items:   center;
+  gap:           16px;
+  margin-bottom: 20px;
+  flex-wrap:     wrap;
+}
+.cantina-title-row h2 {
+  font-family: var(--font-display);
+  font-size:   clamp(1.7rem, 2.6vw, 2.3rem);
+  line-height: 1.2;
+}
+.cantina-winery-logo {
+  height:        52px;
+  width:         auto;
+  object-fit:    contain;
+  flex-shrink:   0;
+  border-radius: 6px;
+}
+.cantina-subtitle {
+  font-family:  var(--font-display);
+  font-style:   italic;
+  font-size:    1.05rem;
+  color:        var(--color-gold);
+  margin-bottom:16px;
+}
+.cantina-text p {
+  color:        var(--color-text-light);
+  font-size:    .97rem;
+  line-height:  1.8;
+  margin-bottom:12px;
+}
+.cantina-text p:last-of-type { margin-bottom: 24px; }
+.cantina-winery-link {
+  color:            var(--color-primary-dark);
+  font-weight:      700;
+  text-decoration:  underline;
+  text-underline-offset: 3px;
+  transition:       color var(--transition);
+}
+.cantina-winery-link:hover { color: var(--color-primary); }
+
+@media (max-width: 860px) {
+  .cantina-grid,
+  .cantina-grid.reverse {
+    grid-template-columns: 1fr;
+    direction: ltr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cantina-grid .cantina-text         { order: 1; }
+  .cantina-grid .cantina-img-wrap     { order: 2; }
+  .cantina-grid.reverse .cantina-text     { order: 1; }
+  .cantina-grid.reverse .cantina-img-wrap { order: 2; }
+}

@@ -101,6 +101,24 @@ const translations = {
     cucina_dishes_subtitle: "Una selezione che parla di identità.",
     cucina_dishes_text: "Il risotto alla milanese, preparato con burro acido e jus di vitello, è un omaggio alla città; la tartare di Fassona racconta l'eleganza della carne piemontese; l'ossobuco con risotto allo zafferano porta in tavola il profumo delle domeniche di un tempo. Poi ci sono le lingue salmistrate con bagnetto rosso, i ravioli di grano saraceno al Bitto e funghi porcini, e il petto d'anatra al Nebbiolo: piatti che restano nel cuore.",
 
+    // CANTINA PAGE
+    cantina_hero_title: "Cantina",
+
+    cantina_production_title: "Vini di nostra produzione",
+    cantina_production_p1: "L'azienda vitivinicola Medolago Albani si trova sulle colline di Redona in Comune di Trescore Balneario in provincia di Bergamo.",
+    cantina_production_p2: "I 30 ettari vitati hanno esposizione ottimale in una conca rivolta a mezzogiorno. I terreni calcareo-argillosi e l'ottimo micro-clima favoriscono da secoli la coltivazione della vite.",
+    cantina_production_p3: "La nostra passione per i vini ci ha portato, inoltre, a conoscere anche le altre cantine e avere una selezione ricercata.",
+    cantina_production_btn: "Carta vini",
+
+    cantina_pairings_title: "Abbinamenti studiati per ogni piatto",
+    cantina_pairings_subtitle: "Cucina sincera, radici solide e un tocco contemporaneo.",
+    cantina_pairings_intro: "Ogni proposta in tavola trova nel vino la sua voce complementare.",
+    cantina_pairings_text: "Il risotto alla milanese incontra la morbidezza di un Franciacorta; la tartare di Fassona si esalta con un Dolcetto; il vitello tonnato dialoga con un Arneis elegante; mentre il petto d'anatra al Nebbiolo celebra il perfetto equilibrio tra terra e frutto. Gli abbinamenti nascono dal confronto costante tra sala e cucina, per offrire un'esperienza armoniosa e completa.",
+
+    cantina_culture_title: "Il vino come un'esperienza culturale",
+    cantina_culture_subtitle: "Non solo degustazione, ma scoperta.",
+    cantina_culture_text: "L'approccio del Sant'Eustorgio Milano è educativo e appassionato. Lo staff, formato direttamente dal titolare, conosce i vitigni, le annate e le tecniche di vinificazione, trasformando la scelta del vino in un momento di dialogo e condivisione. Ogni servizio diventa occasione per far conoscere le eccellenze enologiche italiane e valorizzare il legame tra cucina e territorio.",
+
     // MENU PAGE
     menu_hero_title: "Menù",
     menu_water: "Acqua",
@@ -294,6 +312,24 @@ const translations = {
     cucina_dishes_title: "Risottos, tartares and signature dishes",
     cucina_dishes_subtitle: "A selection that speaks of identity.",
     cucina_dishes_text: "The risotto alla milanese, made with sour butter and veal jus, is a tribute to the city; the Fassona tartare tells the elegance of Piedmontese beef; the ossobuco with saffron risotto brings the scent of Sunday lunches past. Then there are the salted tongues with red sauce, buckwheat ravioli with Bitto and porcini mushrooms, and duck breast with Nebbiolo: dishes that stay in the heart.",
+
+    // CANTINA PAGE
+    cantina_hero_title: "Wine Cellar",
+
+    cantina_production_title: "Our own wines",
+    cantina_production_p1: "The Medolago Albani winery is located on the hills of Redona in the municipality of Trescore Balneario, in the province of Bergamo.",
+    cantina_production_p2: "The 30 hectares of vineyards have optimal sun exposure in a south-facing bowl. The calcareous-clay soils and excellent microclimate have favoured viticulture for centuries.",
+    cantina_production_p3: "Our passion for wines has also led us to discover other wineries and build a refined selection.",
+    cantina_production_btn: "Wine list",
+
+    cantina_pairings_title: "Pairings crafted for every dish",
+    cantina_pairings_subtitle: "Honest cuisine, solid roots and a contemporary touch.",
+    cantina_pairings_intro: "Every dish on the table finds its complementary voice in wine.",
+    cantina_pairings_text: "The risotto alla milanese meets the softness of a Franciacorta; the Fassona tartare is enhanced by a Dolcetto; vitello tonnato dialogues with an elegant Arneis; while duck breast with Nebbiolo celebrates the perfect balance between earth and fruit. Pairings are born from constant exchange between front of house and kitchen, to offer a harmonious and complete experience.",
+
+    cantina_culture_title: "Wine as a cultural experience",
+    cantina_culture_subtitle: "Not just tasting, but discovery.",
+    cantina_culture_text: "The Sant'Eustorgio Milano approach is educational and passionate. Staff trained directly by the owner know the grape varieties, vintages and winemaking techniques, turning the choice of wine into a moment of dialogue and sharing. Every service becomes an opportunity to introduce the finest Italian wines and celebrate the bond between cuisine and territory.",
 
     // MENU PAGE
     menu_hero_title: "Menu",

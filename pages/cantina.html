@@ -3,20 +3,169 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cantina — Ristorante Sant'Eustorgio</title>
+  <meta name="description" content="La cantina del Ristorante Sant'Eustorgio: vini di produzione propria e abbinamenti studiati per ogni piatto." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
-<main>
-  <div class="page-hero"><h1><span data-i18n="page_cantina_title"></span></h1></div>
-  <div class="page-content reveal">
-    <p data-i18n="coming_soon" style="text-align:center;font-style:italic;color:var(--color-text-light);font-size:1.1rem;padding:48px 0">Pagina in costruzione. Torna presto!</p>
+
+<!-- Navbar iniettata da navbar.js -->
+
+<!-- ══════════════════════════════════════════════════════════
+     BANNER HERO
+     Inserisci: ../images/cantina-hero.jpg (min 1600x700px)
+     ══════════════════════════════════════════════════════════ -->
+<header class="page-banner" role="banner">
+  <div class="page-banner-bg"
+       style="background-image: url('../images/cantina-hero.jpg'),
+              url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1600&q=80');">
   </div>
-</main>
+  <div class="page-banner-overlay"></div>
+  <div class="page-banner-content">
+    <h1 data-i18n="cantina_hero_title">Cantina</h1>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════════════════════
+     SEZIONE 1 — Vini di nostra produzione: testo sx | foto dx
+     Inserisci: ../images/cantina-produzione.jpg (min 800x600px)
+     Inserisci: ../images/cantina-logo-medolago.png (logo cantina)
+     ══════════════════════════════════════════════════════════ -->
+<section class="cantina-section" aria-labelledby="production-title">
+  <div class="cantina-grid reveal">
+
+    <div class="cantina-text">
+      <div class="cantina-title-row">
+        <h2 id="production-title" data-i18n="cantina_production_title">Vini di nostra produzione</h2>
+        <!-- Logo cantina Medolago Albani
+             Inserisci: ../images/cantina-logo-medolago.png
+             Se non disponibile non appare (gestito con onerror) -->
+        <img
+          class="cantina-winery-logo"
+          src="../images/cantina-logo-medolago.png"
+          alt="Logo cantina Medolago Albani"
+          onerror="this.style.display='none';"
+        />
+      </div>
+
+
+      <!-- Versione estesa con link inline (non i18n per preservare il link) -->
+      <p id="cantina-p1-full">
+  L'azienda vitivinicola <a href="https://www.medolagoalbani.it"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="cantina-winery-link">Medolago Albani</a>
+  si trova sulle colline di Redona in Comune di Trescore Balneario in provincia di Bergamo.
+      </p>
+      <p id="cantina-p1-full-en" style="display:none;">
+        The <a href="https://www.medolagoalbani.it"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="cantina-winery-link">Medolago Albani winery</a>
+        is located on the hills of Redona in the municipality of Trescore Balneario, in the province of Bergamo.
+      </p>
+
+      <p data-i18n="cantina_production_p2">I 30 ettari vitati hanno esposizione ottimale in una conca rivolta a mezzogiorno. I terreni calcareo-argillosi e l'ottimo micro-clima favoriscono da secoli la coltivazione della vite.</p>
+      <p data-i18n="cantina_production_p3">La nostra passione per i vini ci ha portato, inoltre, a conoscere anche le altre cantine e avere una selezione ricercata.</p>
+
+      <a href="../CARTA_VINI.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-i18n="cantina_production_btn">Carta vini</a>
+    </div>
+
+    <div class="cantina-img-wrap">
+      <img
+        src="../images/cantina-produzione.jpg"
+        alt="Vigneti Medolago Albani"
+        loading="lazy"
+        onerror="this.src='https://images.unsplash.com/photo-1474722883778-792e7990302f?w=800&q=80'; this.onerror=null;"
+      />
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     SEZIONE 2 — Abbinamenti: foto sx | testo dx
+     Inserisci: ../images/cantina-abbinamenti.jpg (min 800x600px)
+     ══════════════════════════════════════════════════════════ -->
+<section class="cantina-section" aria-labelledby="pairings-title">
+  <div class="cantina-grid reverse reveal">
+
+    <div class="cantina-img-wrap">
+      <img
+        src="../images/cantina-abbinamenti.jpg"
+        alt="Abbinamenti cibo e vino"
+        loading="lazy"
+        onerror="this.src='https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=800&q=80'; this.onerror=null;"
+      />
+    </div>
+
+    <div class="cantina-text">
+      <span class="feature-label">●</span>
+      <h2 id="pairings-title" data-i18n="cantina_pairings_title">Abbinamenti studiati per ogni piatto</h2>
+      <p class="cantina-subtitle" data-i18n="cantina_pairings_subtitle">Cucina sincera, radici solide e un tocco contemporaneo.</p>
+      <p><em data-i18n="cantina_pairings_intro">Ogni proposta in tavola trova nel vino la sua voce complementare.</em></p>
+      <p data-i18n="cantina_pairings_text">Il risotto alla milanese incontra la morbidezza di un Franciacorta; la tartare di Fassona si esalta con un Dolcetto; il vitello tonnato dialoga con un Arneis elegante; mentre il petto d'anatra al Nebbiolo celebra il perfetto equilibrio tra terra e frutto. Gli abbinamenti nascono dal confronto costante tra sala e cucina, per offrire un'esperienza armoniosa e completa.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     SEZIONE 3 — Esperienza culturale: testo sx | foto dx
+     Inserisci: ../images/cantina-cultura.jpg (min 800x600px)
+     ══════════════════════════════════════════════════════════ -->
+<section class="cantina-section" aria-labelledby="culture-title">
+  <div class="cantina-grid reveal">
+
+    <div class="cantina-text">
+      <span class="feature-label">●</span>
+      <h2 id="culture-title" data-i18n="cantina_culture_title">Il vino come un'esperienza culturale</h2>
+      <p class="cantina-subtitle" data-i18n="cantina_culture_subtitle">Non solo degustazione, ma scoperta.</p>
+      <p data-i18n="cantina_culture_text">L'approccio del Sant'Eustorgio Milano è educativo e appassionato. Lo staff, formato direttamente dal titolare, conosce i vitigni, le annate e le tecniche di vinificazione, trasformando la scelta del vino in un momento di dialogo e condivisione. Ogni servizio diventa occasione per far conoscere le eccellenze enologiche italiane e valorizzare il legame tra cucina e territorio.</p>
+    </div>
+
+    <div class="cantina-img-wrap">
+      <img
+        src="../images/cantina-cultura.jpg"
+        alt="Lo staff del Ristorante Sant'Eustorgio con i vini"
+        loading="lazy"
+        onerror="this.src='https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=800&q=80'; this.onerror=null;"
+      />
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer + Modal iniettati da navbar.js -->
+
 <script src="../js/navbar.js"></script>
 <script src="../js/i18n.js"></script>
 <script src="../js/main.js"></script>
+
+<script>
+  // Gestione del paragrafo con link (non traducibile via data-i18n standard)
+  // Mostra la versione corretta in base alla lingua selezionata
+  function updateCantinaLink() {
+    const lang = localStorage.getItem("lang") || "it";
+    const itEl = document.getElementById("cantina-p1-full");
+    const enEl = document.getElementById("cantina-p1-full-en");
+    // Nascondi il paragrafo generico data-i18n per il p1 (già rimosso dall'HTML)
+    if (itEl) itEl.style.display = lang === "it" ? "block" : "none";
+    if (enEl) enEl.style.display = lang === "en" ? "block" : "none";
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    updateCantinaLink();
+    // Aggiorna quando cambia la lingua
+    document.querySelectorAll(".lang-btn").forEach(btn => {
+      btn.addEventListener("click", () => setTimeout(updateCantinaLink, 50));
+    });
+  });
+</script>
+
 </body>
 </html>
