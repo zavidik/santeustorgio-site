@@ -68,7 +68,7 @@
     &nbsp;|&nbsp; P.IVA 13872400968
     &nbsp;|&nbsp; <span data-i18n="footer_rights_reserved">Tutti i diritti riservati</span>
     &nbsp;|&nbsp; <a href="pages/privacy.html" target="_blank" style="color:inherit;text-decoration:underline;" data-i18n="footer_privacy">Informativa Privacy</a>
-    &nbsp;|&nbsp; <a href="pages/cookie-policy.html" target="_blank" style="color:inherit;text-decoration:underline;" data-i18n="footer_cookie">Cookie Policy</a>
+    &nbsp;|&nbsp; <a href="${base}pages/cookie-policy.html" target="_blank" ...>Cookie Policy</a>
     &nbsp;|&nbsp; Developed by <a href="pages/diamondweb.html" target="_blank" style="color:inherit;text-decoration:underline;">Diamondweb S.p.A.</a>
   </p>
 </div>
