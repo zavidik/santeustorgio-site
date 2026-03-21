@@ -1418,3 +1418,393 @@ footer {
   .cantina-grid.reverse .cantina-text     { order: 1; }
   .cantina-grid.reverse .cantina-img-wrap { order: 2; }
 }
+
+/* ════════════════════════════════════════════════════════════
+   EVENTI PAGE
+   ════════════════════════════════════════════════════════════ */
+
+/* Feature sections — riusa .cantina-grid + .cantina-img-wrap */
+.eventi-section {
+  padding: 72px 24px;
+}
+.eventi-section:nth-child(odd)  { background: var(--color-bg); }
+.eventi-section:nth-child(even) { background: var(--color-surface); }
+
+/* Contact form split */
+.eventi-form-section {
+  padding:    72px 24px;
+  background: var(--color-primary);
+}
+.eventi-form-grid {
+  max-width:   1100px;
+  margin:      0 auto;
+  display:     grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap:         64px;
+  align-items: start;
+}
+
+/* Left: intro text */
+.eventi-form-intro { color: var(--color-white); padding-top: 8px; }
+.eventi-form-intro h2 {
+  font-family:  var(--font-display);
+  font-size:    clamp(1.7rem, 2.6vw, 2.3rem);
+  margin-bottom:16px;
+  line-height:  1.2;
+}
+.eventi-form-intro p {
+  font-size:   1rem;
+  opacity:     .9;
+  line-height: 1.7;
+}
+
+/* Right: form card */
+.eventi-form-card {
+  background:    var(--color-surface);
+  border-radius: var(--radius);
+  padding:       36px 40px;
+  box-shadow:    var(--shadow-lg);
+}
+.eventi-form-card h3 {
+  font-family:  var(--font-display);
+  font-size:    1.5rem;
+  margin-bottom:24px;
+}
+
+.eventi-form .form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.eventi-form .form-group       { display: flex; flex-direction: column; gap: 6px; }
+.eventi-form .form-group.full  { grid-column: 1 / -1; }
+.eventi-form .form-group label {
+  font-size:    .78rem;
+  font-weight:  700;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:        var(--color-text-light);
+}
+.eventi-form .form-group input,
+.eventi-form .form-group select,
+.eventi-form .form-group textarea {
+  padding:      10px 14px;
+  border:       1.5px solid #e0e0e0;
+  border-radius:8px;
+  font-family:  var(--font-body);
+  font-size:    .95rem;
+  background:   var(--color-bg);
+  color:        var(--color-text);
+  transition:   border-color var(--transition);
+}
+.eventi-form .form-group input:focus,
+.eventi-form .form-group select:focus,
+.eventi-form .form-group textarea:focus {
+  outline:      none;
+  border-color: var(--color-primary);
+}
+.eventi-form .form-group textarea { resize: vertical; min-height: 110px; }
+
+/* Privacy + captcha */
+.eventi-form-checks { margin-top: 16px; display: flex; flex-direction: column; gap: 12px; }
+.eventi-check-row {
+  display:    flex;
+  align-items:flex-start;
+  gap:        10px;
+  font-size:  .85rem;
+  color:      var(--color-text-light);
+  line-height:1.5;
+}
+.eventi-check-row input[type="checkbox"] {
+  width:       16px;
+  height:      16px;
+  flex-shrink: 0;
+  margin-top:  2px;
+  accent-color:var(--color-primary);
+  cursor:      pointer;
+}
+.eventi-check-row a {
+  color:            var(--color-primary-dark);
+  font-weight:      700;
+  text-decoration:  underline;
+  text-underline-offset: 2px;
+}
+.eventi-check-row a:hover { color: var(--color-primary); }
+
+/* Captcha custom */
+.captcha-box {
+  display:       flex;
+  align-items:   center;
+  gap:           12px;
+  padding:       12px 16px;
+  border:        1.5px solid #e0e0e0;
+  border-radius: 8px;
+  background:    var(--color-bg);
+  user-select:   none;
+  cursor:        pointer;
+  transition:    border-color var(--transition);
+}
+.captcha-box.checked { border-color: var(--color-primary); }
+.captcha-check {
+  width:         20px;
+  height:        20px;
+  border:        2px solid #ccc;
+  border-radius: 3px;
+  display:       flex;
+  align-items:   center;
+  justify-content:center;
+  flex-shrink:   0;
+  transition:    var(--transition);
+  background:    white;
+}
+.captcha-box.checked .captcha-check {
+  background:   var(--color-primary);
+  border-color: var(--color-primary);
+  color:        white;
+  font-size:    .75rem;
+}
+.captcha-label { font-size: .85rem; color: var(--color-text-light); }
+.captcha-logo  { margin-left: auto; font-size: .65rem; color: #aaa; text-align: right; line-height: 1.3; }
+
+/* Submit row */
+.eventi-form-submit-row {
+  display:         flex;
+  justify-content: flex-end;
+  margin-top:      20px;
+}
+
+/* Error / success */
+.form-error {
+  display:      none;
+  color:        #c0392b;
+  font-size:    .82rem;
+  margin-top:   10px;
+  padding:      10px 14px;
+  background:   #fdecea;
+  border-radius:6px;
+  border-left:  3px solid #c0392b;
+}
+.form-error.visible { display: block; }
+
+.eventi-success {
+  display:    none;
+  text-align: center;
+  padding:    32px 16px;
+}
+.eventi-success .checkmark { font-size: 3rem; margin-bottom: 12px; }
+.eventi-success p {
+  font-family: var(--font-display);
+  font-size:   1.2rem;
+  color:       var(--color-primary-dark);
+}
+
+/* ── Responsive eventi ──────────────────────────────────────── */
+@media (max-width: 860px) {
+  .eventi-form-grid { grid-template-columns: 1fr; gap: 32px; }
+  .eventi-form-card { padding: 28px 24px; }
+  .eventi-form .form-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .eventi-section .cantina-grid,
+  .eventi-section .cantina-grid.reverse {
+    grid-template-columns: 1fr;
+    direction: ltr;
+    gap: 28px;
+  }
+  .eventi-section .cantina-grid .cantina-text     { order: 1; }
+  .eventi-section .cantina-grid .cantina-img-wrap { order: 2; }
+  .eventi-section .cantina-grid.reverse .cantina-text     { order: 1; }
+  .eventi-section .cantina-grid.reverse .cantina-img-wrap { order: 2; }
+}
+
+/* ════════════════════════════════════════════════════════════
+   EVENTI PAGE
+   ════════════════════════════════════════════════════════════ */
+
+/* Feature sections — riusa .cantina-grid */
+.eventi-section {
+  padding: 72px 24px;
+}
+.eventi-section:nth-child(odd)  { background: var(--color-bg); }
+.eventi-section:nth-child(even) { background: var(--color-surface); }
+
+/* Contact form section */
+.eventi-form-section {
+  padding:    72px 24px 88px;
+  background: var(--color-primary);
+}
+.eventi-form-grid {
+  max-width:   1100px;
+  margin:      0 auto;
+  display:     grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap:         64px;
+  align-items: start;
+}
+
+/* Left text */
+.eventi-form-left h2 {
+  font-family:  var(--font-display);
+  font-size:    clamp(1.8rem, 3vw, 2.6rem);
+  color:        var(--color-white);
+  margin-bottom:16px;
+}
+.eventi-form-left p {
+  font-size:   1rem;
+  color:       rgba(255,255,255,.85);
+  line-height: 1.7;
+}
+
+/* Form card */
+.eventi-form-card {
+  background:    var(--color-white);
+  border-radius: var(--radius);
+  padding:       36px 40px;
+  box-shadow:    var(--shadow-lg);
+}
+.eventi-form-card h3 {
+  font-family:  var(--font-display);
+  font-size:    1.5rem;
+  margin-bottom:24px;
+  color:        var(--color-text);
+}
+
+.eventi-form-grid-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.eventi-form-group {
+  display:       flex;
+  flex-direction:column;
+  gap:           6px;
+}
+.eventi-form-group.full { grid-column: 1 / -1; }
+.eventi-form-group label {
+  font-size:      .78rem;
+  font-weight:    700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color:          var(--color-text-light);
+}
+.eventi-form-group input,
+.eventi-form-group select,
+.eventi-form-group textarea {
+  padding:      10px 14px;
+  border:       1.5px solid #e0e0e0;
+  border-radius:8px;
+  font-family:  var(--font-body);
+  font-size:    .95rem;
+  background:   var(--color-bg);
+  color:        var(--color-text);
+  transition:   border-color var(--transition);
+}
+.eventi-form-group input:focus,
+.eventi-form-group select:focus,
+.eventi-form-group textarea:focus {
+  outline:      none;
+  border-color: var(--color-primary);
+}
+.eventi-form-group textarea { resize: vertical; min-height: 110px; }
+
+/* Privacy & captcha row */
+.eventi-check-row {
+  display:     flex;
+  align-items: flex-start;
+  gap:         10px;
+  margin-top:  16px;
+}
+.eventi-check-row input[type="checkbox"] {
+  margin-top:  3px;
+  width:       16px;
+  height:      16px;
+  flex-shrink: 0;
+  accent-color:var(--color-primary);
+  cursor:      pointer;
+}
+.eventi-check-row label {
+  font-size:   .85rem;
+  color:       var(--color-text-light);
+  line-height: 1.5;
+  cursor:      pointer;
+}
+.eventi-privacy-link {
+  color:            var(--color-primary-dark);
+  font-weight:      700;
+  text-decoration:  underline;
+  text-underline-offset: 2px;
+}
+.eventi-privacy-link:hover { color: var(--color-primary); }
+
+/* Captcha */
+.eventi-captcha {
+  display:      flex;
+  align-items:  center;
+  gap:          12px;
+  margin-top:   16px;
+  padding:      14px 18px;
+  border:       1.5px solid #e0e0e0;
+  border-radius:8px;
+  background:   var(--color-bg);
+}
+.eventi-captcha input[type="checkbox"] {
+  width:  20px;
+  height: 20px;
+  flex-shrink: 0;
+  accent-color:var(--color-primary);
+  cursor: pointer;
+}
+.eventi-captcha label {
+  font-size:   .9rem;
+  color:       var(--color-text);
+  cursor:      pointer;
+  flex:        1;
+}
+.eventi-captcha-logo {
+  font-size:    .65rem;
+  color:        #aaa;
+  text-align:   right;
+  line-height:  1.3;
+}
+
+/* Submit row */
+.eventi-submit-row {
+  display:         flex;
+  justify-content: flex-end;
+  margin-top:      20px;
+}
+
+/* Error & success messages */
+.eventi-error {
+  display:      none;
+  color:        #c0392b;
+  font-size:    .83rem;
+  margin-top:   12px;
+  padding:      10px 14px;
+  background:   #fdecea;
+  border-radius:6px;
+  border-left:  3px solid #c0392b;
+}
+.eventi-error.show { display: block; }
+
+.eventi-success {
+  display:     none;
+  text-align:  center;
+  padding:     32px 0;
+}
+.eventi-success .checkmark { font-size: 3rem; margin-bottom: 16px; }
+.eventi-success p {
+  font-family: var(--font-display);
+  font-size:   1.2rem;
+  color:       var(--color-primary-dark);
+}
+
+/* ── Responsive eventi ──────────────────────────────────────── */
+@media (max-width: 860px) {
+  .eventi-form-grid { grid-template-columns: 1fr; gap: 36px; }
+  .eventi-form-card { padding: 28px 24px; }
+}
+@media (max-width: 600px) {
+  .eventi-form-grid-fields { grid-template-columns: 1fr; }
+}

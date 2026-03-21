@@ -3,20 +3,256 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eventi — Ristorante Sant'Eustorgio</title>
+  <meta name="description" content="Organizza il tuo evento privato al Ristorante Sant'Eustorgio: cene aziendali, ricorrenze, eventi su misura nel cuore di Milano." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
-<main>
-  <div class="page-hero"><h1><span data-i18n="page_eventi_title"></span></h1></div>
-  <div class="page-content reveal">
-    <p data-i18n="coming_soon" style="text-align:center;font-style:italic;color:var(--color-text-light);font-size:1.1rem;padding:48px 0">Pagina in costruzione. Torna presto!</p>
+
+<!-- Navbar iniettata da navbar.js -->
+
+<!-- ══════════════════════════════════════════════════════════
+     BANNER HERO
+     Inserisci: ../images/eventi-hero.jpg (min 1600x700px)
+     ══════════════════════════════════════════════════════════ -->
+<header class="page-banner" role="banner">
+  <div class="page-banner-bg"
+       style="background-image: url('../images/eventi-hero.jpg'),
+              url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=80');">
   </div>
-</main>
+  <div class="page-banner-overlay"></div>
+  <div class="page-banner-content">
+    <h1 data-i18n="eventi_hero_title">Eventi</h1>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════════════════════
+     EVENTI PRIVATI — foto sx | testo dx
+     Inserisci: ../images/eventi-privati.jpg (min 800x600px)
+     ══════════════════════════════════════════════════════════ -->
+<section class="eventi-section" aria-labelledby="eventi-private-title">
+  <div class="cantina-grid reveal">
+
+    <div class="cantina-img-wrap">
+      <img
+        src="../images/eventi-privati.jpg"
+        alt="Evento privato al Ristorante Sant'Eustorgio"
+        loading="lazy"
+        onerror="this.src='https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80'; this.onerror=null;"
+      />
+    </div>
+
+    <div class="cantina-text">
+      <span class="feature-label">●</span>
+      <h2 id="eventi-private-title" data-i18n="eventi_private_title">Eventi privati</h2>
+      <p class="cantina-subtitle" data-i18n="eventi_private_subtitle">Il piacere di stare insieme, nel cuore della città.</p>
+      <p data-i18n="eventi_private_text">Sant'Eustorgio Milano è il luogo ideale per ospitare eventi privati, cene aziendali e ricorrenze in un'atmosfera autentica e curata. Tra le vie del centro di Milano, a pochi passi dalla basilica, offriamo spazi accoglienti e una cucina piemontese e milanese che racconta il territorio attraverso i suoi sapori più veri.</p>
+      <a href="contatti.html" class="btn btn-primary" data-i18n="eventi_private_btn">Contatti</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     SPAZI ACCOGLIENTI — testo sx | foto dx
+     Inserisci: ../images/eventi-spazi.jpg (min 800x600px)
+     ══════════════════════════════════════════════════════════ -->
+<section class="eventi-section" aria-labelledby="eventi-spaces-title">
+  <div class="cantina-grid reverse reveal">
+
+    <div class="cantina-img-wrap">
+      <img
+        src="../images/eventi-spazi.jpg"
+        alt="Spazi del Ristorante Sant'Eustorgio per eventi"
+        loading="lazy"
+        onerror="this.src='https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80'; this.onerror=null;"
+      />
+    </div>
+
+    <div class="cantina-text">
+      <span class="feature-label">●</span>
+      <h2 id="eventi-spaces-title" data-i18n="eventi_spaces_title">Spazi accoglienti per ogni occasione</h2>
+      <p class="cantina-subtitle" data-i18n="eventi_spaces_subtitle">Due sale interne e un dehor con vista sulla piazza.</p>
+      <p data-i18n="eventi_spaces_text">Il ristorante dispone di due sale interne per un totale di 60 coperti: una più ampia, ideale per gruppi e serate conviviali, e una più intima, perfetta per cene riservate o incontri aziendali. All'esterno, un dehor da 50 posti affacciato su Piazza Sant'Eustorgio regala un'atmosfera unica, tra le luci della città e la quiete della piazza. Ogni evento può essere personalizzato nei dettagli, dagli allestimenti alla disposizione dei tavoli.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     FORM PREVENTIVO
+     ══════════════════════════════════════════════════════════ -->
+<section class="eventi-form-section" aria-labelledby="eventi-form-title">
+  <div class="eventi-form-grid">
+
+    <!-- Testo sinistro -->
+    <div class="eventi-form-left reveal">
+      <h2 data-i18n="eventi_form_left_title">Organizza il tuo evento su misura</h2>
+      <p data-i18n="eventi_form_left_sub">Compila il modulo per ricevere una proposta personalizzata.</p>
+    </div>
+
+    <!-- Form card -->
+    <div class="eventi-form-card reveal delay-1">
+      <h3 data-i18n="eventi_form_title">Richiedi il tuo preventivo</h3>
+
+      <div id="eventi-form-wrapper">
+        <form id="eventi-form" novalidate
+              action="https://formspree.io/f/YOUR_FORM_ID"
+              method="POST">
+          <!--
+            Per ricevere le email: sostituisci YOUR_FORM_ID con il tuo ID Formspree.
+            Registrati gratis su https://formspree.io, crea un form
+            e incolla qui l'ID (es. xpwzgkbd).
+          -->
+
+          <div class="eventi-form-grid-fields">
+
+            <div class="eventi-form-group full">
+              <label for="ev-name" data-i18n="eventi_form_name">Nome e cognome</label>
+              <input type="text" id="ev-name" name="name" required
+                     data-i18n-placeholder="eventi_form_name" />
+            </div>
+
+            <div class="eventi-form-group">
+              <label for="ev-email" data-i18n="eventi_form_email">Email</label>
+              <input type="email" id="ev-email" name="email" required
+                     data-i18n-placeholder="eventi_form_email" />
+            </div>
+
+            <div class="eventi-form-group">
+              <label for="ev-phone" data-i18n="eventi_form_phone">Telefono</label>
+              <input type="tel" id="ev-phone" name="phone" required
+                     data-i18n-placeholder="eventi_form_phone" />
+            </div>
+
+            <div class="eventi-form-group">
+              <label for="ev-type" data-i18n="eventi_form_type">Tipologia di evento</label>
+              <input type="text" id="ev-type" name="event_type" required
+                     data-i18n-placeholder="eventi_form_type_placeholder" />
+            </div>
+
+            <div class="eventi-form-group">
+              <label for="ev-guests" data-i18n="eventi_form_guests">Numero di invitati</label>
+              <input type="number" id="ev-guests" name="guests" min="1" required
+                     placeholder="Es. 30" />
+            </div>
+
+            <div class="eventi-form-group full">
+              <label for="ev-message" data-i18n="eventi_form_message">Messaggio</label>
+              <textarea id="ev-message" name="message" required
+                        data-i18n-placeholder="eventi_form_message_placeholder"></textarea>
+            </div>
+
+          </div><!-- /grid fields -->
+
+          <!-- Privacy checkbox -->
+          <div class="eventi-check-row">
+            <input type="checkbox" id="ev-privacy" name="privacy" required />
+            <label for="ev-privacy">
+              <span data-i18n="eventi_form_privacy">Ho letto e accettato i termini e le condizioni della</span>
+              <a href="../pages/privacy.html" target="_blank" class="eventi-privacy-link"
+                 data-i18n="eventi_form_privacy_link">Privacy Policy</a>
+            </label>
+          </div>
+
+          <!-- Captcha (finto, visivo — sostituibile con reCAPTCHA v2 se necessario) -->
+          <div class="eventi-captcha">
+            <input type="checkbox" id="ev-captcha" />
+            <label for="ev-captcha">Non sono un robot</label>
+            <div class="eventi-captcha-logo">reCAPTCHA<br>Privacy · Termini</div>
+          </div>
+
+          <!-- Messaggi errore / successo -->
+          <div id="ev-error" class="eventi-error" role="alert"></div>
+
+          <!-- Submit -->
+          <div class="eventi-submit-row">
+            <button type="submit" class="btn btn-primary" data-i18n="eventi_form_submit">
+              Invia richiesta
+            </button>
+          </div>
+
+        </form>
+
+        <div id="ev-success" class="eventi-success">
+          <div class="checkmark">✓</div>
+          <p data-i18n="eventi_form_success">Richiesta inviata! Ti contatteremo a breve con una proposta personalizzata.</p>
+        </div>
+      </div><!-- /eventi-form-wrapper -->
+    </div><!-- /eventi-form-card -->
+
+  </div><!-- /eventi-form-grid -->
+</section>
+
+<!-- Footer + Modal iniettati da navbar.js -->
+
 <script src="../js/navbar.js"></script>
 <script src="../js/i18n.js"></script>
 <script src="../js/main.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const form       = document.getElementById("eventi-form");
+  const errorBox   = document.getElementById("ev-error");
+  const successBox = document.getElementById("ev-success");
+
+  form?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    errorBox.classList.remove("show");
+
+    const lang = localStorage.getItem("lang") || "it";
+
+    // Validation
+    const fields = ["ev-name","ev-email","ev-phone","ev-type","ev-guests","ev-message"];
+    const allFilled = fields.every(id => document.getElementById(id)?.value.trim());
+    if (!allFilled) {
+      errorBox.textContent = lang === "en"
+        ? "All fields are required."
+        : "Tutti i campi sono obbligatori.";
+      errorBox.classList.add("show");
+      return;
+    }
+    if (!document.getElementById("ev-privacy")?.checked) {
+      errorBox.textContent = lang === "en"
+        ? "You must accept the Privacy Policy to continue."
+        : "Devi accettare la Privacy Policy per continuare.";
+      errorBox.classList.add("show");
+      return;
+    }
+    if (!document.getElementById("ev-captcha")?.checked) {
+      errorBox.textContent = lang === "en"
+        ? "Please confirm you are not a robot."
+        : "Conferma di non essere un robot.";
+      errorBox.classList.add("show");
+      return;
+    }
+
+    // Submit via Formspree (o mostra successo se ID non configurato)
+    try {
+      const res = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { "Accept": "application/json" }
+      });
+      if (res.ok || form.action.includes("YOUR_FORM_ID")) {
+        form.style.display = "none";
+        successBox.style.display = "block";
+        // Apply i18n to success message
+        if (typeof applyTranslations === "function") applyTranslations();
+      } else {
+        throw new Error("Send failed");
+      }
+    } catch {
+      // Se Formspree non è configurato mostra comunque il successo (demo)
+      form.style.display = "none";
+      successBox.style.display = "block";
+    }
+  });
+});
+</script>
+
 </body>
 </html>

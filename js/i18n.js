@@ -215,6 +215,37 @@ const translations = {
     page_venue_title: "Il locale",
     page_contacts_title: "Contatti",
     coming_soon: "Pagina in costruzione. Torna presto!",
+
+    // EVENTI PAGE
+    eventi_hero_title: "Eventi",
+
+    eventi_private_title: "Eventi privati",
+    eventi_private_subtitle: "Il piacere di stare insieme, nel cuore della città.",
+    eventi_private_text: "Sant'Eustorgio Milano è il luogo ideale per ospitare eventi privati, cene aziendali e ricorrenze in un'atmosfera autentica e curata. Tra le vie del centro di Milano, a pochi passi dalla basilica, offriamo spazi accoglienti e una cucina piemontese e milanese che racconta il territorio attraverso i suoi sapori più veri.",
+    eventi_private_btn: "Contatti",
+
+    eventi_spaces_title: "Spazi accoglienti per ogni occasione",
+    eventi_spaces_subtitle: "Due sale interne e un dehor con vista sulla piazza.",
+    eventi_spaces_text: "Il ristorante dispone di due sale interne per un totale di 60 coperti: una più ampia, ideale per gruppi e serate conviviali, e una più intima, perfetta per cene riservate o incontri aziendali. All'esterno, un dehor da 50 posti affacciato su Piazza Sant'Eustorgio regala un'atmosfera unica, tra le luci della città e la quiete della piazza. Ogni evento può essere personalizzato nei dettagli, dagli allestimenti alla disposizione dei tavoli.",
+
+    eventi_form_left_title: "Organizza il tuo evento su misura",
+    eventi_form_left_sub: "Compila il modulo per ricevere una proposta personalizzata.",
+    eventi_form_title: "Richiedi il tuo preventivo",
+    eventi_form_name: "Nome e cognome",
+    eventi_form_email: "Email",
+    eventi_form_phone: "Telefono",
+    eventi_form_type: "Tipologia di evento",
+    eventi_form_type_placeholder: "Es. cena aziendale, compleanno, matrimonio…",
+    eventi_form_guests: "Numero di invitati",
+    eventi_form_message: "Messaggio",
+    eventi_form_message_placeholder: "Raccontaci la tua idea: data, orario, richieste particolari…",
+    eventi_form_privacy: "Ho letto e accettato i termini e le condizioni della",
+    eventi_form_privacy_link: "Privacy Policy",
+    eventi_form_submit: "Invia richiesta",
+    eventi_form_success: "Richiesta inviata! Ti contatteremo a breve con una proposta personalizzata.",
+    eventi_form_error_required: "Tutti i campi sono obbligatori.",
+    eventi_form_error_captcha: "Conferma di non essere un robot.",
+    eventi_form_error_privacy: "Devi accettare la Privacy Policy per continuare.",
   },
 
   en: {
@@ -427,6 +458,37 @@ const translations = {
     page_venue_title: "The venue",
     page_contacts_title: "Contacts",
     coming_soon: "Page under construction. Come back soon!",
+
+    // EVENTI PAGE
+    eventi_hero_title: "Events",
+
+    eventi_private_title: "Private events",
+    eventi_private_subtitle: "The pleasure of being together, in the heart of the city.",
+    eventi_private_text: "Sant'Eustorgio Milano is the ideal venue for private events, corporate dinners and celebrations in an authentic and refined atmosphere. In the streets of central Milan, steps from the basilica, we offer welcoming spaces and a Piedmontese and Milanese cuisine that tells the story of the territory through its truest flavours.",
+    eventi_private_btn: "Contacts",
+
+    eventi_spaces_title: "Welcoming spaces for every occasion",
+    eventi_spaces_subtitle: "Two indoor rooms and an outdoor terrace overlooking the square.",
+    eventi_spaces_text: "The restaurant has two indoor rooms with a total of 60 covers: a larger one, ideal for groups and convivial evenings, and a more intimate one, perfect for private dinners or business meetings. Outside, a 50-seat terrace overlooking Piazza Sant'Eustorgio offers a unique atmosphere, between the city lights and the quiet of the square. Every event can be personalised in every detail, from the décor to the table layout.",
+
+    eventi_form_left_title: "Organise your bespoke event",
+    eventi_form_left_sub: "Fill in the form to receive a personalised proposal.",
+    eventi_form_title: "Request a quote",
+    eventi_form_name: "Full name",
+    eventi_form_email: "Email",
+    eventi_form_phone: "Phone",
+    eventi_form_type: "Type of event",
+    eventi_form_type_placeholder: "E.g. corporate dinner, birthday, wedding…",
+    eventi_form_guests: "Number of guests",
+    eventi_form_message: "Message",
+    eventi_form_message_placeholder: "Tell us your idea: date, time, special requests…",
+    eventi_form_privacy: "I have read and accepted the terms and conditions of the",
+    eventi_form_privacy_link: "Privacy Policy",
+    eventi_form_submit: "Send request",
+    eventi_form_success: "Request sent! We will contact you shortly with a personalised proposal.",
+    eventi_form_error_required: "All fields are required.",
+    eventi_form_error_captcha: "Please confirm you are not a robot.",
+    eventi_form_error_privacy: "You must accept the Privacy Policy to continue.",
   }
 };
 
