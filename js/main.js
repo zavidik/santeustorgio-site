@@ -29,6 +29,41 @@ document.addEventListener("DOMContentLoaded", () => {
     link.addEventListener("click", closeMenu);
   });
 
+  // ── Auto-hide navbar links quando non ci stanno ─────────────
+const navInner  = document.querySelector('.nav-inner');
+const navLinksEl = document.getElementById('nav-links');
+const hamburgerEl = document.getElementById('hamburger');
+const bookNavBtn  = document.querySelector('.btn-book-nav');
+
+function checkNavOverflow() {
+  if (!navInner || !navLinksEl || !hamburgerEl) return;
+
+  // Mostra temporaneamente i link per misurarne la larghezza reale
+  navLinksEl.style.visibility = 'hidden';
+  navLinksEl.style.display    = 'flex';
+  hamburgerEl.style.display   = 'none';
+
+  const overflowing = navInner.scrollWidth > navInner.clientWidth;
+
+  if (overflowing) {
+    // Non ci stanno: hamburger
+    navLinksEl.style.display    = '';
+    navLinksEl.style.visibility = '';
+    hamburgerEl.style.display   = 'flex';
+    if (bookNavBtn) bookNavBtn.style.display = 'none';
+  } else {
+    // Ci stanno: mostra i link normalmente
+    navLinksEl.style.display    = '';
+    navLinksEl.style.visibility = '';
+    hamburgerEl.style.display   = 'none';
+    if (bookNavBtn) bookNavBtn.style.display = '';
+  }
+}
+
+// Esegui al caricamento e ad ogni resize
+checkNavOverflow();
+window.addEventListener('resize', checkNavOverflow);
+
   // ── Navbar scroll effect ────────────────────────────────────
   const navbar = document.getElementById("navbar");
   window.addEventListener("scroll", () => {
