@@ -52,9 +52,9 @@ const translations = {
     footer_hours: "Tutti i giorni 12:00 – 23:00",
     footer_contacts_title: "Contatti",
     footer_address: "Piazza Sant'Eustorgio, 6, 20122 Milano MI",
-    footer_phone: "+39 02 0000000",
+    footer_phone: "02 5810 1396",
     footer_email: "ristorante@santeustorgiomilano.it",
-    footer_instagram: "ristorante_sant'eustorgiomilano",
+    footer_instagram: " ",
     footer_rights: "© 2025 Ristorante Sant'Eustorgio. Tutti i diritti riservati.",
 
     // BOOKING MODAL

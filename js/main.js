@@ -121,13 +121,13 @@ document.addEventListener("DOMContentLoaded", () => {
             clearInterval(galleryAuto);
           }
         });
-      }, { threshold: 0.1 });
+      }, { threshold: 0.2 });
 
       galleryObserver.observe(gallerySection);
     }
     galleryTrack.parentElement.addEventListener("mouseenter", () => clearInterval(galleryAuto));
     galleryTrack.parentElement.addEventListener("mouseleave", () => {
-      galleryAuto = setInterval(() => updateGallery(1), 4000);
+      galleryAuto = setInterval(() => updateGallery(1), 2000);
     });
   }
 
