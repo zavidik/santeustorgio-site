@@ -12,7 +12,7 @@
 <nav id="navbar" role="navigation" aria-label="Navigazione principale">
   <div class="nav-inner">
     <a href="${base}index.html" class="nav-brand">
-      <span class="nav-brand-name">Ristorante Sant'Eustorgio</span>
+      <span class="nav-brand-name">Ristorante <br> Sant'Eustorgio</span>
       <span class="nav-brand-city" data-i18n="nav_city">Milano</span>
     </a>
     <ul id="nav-links" role="menubar">
@@ -24,19 +24,17 @@
       <li role="none"><a href="${base}pages/eventi.html"     class="nav-link" role="menuitem" data-i18n="nav_events">Eventi</a></li>
       <li role="none"><a href="${base}pages/locale.html"     class="nav-link" role="menuitem" data-i18n="nav_venue">Locale</a></li>
       <li role="none"><a href="${base}pages/contatti.html"   class="nav-link" role="menuitem" data-i18n="nav_contacts">Contatti</a></li>
-      <li role="none" style="width:100%">
-        <button class="btn-book btn-book-nav-mobile" data-i18n="nav_book">Prenota un tavolo</button>
-      </li>
     </ul>
     <div class="nav-right">
-      <div class="lang-switcher" role="group" aria-label="Seleziona lingua">
-        <button class="lang-btn" data-lang="it" aria-label="Italiano">IT</button>
-        <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
-      </div>
       <button class="btn-book-nav btn-book" data-i18n="nav_book">Prenota un tavolo</button>
       <button id="hamburger" aria-label="Apri menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
       </button>
+      <div class="lang-switcher" role="group" aria-label="Seleziona lingua">
+        <button class="lang-btn" data-lang="it" aria-label="Italiano">IT</button>
+        <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+      </div>
+      
     </div>
   </div>
 </nav>

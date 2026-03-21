@@ -85,6 +85,22 @@ const translations = {
     about_wine_title: "Vino e conoscenza",
     about_wine_text: "La proprietà rappresenta anche una cantina rinomata. Da questa esperienza nasce una carta dei vini costruita con rigore e passione, che attraversa le regioni d'Italia con particolare attenzione ai produttori piemontesi e lombardi. Lo staff, formato e aggiornato, accompagna ogni piatto con il calice giusto, creando un dialogo costante tra cucina e vino.",
 
+    // CUCINA PAGE
+    cucina_hero_title: "Cucina",
+
+    cucina_intro_title: "La cucina",
+    cucina_intro_subtitle: "Sapori autentici, ingredienti locali e rispetto per la tradizione.",
+    cucina_intro_text: "Da Sant'Eustorgio Milano la cucina è una dichiarazione d'amore per Milano e il Piemonte. I piatti nascono da ricette tramandate, reinterpretate con delicatezza e rigore. Ogni portata è preparata al momento, con ingredienti selezionati e accostamenti che esaltano la memoria del gusto.",
+    cucina_intro_btn: "Menù",
+
+    cucina_tradition_title: "La tradizione che si rinnova ogni giorno",
+    cucina_tradition_subtitle: "Cucina sincera, radici solide e un tocco contemporaneo.",
+    cucina_tradition_text: "Il menu segue la stagionalità e racconta il territorio attraverso profumi e consistenze autentiche. Dal risotto saltato della tradizione ai fusilloni alla Norma con pesce spada, ogni piatto unisce storia e creatività. La materia prima è protagonista: carni piemontesi selezionate, formaggi d'alpeggio, verdure di stagione e prodotti locali scelti con cura. Nulla è lasciato al caso, perché ogni dettaglio contribuisce a creare un'esperienza completa.",
+
+    cucina_dishes_title: "Risotti, tartare e piatti simbolo",
+    cucina_dishes_subtitle: "Una selezione che parla di identità.",
+    cucina_dishes_text: "Il risotto alla milanese, preparato con burro acido e jus di vitello, è un omaggio alla città; la tartare di Fassona racconta l'eleganza della carne piemontese; l'ossobuco con risotto allo zafferano porta in tavola il profumo delle domeniche di un tempo. Poi ci sono le lingue salmistrate con bagnetto rosso, i ravioli di grano saraceno al Bitto e funghi porcini, e il petto d'anatra al Nebbiolo: piatti che restano nel cuore.",
+
     // PAGES (sottopagine)
     page_about_title: "Chi siamo",
     page_kitchen_title: "La nostra cucina",
@@ -175,6 +191,22 @@ const translations = {
 
     about_wine_title: "Wine & knowledge",
     about_wine_text: "The ownership also represents a renowned wine cellar. From this experience comes a wine list built with rigor and passion, traversing Italy's regions with particular attention to Piedmontese and Lombard producers. The trained and informed staff pairs each dish with the right glass, creating a constant dialogue between kitchen and wine.",
+
+    // CUCINA PAGE
+    cucina_hero_title: "Kitchen",
+
+    cucina_intro_title: "The kitchen",
+    cucina_intro_subtitle: "Authentic flavors, local ingredients and respect for tradition.",
+    cucina_intro_text: "At Sant'Eustorgio Milano, the kitchen is a declaration of love for Milan and Piedmont. Dishes are born from handed-down recipes, reinterpreted with delicacy and rigor. Every course is prepared fresh, with selected ingredients and pairings that celebrate the memory of taste.",
+    cucina_intro_btn: "Menu",
+
+    cucina_tradition_title: "Tradition renewed every day",
+    cucina_tradition_subtitle: "Honest cuisine, solid roots and a contemporary touch.",
+    cucina_tradition_text: "The menu follows seasonality and tells the story of the territory through authentic aromas and textures. From the traditional sautéed risotto to fusilli alla Norma with swordfish, each dish unites history and creativity. The raw ingredient is the star: selected Piedmontese meats, mountain cheeses, seasonal vegetables and carefully chosen local products. Nothing is left to chance, because every detail contributes to a complete experience.",
+
+    cucina_dishes_title: "Risottos, tartares and signature dishes",
+    cucina_dishes_subtitle: "A selection that speaks of identity.",
+    cucina_dishes_text: "The risotto alla milanese, made with sour butter and veal jus, is a tribute to the city; the Fassona tartare tells the elegance of Piedmontese beef; the ossobuco with saffron risotto brings the scent of Sunday lunches past. Then there are the salted tongues with red sauce, buckwheat ravioli with Bitto and porcini mushrooms, and duck breast with Nebbiolo: dishes that stay in the heart.",
 
     // PAGES
     page_about_title: "About us",

@@ -3,20 +3,150 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cucina — Ristorante Sant'Eustorgio</title>
+  <meta name="description" content="La cucina del Ristorante Sant'Eustorgio: sapori autentici, ingredienti locali e rispetto per la tradizione lombarda e piemontese." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
-<main>
-  <div class="page-hero"><h1><span data-i18n="page_cucina_title"></span></h1></div>
-  <div class="page-content reveal">
-    <p data-i18n="coming_soon" style="text-align:center;font-style:italic;color:var(--color-text-light);font-size:1.1rem;padding:48px 0">Pagina in costruzione. Torna presto!</p>
+
+<!-- Navbar iniettata da navbar.js -->
+
+<!-- ══════════════════════════════════════════════════════════
+     BANNER HERO
+     Inserisci: ../images/cucina-hero.jpg (min 1600x700px)
+     ══════════════════════════════════════════════════════════ -->
+<header class="page-banner" role="banner">
+  <div class="page-banner-bg"
+       style="background-image: url('../images/cucina-hero.jpg'),
+              url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1600&q=80');">
   </div>
-</main>
+  <div class="page-banner-overlay"></div>
+  <div class="page-banner-content">
+    <h1 data-i18n="cucina_hero_title">Cucina</h1>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════════════════════
+     INTRO — 4 foto sinistra | testo centro | 4 foto destra
+     ══════════════════════════════════════════════════════════ -->
+<section class="cucina-intro" aria-labelledby="cucina-intro-title">
+  <div class="cucina-intro-grid">
+
+    <!-- 4 foto sinistra
+         Inserisci: ../images/cucina-sx-1…4.jpg (min 300x300px) -->
+    <div class="about-photos-grid reveal">
+      <div class="photo-item">
+        <img src="../images/cucina-sx-1.jpg" alt="Piatto della cucina" loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=400&q=75'; this.onerror=null;" />
+      </div>
+      <div class="photo-item">
+        <img src="../images/cucina-sx-2.jpg" alt="Ingredienti freschi" loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&q=75'; this.onerror=null;" />
+      </div>
+      <div class="photo-item">
+        <img src="../images/cucina-sx-3.jpg" alt="Risotto milanese" loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1555244162-803834f70033?w=400&q=75'; this.onerror=null;" />
+      </div>
+      <div class="photo-item">
+        <img src="../images/cucina-sx-4.jpg" alt="Antipasto" loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&q=75'; this.onerror=null;" />
+      </div>
+    </div>
+
+    <!-- Testo centrale -->
+    <div class="cucina-intro-text reveal delay-1">
+      <span class="feature-label" data-i18n="cucina_intro_title">La cucina</span>
+      <h2 id="cucina-intro-title" data-i18n="cucina_intro_title">La cucina</h2>
+      <p class="subtitle" data-i18n="cucina_intro_subtitle">Sapori autentici, ingredienti locali e rispetto per la tradizione.</p>
+      <p data-i18n="cucina_intro_text">Da Sant'Eustorgio Milano la cucina è una dichiarazione d'amore per Milano e il Piemonte. I piatti nascono da ricette tramandate, reinterpretate con delicatezza e rigore. Ogni portata è preparata al momento, con ingredienti selezionati e accostamenti che esaltano la memoria del gusto.</p>
+      <a href="menu.html" class="btn btn-primary" data-i18n="cucina_intro_btn">Menù</a>
+    </div>
+
+    <!-- 4 foto destra
+         Inserisci: ../images/cucina-dx-1…4.jpg (min 300x300px) -->
+    <div class="about-photos-grid reveal delay-2">
+      <div class="photo-item">
+        <img src="../images/cucina-dx-1.jpg" alt="Tartare di Fassona" loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&q=75'; this.onerror=null;" />
+      </div>
+      <div class="photo-item">
+        <img src="../images/cucina-dx-2.jpg" alt="Ossobuco" loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=75'; this.onerror=null;" />
+      </div>
+      <div class="photo-item">
+        <img src="../images/cucina-dx-3.jpg" alt="Pasta fresca" loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=400&q=75'; this.onerror=null;" />
+      </div>
+      <div class="photo-item">
+        <img src="../images/cucina-dx-4.jpg" alt="Dessert" loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?w=400&q=75'; this.onerror=null;" />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     LA TRADIZIONE CHE SI RINNOVA — foto destra | testo sinistra
+     Inserisci: ../images/cucina-tradizione.jpg (min 800x600px)
+     ══════════════════════════════════════════════════════════ -->
+<section class="cucina-feature" aria-labelledby="tradition-title">
+  <div class="feature-grid reveal">
+
+    <div class="feature-text">
+      <span class="feature-label">●</span>
+      <h2 id="tradition-title" data-i18n="cucina_tradition_title">La tradizione che si rinnova ogni giorno</h2>
+      <p class="subtitle" data-i18n="cucina_tradition_subtitle">Cucina sincera, radici solide e un tocco contemporaneo.</p>
+      <p data-i18n="cucina_tradition_text">Il menu segue la stagionalità e racconta il territorio attraverso profumi e consistenze autentiche. Dal risotto saltato della tradizione ai fusilloni alla Norma con pesce spada, ogni piatto unisce storia e creatività. La materia prima è protagonista: carni piemontesi selezionate, formaggi d'alpeggio, verdure di stagione e prodotti locali scelti con cura. Nulla è lasciato al caso, perché ogni dettaglio contribuisce a creare un'esperienza completa.</p>
+    </div>
+
+    <div class="feature-img-wrap">
+      <img
+        src="../images/cucina-tradizione.jpg"
+        alt="La tradizione in cucina"
+        loading="lazy"
+        onerror="this.src='https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=800&q=80'; this.onerror=null;"
+      />
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     RISOTTI TARTARE E PIATTI SIMBOLO — testo sinistra | foto destra
+     Inserisci: ../images/cucina-piatti.jpg (min 800x600px)
+     ══════════════════════════════════════════════════════════ -->
+<section class="cucina-feature" aria-labelledby="dishes-title">
+  <div class="feature-grid reverse reveal">
+
+    <div class="feature-img-wrap">
+      <img
+        src="../images/cucina-piatti.jpg"
+        alt="Piatti simbolo del Ristorante Sant'Eustorgio"
+        loading="lazy"
+        onerror="this.src='https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=800&q=80'; this.onerror=null;"
+      />
+    </div>
+
+    <div class="feature-text">
+      <span class="feature-label">●</span>
+      <h2 id="dishes-title" data-i18n="cucina_dishes_title">Risotti, tartare e piatti simbolo</h2>
+      <p class="subtitle" data-i18n="cucina_dishes_subtitle">Una selezione che parla di identità.</p>
+      <p data-i18n="cucina_dishes_text">Il risotto alla milanese, preparato con burro acido e jus di vitello, è un omaggio alla città; la tartare di Fassona racconta l'eleganza della carne piemontese; l'ossobuco con risotto allo zafferano porta in tavola il profumo delle domeniche di un tempo. Poi ci sono le lingue salmistrate con bagnetto rosso, i ravioli di grano saraceno al Bitto e funghi porcini, e il petto d'anatra al Nebbiolo: piatti che restano nel cuore.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer + Modal iniettati da navbar.js -->
+
 <script src="../js/navbar.js"></script>
 <script src="../js/i18n.js"></script>
 <script src="../js/main.js"></script>
+
 </body>
 </html>
