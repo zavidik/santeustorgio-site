@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chi siamo — Ristorante Sant'Eustorgio</title>
-  <meta name="description" content="Scopri la storia del Ristorante Sant'Eustorgio nel cuore di Milano." />
+  <meta name="description" content="La storia del Ristorante Sant'Eustorgio: cinque ragazzi, una piazza incantevole e la cucina lombarda e piemontese nel cuore di Milano." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
@@ -12,28 +13,145 @@
 </head>
 <body>
 
-<!-- Navbar + Footer iniettati da navbar.js -->
+<!-- Navbar iniettata da navbar.js -->
 
-<main>
-  <div class="page-hero">
-    <h1 data-i18n="page_about_title">Chi siamo</h1>
+<!-- ══════════════════════════════════════════════════════════
+     BANNER HERO (più basso della home)
+     ══════════════════════════════════════════════════════════ -->
+<header class="page-banner" role="banner">
+
+  <!-- Sfondo: inserisci ../images/chi-siamo-hero.jpg (min 1600x700px)
+       Se mancante, usa il fallback Unsplash tramite CSS multiplo -->
+  <div class="page-banner-bg"
+       style="background-image: url('../images/chi-siamo-hero.jpg'),
+              url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1600&q=80');">
   </div>
-  <div class="page-content reveal">
-    <!--
-      ════════════════════════════════════════
-      MODIFICA QUI IL CONTENUTO DI QUESTA PAGINA
-      ════════════════════════════════════════
-      Sostituisci i paragrafi sotto con il testo reale.
-      Puoi aggiungere immagini, sezioni, tabelle ecc.
-    -->
-    <p data-i18n="coming_soon" style="text-align:center; font-style:italic; color: var(--color-text-light); font-size:1.1rem; padding: 48px 0;">
-      Pagina in costruzione. Torna presto!
-    </p>
+  <div class="page-banner-overlay"></div>
+
+  <div class="page-banner-content">
+    <h1 data-i18n="about_hero_title">Chi siamo</h1>
+    <div class="page-banner-cta">
+      <button class="btn btn-white btn-book" data-i18n="about_hero_btn">Prenota ora</button>
+    </div>
   </div>
-</main>
+
+</header>
+
+<!-- ══════════════════════════════════════════════════════════
+     LA NOSTRA STORIA — foto sinistra | testo centro | foto destra
+     ══════════════════════════════════════════════════════════ -->
+<section class="about-story" aria-labelledby="story-title">
+  <div class="about-story-grid">
+
+    <!-- Foto sinistra — inserisci ../images/about-storia-sx.jpg (min 600x800px) -->
+    <div class="about-story-img reveal">
+      <img
+        src="../images/about-storia-sx.jpg"
+        alt="Piazza Sant'Eustorgio Milano"
+        loading="lazy"
+        onerror="this.src='https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=600&q=80'; this.onerror=null;"
+      />
+    </div>
+
+    <!-- Testo centrale -->
+    <div class="about-story-text reveal delay-1">
+      <span class="feature-label" data-i18n="about_story_label">La nostra storia</span>
+      <h2 id="story-title" data-i18n="about_story_title">La nostra storia</h2>
+      <p data-i18n="about_story_p1">Sant'Eustorgio Milano nasce a febbraio 2025 in una delle piazze più incantevoli della città, all'ombra dell'omonima basilica. Il progetto si concretizza grazie al desiderio di cinque ragazzi di portare in tavola la cultura enogastronomica delle proprie città d'origine.</p>
+      <p data-i18n="about_story_p2">Sant'Eustorgio Milano intende realizzare una sinergia tra Bergamo, Milano e il Piemonte, ricreando un luogo che, con le proposte de La Tradizione, possa ricordare i sapori di casa agli amici milanesi di nascita o di adozione; come le proposte de Le origini, possa raccontare le radici di chi questo posto lo ha immaginato e desiderato a lungo; con le proposte de La Contemporaneità, possa stupire con sapori nuovi e sorprendenti.</p>
+      <a href="menu.html" class="btn btn-primary" data-i18n="about_story_btn">Menù</a>
+    </div>
+
+    <!-- Foto destra — inserisci ../images/about-storia-dx.jpg (min 600x800px) -->
+    <div class="about-story-img reveal delay-2">
+      <img
+        src="../images/about-storia-dx.jpg"
+        alt="I fondatori del Ristorante Sant'Eustorgio"
+        loading="lazy"
+        onerror="this.src='https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80'; this.onerror=null;"
+      />
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     UNA NUOVA GESTIONE — griglia 4 foto a sinistra | testo a destra
+     ══════════════════════════════════════════════════════════ -->
+<section class="about-split" aria-labelledby="management-title">
+  <div class="about-split-grid">
+
+    <!-- 4 foto 2×2 — inserisci ../images/about-gest-1…4.jpg (min 400x400px) -->
+    <div class="about-photos-grid reveal">
+      <div class="photo-item">
+        <img src="../images/about-gest-1.jpg" alt="Piatto della cucina" loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=400&q=75'; this.onerror=null;" />
+      </div>
+      <div class="photo-item">
+        <img src="../images/about-gest-2.jpg" alt="Lo chef al lavoro" loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=75'; this.onerror=null;" />
+      </div>
+      <div class="photo-item">
+        <img src="../images/about-gest-3.jpg" alt="Ingredienti freschi" loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&q=75'; this.onerror=null;" />
+      </div>
+      <div class="photo-item">
+        <img src="../images/about-gest-4.jpg" alt="Sala del ristorante" loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=75'; this.onerror=null;" />
+      </div>
+    </div>
+
+    <!-- Testo -->
+    <div class="about-split-text reveal delay-1">
+      <span class="feature-label">●</span>
+      <h2 id="management-title" data-i18n="about_management_title">Una nuova gestione</h2>
+      <p data-i18n="about_management_text">Nel 2025 il ristorante ha trovato una nuova guida, animata dal desiderio di custodire la tradizione e allo stesso tempo renderla viva. Dalla tartare di Fassona al risotto alla milanese, ogni piatto è un gesto di rispetto verso la materia prima e un omaggio alla cucina lombarda e piemontese. La proposta gastronomica evolve seguendo le stagioni e la creatività dello chef, mantenendo saldi i valori di autenticità e gusto.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     VINO E CONOSCENZA — testo a sinistra | griglia 4 foto a destra
+     ══════════════════════════════════════════════════════════ -->
+<section class="about-split" style="background: var(--color-bg);" aria-labelledby="wine-title">
+  <div class="about-split-grid">
+
+    <!-- Testo -->
+    <div class="about-split-text reveal">
+      <span class="feature-label">●</span>
+      <h2 id="wine-title" data-i18n="about_wine_title">Vino e conoscenza</h2>
+      <p data-i18n="about_wine_text">La proprietà rappresenta anche una cantina rinomata. Da questa esperienza nasce una carta dei vini costruita con rigore e passione, che attraversa le regioni d'Italia con particolare attenzione ai produttori piemontesi e lombardi. Lo staff, formato e aggiornato, accompagna ogni piatto con il calice giusto, creando un dialogo costante tra cucina e vino.</p>
+    </div>
+
+    <!-- 4 foto vino 2×2 — inserisci ../images/about-vino-1…4.jpg (min 400x400px) -->
+    <div class="about-photos-grid reveal delay-1">
+      <div class="photo-item">
+        <img src="../images/about-vino-1.jpg" alt="Cantina vini" loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=400&q=75'; this.onerror=null;" />
+      </div>
+      <div class="photo-item">
+        <img src="../images/about-vino-2.jpg" alt="Selezione vini" loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=400&q=75'; this.onerror=null;" />
+      </div>
+      <div class="photo-item">
+        <img src="../images/about-vino-3.jpg" alt="Calice di vino rosso" loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1474722883778-792e7990302f?w=400&q=75'; this.onerror=null;" />
+      </div>
+      <div class="photo-item">
+        <img src="../images/about-vino-4.jpg" alt="Etichette vini piemontesi" loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=400&q=75'; this.onerror=null;" />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer + Modal iniettati da navbar.js -->
 
 <script src="../js/navbar.js"></script>
 <script src="../js/i18n.js"></script>
 <script src="../js/main.js"></script>
+
 </body>
 </html>

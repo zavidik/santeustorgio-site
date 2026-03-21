@@ -54,7 +54,7 @@ const translations = {
     footer_address: "Piazza Sant'Eustorgio, 6, 20122 Milano MI",
     footer_phone: "+39 02 0000000",
     footer_email: "ristorante@santeustorgiomilano.it",
-    footer_instagram: " ",
+    footer_instagram: "ristorante_sant'eustorgiomilano",
     footer_rights: "© 2025 Ristorante Sant'Eustorgio. Tutti i diritti riservati.",
 
     // BOOKING MODAL
@@ -68,6 +68,22 @@ const translations = {
     modal_submit: "Invia richiesta",
     modal_close: "Chiudi",
     modal_success: "Richiesta inviata! Vi contatteremo a breve per confermare.",
+
+    // CHI SIAMO PAGE
+    about_hero_title: "Chi siamo",
+    about_hero_btn: "Prenota ora",
+
+    about_story_label: "La nostra storia",
+    about_story_title: "La nostra storia",
+    about_story_p1: "Sant'Eustorgio Milano nasce a febbraio 2025 in una delle piazze più incantevoli della città, all'ombra dell'omonima basilica. Il progetto si concretizza grazie al desiderio di cinque ragazzi di portare in tavola la cultura enogastronomica delle proprie città d'origine.",
+    about_story_p2: "Sant'Eustorgio Milano intende realizzare una sinergia tra Bergamo, Milano e il Piemonte, ricreando un luogo che, con le proposte de La Tradizione, possa ricordare i sapori di casa agli amici milanesi di nascita o di adozione; come le proposte de Le origini, possa raccontare le radici di chi questo posto lo ha immaginato e desiderato a lungo; con le proposte de La Contemporaneità, possa stupire con sapori nuovi e sorprendenti.",
+    about_story_btn: "Menù",
+
+    about_management_title: "Una nuova gestione",
+    about_management_text: "Nel 2025 il ristorante ha trovato una nuova guida, animata dal desiderio di custodire la tradizione e allo stesso tempo renderla viva. Dalla tartare di Fassona al risotto alla milanese, ogni piatto è un gesto di rispetto verso la materia prima e un omaggio alla cucina lombarda e piemontese. La proposta gastronomica evolve seguendo le stagioni e la creatività dello chef, mantenendo saldi i valori di autenticità e gusto.",
+
+    about_wine_title: "Vino e conoscenza",
+    about_wine_text: "La proprietà rappresenta anche una cantina rinomata. Da questa esperienza nasce una carta dei vini costruita con rigore e passione, che attraversa le regioni d'Italia con particolare attenzione ai produttori piemontesi e lombardi. Lo staff, formato e aggiornato, accompagna ogni piatto con il calice giusto, creando un dialogo costante tra cucina e vino.",
 
     // PAGES (sottopagine)
     page_about_title: "Chi siamo",
@@ -143,6 +159,22 @@ const translations = {
     modal_submit: "Send request",
     modal_close: "Close",
     modal_success: "Request sent! We will contact you shortly to confirm.",
+
+    // CHI SIAMO PAGE
+    about_hero_title: "About us",
+    about_hero_btn: "Book now",
+
+    about_story_label: "Our story",
+    about_story_title: "Our story",
+    about_story_p1: "Sant'Eustorgio Milano was born in February 2025 in one of the city's most enchanting squares, in the shadow of the namesake basilica. The project came to life through the desire of five young people to bring the food and wine culture of their hometowns to the table.",
+    about_story_p2: "Sant'Eustorgio Milano aims to create a synergy between Bergamo, Milan and Piedmont, recreating a place that — through La Tradizione — recalls the flavors of home for Milanese friends by birth or adoption; through Le Origini, tells the roots of those who imagined and longed for this place; through La Contemporaneità, surprises with new and unexpected flavors.",
+    about_story_btn: "Menu",
+
+    about_management_title: "A new management",
+    about_management_text: "In 2025, the restaurant found new leadership, driven by the desire to preserve tradition while keeping it alive. From Fassona beef tartare to risotto alla milanese, every dish is an act of respect towards the ingredients and a tribute to Lombard and Piedmontese cuisine. The menu evolves with the seasons and the chef's creativity, maintaining firm values of authenticity and taste.",
+
+    about_wine_title: "Wine & knowledge",
+    about_wine_text: "The ownership also represents a renowned wine cellar. From this experience comes a wine list built with rigor and passion, traversing Italy's regions with particular attention to Piedmontese and Lombard producers. The trained and informed staff pairs each dish with the right glass, creating a constant dialogue between kitchen and wine.",
 
     // PAGES
     page_about_title: "About us",

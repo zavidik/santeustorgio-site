@@ -106,8 +106,25 @@ document.addEventListener("DOMContentLoaded", () => {
     galleryPrev?.addEventListener("click", () => updateGallery(-1));
     galleryNext?.addEventListener("click", () => updateGallery(1));
 
-    // Auto-scroll gallery
-    let galleryAuto = setInterval(() => updateGallery(1), 4000);
+    // Auto-scroll gallery — parte solo quando visibile
+    const gallerySection = document.querySelector('.gallery-section');
+    if (gallerySection && galleryTrack) {
+      const startGalleryAuto = () => {
+        galleryAuto = setInterval(() => updateGallery(1), 2000);
+      };
+
+      const galleryObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            startGalleryAuto();
+          } else {
+            clearInterval(galleryAuto);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      galleryObserver.observe(gallerySection);
+    }
     galleryTrack.parentElement.addEventListener("mouseenter", () => clearInterval(galleryAuto));
     galleryTrack.parentElement.addEventListener("mouseleave", () => {
       galleryAuto = setInterval(() => updateGallery(1), 4000);
