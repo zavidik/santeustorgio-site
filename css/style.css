@@ -32,12 +32,13 @@
 
 html { scroll-behavior: smooth; }
 
-body {
+bbody {
   font-family: var(--font-body);
   background:  var(--color-bg);
   color:       var(--color-text);
   line-height: 1.7;
   overflow-x:  hidden;
+  padding-top: var(--nav-height);
 }
 
 img { display: block; max-width: 100%; height: auto; }
@@ -306,8 +307,7 @@ h1, h2, h3, h4 {
   justify-content:center;
   text-align:   center;
   overflow:     hidden;
-  margin-top:   calc(-1 * var(--nav-height));
-}
+  margin-top: 0;}
 
 .hero-bg {
   position:   absolute;
@@ -2074,22 +2074,18 @@ footer {
   padding-right:  24px !important;
 }
 @media (max-width: 768px) {
+  .hero {
+    height: auto;
+    min-height: unset;
+    max-height: unset;
+    margin-top: 0;
+    aspect-ratio: 10 / 7;
+  }
   .hero-bg {
     background-size: contain;
     background-position: center top;
     background-repeat: no-repeat;
     background-color: #faf9f6;
   }
-  .hero {
-    height: auto;
-    min-height: unset;
-    aspect-ratio: 10 / 7;
-    max-height: unset;
-    margin-top: 0;
-  }
-  @media (max-width: 768px) {
-  .hero::before {
-    display: none;
-  }
-  }
+  .hero::before { display: none; }
 }
