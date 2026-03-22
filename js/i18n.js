@@ -243,7 +243,7 @@ const translations = {
     contatti_email_title: "Email",
     contatti_email: "ristorante@santeustorgiomilano.it",
     contatti_instagram_title: "Instagram",
-    contatti_instagram: "@ristorante_sant_eustorgiomilano",
+    contatti_instagram: "@ristorante_santeustorgiomilano",
     contatti_map_title: "Scopri dove siamo",
     contatti_map_open: "Apri in Google Maps",
     contatti_hours_title: "Orari",
