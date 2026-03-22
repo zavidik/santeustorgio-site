@@ -2089,3 +2089,10 @@ footer {
   }
   .hero::before { display: none; }
 }
+@media (max-width: 768px) {
+  .hero-cta .btn-white {
+    background:   var(--color-primary);
+    color:        var(--color-white);
+    border-color: var(--color-primary);
+  }
+}
