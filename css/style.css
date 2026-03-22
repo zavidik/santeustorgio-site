@@ -2085,5 +2085,11 @@ footer {
     min-height: unset;
     aspect-ratio: 10 / 7;
     max-height: unset;
+    margin-top: 0;
+  }
+  @media (max-width: 768px) {
+  .hero::before {
+    display: none;
+  }
   }
 }
