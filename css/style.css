@@ -1048,6 +1048,7 @@ footer {
 /* Mobile navbar */
 @media (max-width: 960px) {
   #hamburger { display: flex !important; }
+  
 
   .nav-right .btn-book-nav { display: none; }
   .nav-right .lang-switcher { display: none; }
@@ -2039,4 +2040,8 @@ footer {
 @media (max-width: 480px) {
   .contatti-card { padding: 20px; gap: 14px; }
   .contatti-map-footer { flex-direction: column; align-items: flex-start; }
+}
+#nav-links.open .nav-mobile-only {
+  display: block;
+  width: 100%;
 }

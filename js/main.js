@@ -4,7 +4,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  // ── Hamburger menu ──────────────────────────────────────────
+// ── Hamburger menu ──────────────────────────────────────────
   const hamburger = document.getElementById("hamburger");
   const navLinks  = document.getElementById("nav-links");
   const overlay   = document.getElementById("nav-overlay");
@@ -14,6 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
     navLinks?.classList.remove("open");
     overlay?.classList.remove("open");
     document.body.style.overflow = "";
+    const extras = document.getElementById("nav-mobile-extras");
+    if (extras) extras.style.display = "none";
+    checkNavOverflow();
   }
 
   hamburger?.addEventListener("click", () => {
@@ -21,6 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
     navLinks?.classList.toggle("open", isOpen);
     overlay?.classList.toggle("open", isOpen);
     document.body.style.overflow = isOpen ? "hidden" : "";
+    const extras = document.getElementById("nav-mobile-extras");
+    if (extras) extras.style.display = isOpen ? "block" : "none";
   });
 
   overlay?.addEventListener("click", closeMenu);
@@ -30,35 +35,28 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ── Auto-hide navbar links quando non ci stanno ─────────────
-const navInner  = document.querySelector('.nav-inner');
-const navLinksEl = document.getElementById('nav-links');
-const hamburgerEl = document.getElementById('hamburger');
-const bookNavBtn  = document.querySelector('.btn-book-nav');
+  const navInner   = document.querySelector('.nav-inner');
+  const navLinksEl = document.getElementById('nav-links');
+  const hamburgerEl = document.getElementById('hamburger');
+  const bookNavBtn  = document.querySelector('.btn-book-nav');
 
-function checkNavOverflow() {
-  if (!navInner || !navLinksEl || !hamburgerEl) return;
-
-  // Mostra temporaneamente i link per misurarne la larghezza reale
-  navLinksEl.style.visibility = 'hidden';
-  navLinksEl.style.display    = 'flex';
-  hamburgerEl.style.display   = 'none';
-
-  const overflowing = navInner.scrollWidth > navInner.clientWidth;
-
-  if (overflowing) {
-    // Non ci stanno: hamburger
-    navLinksEl.style.display    = '';
-    navLinksEl.style.visibility = '';
-    hamburgerEl.style.display   = 'flex';
-    if (bookNavBtn) bookNavBtn.style.display = 'none';
-  } else {
-    // Ci stanno: mostra i link normalmente
-    navLinksEl.style.display    = '';
-    navLinksEl.style.visibility = '';
+  function checkNavOverflow() {
+    if (!navInner || !navLinksEl || !hamburgerEl) return;
+    if (navLinksEl.classList.contains('open')) return;
+    navLinksEl.style.visibility = 'hidden';
+    navLinksEl.style.display    = 'flex';
     hamburgerEl.style.display   = 'none';
-    if (bookNavBtn) bookNavBtn.style.display = '';
+    const overflowing = navInner.scrollWidth > navInner.clientWidth + 2;
+    navLinksEl.style.display    = '';
+    navLinksEl.style.visibility = '';
+    if (overflowing) {
+      hamburgerEl.style.display = 'flex';
+      if (bookNavBtn) bookNavBtn.style.display = 'none';
+    } else {
+      hamburgerEl.style.display = 'none';
+      if (bookNavBtn) bookNavBtn.style.display = '';
+    }
   }
-}
 
 // Esegui al caricamento e ad ogni resize
 checkNavOverflow();
