@@ -1,7 +1,5 @@
 // ============================================================
 // navbar.js — Inietta navbar e footer nelle sottopagine
-// Include questo script nelle sottopagine PRIMA di main.js
-// Esempio: <script src="../js/navbar.js"></script>
 // ============================================================
 
 (function() {
@@ -24,17 +22,17 @@
       <li role="none"><a href="${base}pages/eventi.html"     class="nav-link" role="menuitem" data-i18n="nav_events">Eventi</a></li>
       <li role="none"><a href="${base}pages/locale.html"     class="nav-link" role="menuitem" data-i18n="nav_venue">Locale</a></li>
       <li role="none"><a href="${base}pages/contatti.html"   class="nav-link" role="menuitem" data-i18n="nav_contacts">Contatti</a></li>
-    <li role="none" id="nav-book-mobile" style="display:none; width:100%; margin-top:16px;">
-  <button class="btn-book" data-i18n="nav_book" style="width:100%; padding:12px 20px; text-align:center; border-radius:40px; background:white; color:#8aa07e; font-weight:700; font-size:.85rem; letter-spacing:.06em; text-transform:uppercase; border:none; cursor:pointer;">Prenota un tavolo</button>
-</li>
-<li role="none" id="nav-lang-mobile" style="display:none; width:100%; margin-top:12px;">
-  <div style="display:flex; gap:8px; padding:0 14px;">
-    <button class="lang-btn" data-lang="it" aria-label="Italiano">IT</button>
-    <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
-  </div>
-</li>
-      </ul>
-      <div id="nav-mobile-extras" style="display:none; position:fixed; bottom:40px; right:0; width:min(80vw,300px); padding:0 28px; z-index:1000;">
+      <li role="none" id="nav-book-mobile" style="display:none; width:100%; margin-top:16px;">
+        <button class="btn-book" data-i18n="nav_book" style="width:100%; padding:12px 20px; text-align:center; border-radius:40px; background:white; color:#8aa07e; font-weight:700; font-size:.85rem; letter-spacing:.06em; text-transform:uppercase; border:none; cursor:pointer;">Prenota un tavolo</button>
+      </li>
+      <li role="none" id="nav-lang-mobile" style="display:none; width:100%; margin-top:12px;">
+        <div style="display:flex; gap:8px; padding:0 14px;">
+          <button class="lang-btn" data-lang="it" aria-label="Italiano">IT</button>
+          <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+        </div>
+      </li>
+    </ul>
+    <div id="nav-mobile-extras" style="display:none; position:fixed; bottom:40px; right:0; width:min(80vw,300px); padding:0 28px; z-index:1000;">
       <button class="btn-book" data-i18n="nav_book" style="width:100%; padding:12px 20px; text-align:center; border-radius:40px; background:white; color:#8aa07e; font-weight:700; font-size:.85rem; letter-spacing:.06em; text-transform:uppercase; border:none; cursor:pointer; margin-bottom:12px;">Prenota un tavolo</button>
       <div style="display:flex; gap:8px;">
         <button class="lang-btn" data-lang="it" style="flex:1; padding:8px; border-radius:4px; border:1px solid rgba(255,255,255,.4); background:transparent; color:white; font-weight:700; font-size:.72rem; cursor:pointer;">IT</button>
@@ -50,7 +48,6 @@
         <button class="lang-btn" data-lang="it" aria-label="Italiano">IT</button>
         <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
       </div>
-      
     </div>
   </div>
 </nav>
@@ -59,34 +56,46 @@
   const footerHTML = `
 <footer role="contentinfo">
   <div class="footer-inner">
+
     <div class="footer-logo">
       Ristorante<br>Sant'Eustorgio
       <span data-i18n="nav_city">Milano</span>
     </div>
+
     <div class="footer-col">
+    </div> 
+
+   <div class="footer-col">
       <h4 data-i18n="footer_hours_title">Orari</h4>
       <p data-i18n="footer_hours">Tutti i giorni 12:00 – 23:00</p>
-    </div>
+    </div> 
+
     <div class="footer-col">
       <h4 data-i18n="footer_contacts_title">Contatti</h4>
       <a href="https://maps.app.goo.gl/G2XTDJQzzFDLv1jw5" target="_blank" rel="noopener noreferrer" data-i18n="footer_address">Piazza Sant'Eustorgio, 6, 20122 Milano MI</a>
-      <a href="tel:+39 02 5810 1396" data-i18n="footer_phone">+39 02 0000000</a>
+      <a href="tel:+390258101396" data-i18n="footer_phone">02 5810 1396</a>
       <a href="mailto:ristorante@santeustorgiomilano.it" data-i18n="footer_email">ristorante@santeustorgiomilano.it</a>
       <a href="https://www.instagram.com/ristorante_santeustorgiomilano" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="Instagram">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-        <span data-i18n="footer_instagram">ristorante_sant'eustorgiomilano</span>
+        <span data-i18n="footer_instagram">ristorante_santeustorgiomilano</span>
       </a>
     </div>
+
+    
+
   </div>
+
   <div class="footer-bottom">
-  <p>
-    <span data-i18n="© 2025 Ristorante Sant'Eustorgio">© 2025 Ristorante Sant'Eustorgio</span>
-    &nbsp;|&nbsp; P.IVA 13872400968
-    &nbsp;|&nbsp; <span data-i18n="footer_rights_reserved">Tutti i diritti riservati</span>
-    &nbsp;|&nbsp; <a href="${base}pages/privacy.html" target="_blank" style="color:inherit;text-decoration:underline;" data-i18n="footer_privacy">Informativa Privacy</a>
-    &nbsp;|&nbsp; <a href="${base}pages/cookie-policy.html" target="_blank" ...>Cookie Policy</a>
+    <p>
+      © 2025 Ristorante Sant'Eustorgio
+      &nbsp;|&nbsp; P.IVA 13872400968
+      &nbsp;|&nbsp; <span data-i18n="footer_rights_reserved">Tutti i diritti riservati</span>
+      &nbsp;|&nbsp; <a href="${base}pages/privacy.html" target="_blank" style="color:inherit;text-decoration:underline;" data-i18n="footer_privacy">Informativa Privacy</a>
+      &nbsp;|&nbsp; <a href="${base}pages/cookie-policy.html" target="_blank" style="color:inherit;text-decoration:underline;">Cookie Policy</a>
+      &nbsp;|&nbsp; Developed by <a href="#" target="_blank" style="color:inherit;text-decoration:underline;">Diamondweb S.p.A.</a>
     </p>
-</div>
+  </div>
+
 </footer>`;
 
   const modalHTML = `
@@ -149,9 +158,7 @@
   </div>
 </div>`;
 
-  // Inject navbar at top of body
   document.body.insertAdjacentHTML('afterbegin', navbarHTML);
-
-  // Inject footer and modal before </body>
   document.body.insertAdjacentHTML('beforeend', footerHTML + modalHTML);
+
 })();
