@@ -11,52 +11,52 @@
 
 const reviews = [
   {
-    author: "Marco B.",
+    author: "Paola M.",
     rating: 5,
-    text_it: "Un posto meraviglioso nel cuore di Milano. La cucina lombarda è autentica e i piatti sono preparati con ingredienti freschissimi. Il personale è gentile e accogliente. Tornerò sicuramente!",
-    text_en: "A wonderful place in the heart of Milan. The Lombard cuisine is authentic and the dishes are prepared with very fresh ingredients. The staff is kind and welcoming. I will definitely come back!",
+    text_it: "Gustato dei piatti davvero ottimi...dall' entré offerto dalla casa al dolce... tutto molto buono...😋😋😋 Personale molto gentile e disponibile.  Complimenti e alla prossima...👍👍👍",
+    text_en: "I enjoyed some truly excellent dishes… from the complimentary entrée to the dessert… everything was very good 😋😋😋 The staff was very kind and helpful. Compliments, and see you next time 👍👍👍",
+    date_it: "Settembre 2025",
+    date_en: "September 2025"
+  },
+  {
+    author: "Silvia C.",
+    rating: 5,
+    text_it: "Una serata davvero piacevole, condivisa con amici, in un ambiente curato e accogliente. Il risotto è stato eccellente, equilibrato e raffinato, mentre lo zabaione finale ha conquistato tutti, regalando una chiusura memorabile. Ottima anche la macedonia con gelato, preparata con frutta freschissima, leggera e piacevolmente armoniosa. Il personale si è dimostrato estremamente gentile e attento, contribuendo a creare un clima rilassato e piacevole per tutta la durata della cena. La location, in Piazza Sant’Eustorgio, aggiunge un valore ulteriore all’esperienza grazie a un’atmosfera calda ed elegante. Un ristorante che unisce qualità, professionalità e un’autentica attenzione al cliente. Un luogo in cui tornare con grande piacere.",
+    text_en: "A truly pleasant evening, shared with friends, in a refined and welcoming setting. The risotto was excellent, balanced and refined, while the final zabaglione won everyone over, providing a memorable ending. The fruit salad with ice cream was also excellent, prepared with very fresh fruit, light and pleasantly harmonious. The staff proved to be extremely kind and attentive, helping to create a relaxed and enjoyable atmosphere throughout the dinner. The location, in Piazza Sant’Eustorgio, adds further value to the experience thanks to its warm and elegant ambiance. A restaurant that combines quality, professionalism, and genuine attention to the customer. A place to return to with great pleasure.",
+    date_it: "Gennaio 2025",
+    date_en: "Jenuary 2025"
+  },
+  {
+    author: "Marta Z.",
+    rating: 5,
+    text_it: "Piatti squisiti (sia per vegetariani che amanti di carne e pesce) e bellissima atmosfera rinnovata post ri-apertura. Personale molto cortese e vista mozzafiato sulla Piazza S.Eustorgio! Super consigliato!",
+    text_en: "Exquisite dishes (both for vegetarians and for lovers of meat and fish) and a beautiful atmosphere, newly refreshed after reopening. Very courteous staff and a breathtaking view over Piazza S. Eustorgio! Highly recommended!",
     date_it: "Marzo 2025",
     date_en: "March 2025"
   },
   {
-    author: "Laura M.",
+    author: "Calogero V.",
     rating: 5,
-    text_it: "Ambiente bellissimo, cibo eccezionale e posizione fantastica vicino alla Basilica di Sant'Eustorgio. I risotti erano perfetti e il vino selezionato dalla cantina era sublime. Consigliato!",
-    text_en: "Beautiful atmosphere, exceptional food and fantastic location near the Basilica di Sant'Eustorgio. The risottos were perfect and the wine selected from the cellar was sublime. Highly recommended!",
+    text_it: "Sono stato al Ristorante Sant’Eustorgio con la mia ragazza e devo dire che è stata un’esperienza davvero piacevole. Fin da subito ci ha colpito l'accoglienza calorosa dello staff e in particolare del titolare Matteo, un ragazzo giovane, simpatico e molto disponibile. Il ristorante si affaccia direttamente su Piazza Sant’Eustorgio, una location davvero suggestiva, e abbiamo avuto la fortuna di cenare all’aperto, godendoci una vista bellissima e un’atmosfera rilassata. Un altro punto forte è sicuramente la cucina: il menù propone piatti tipici della tradizione milanese, preparati con cura e grande attenzione ai dettagli. Una cucina autentica che valorizza la tradizione, ma con un tocco giovane e moderno. In definitiva, un posto che consiglio vivamente, sia per una serata romantica che per un pranzo rilassato nel cuore di Milano. Consigliatissimo!",
+    text_en: "I went to Ristorante Sant’Eustorgio with my girlfriend, and I must say it was a truly pleasant experience. From the very beginning, we were impressed by the warm welcome from the staff, especially the owner Matteo—a young, friendly, and very helpful guy. The restaurant overlooks Piazza Sant’Eustorgio, a truly charming location, and we were lucky enough to dine outdoors, enjoying a beautiful view and a relaxed atmosphere. Another strong point is definitely the cuisine: the menu features typical dishes from the Milanese tradition, prepared with care and great attention to detail. It’s an authentic cuisine that enhances tradition, but with a fresh and modern touch. All in all, a place I highly recommend, whether for a romantic evening or a relaxed lunch in the heart of Milan. Highly recommended!",
+    date_it: "Ottobre 2025",
+    date_en: "October 2025"
+  },
+  {
+    author: "Maddalena M.",
+    rating: 5,
+    text_it: "Ristorante storico milanese con nuova gestione, menù vario (piatti della tradizione più proposte piemontesi e lombarde), locale tranquillo e accogliente, personale attento e disponibile. Abbiamo mangiato e bevuto benissimo, non vediamo l’ora di tornare per poter mangiare anche all’esterno con la bella stagione!",
+    text_en: "A historic Milanese restaurant under new management, offering a varied menu (traditional dishes along with Piedmontese and Lombard specialties). The place is მშვიდ and welcoming, with attentive and helpful staff. We ate and drank very well, and we can’t wait to come back to enjoy dining outdoors during the warmer season!",
+    date_it: "Giugno 2025",
+    date_en: "June 2025"
+  },
+  {
+    author: "ADiCA V.",
+    rating: 5,
+    text_it: "Esperienza sempre meravigliosa. Cibo delizioso, accostamenri creativi, piatti gustosi ma delicati. Atmosfera di casa in un contesto curato nel pieno centro di Milano. Matteo, il gestore, ti accoglie sempre in maniera squisita e gentile, venendo incontro ad ogni tua esigenza. Piatti anche vegetariani. Molto consigliato. Anche la nostra bassottina e’ sempre molto ben accolta.",
+    text_en: "Always a wonderful experience. Delicious food, creative combinations, and dishes that are flavorful yet delicate. A homely atmosphere in a refined setting in the heart of Milan. Matteo, the manager, always welcomes you with great kindness and warmth, accommodating every need. Vegetarian options are also available. Highly recommended. Even our little dachshund is always very well welcomed.",
     date_it: "Febbraio 2025",
-    date_en: "February 2025"
-  },
-  {
-    author: "Giovanni R.",
-    rating: 5,
-    text_it: "La nuova gestione ha fatto un lavoro eccellente. Si percepisce la passione in ogni piatto. L'atmosfera è calda e conviviale, proprio come una vera osteria milanese. La cotoletta alla milanese è da sogno!",
-    text_en: "The new management has done an excellent job. You can feel the passion in every dish. The atmosphere is warm and convivial, just like a real Milanese osteria. The cotoletta alla milanese is a dream!",
-    date_it: "Gennaio 2025",
-    date_en: "January 2025"
-  },
-  {
-    author: "Sofia K.",
-    rating: 5,
-    text_it: "Abbiamo festeggiato un anniversario qui e tutto era perfetto. Dalla mise en place alla scelta del vino, ogni dettaglio curato con amore. Un'esperienza che ci porteremo nel cuore. Grazie!",
-    text_en: "We celebrated an anniversary here and everything was perfect. From the table setting to the wine selection, every detail cared for with love. An experience we will carry in our hearts. Thank you!",
-    date_it: "Dicembre 2024",
-    date_en: "December 2024"
-  },
-  {
-    author: "Tomás V.",
-    rating: 5,
-    text_it: "Sono venuto apposta da Barcellona per visitare la Basilica e ho trovato questo gioiello proprio accanto. Cucina tradizionale lombarda di altissimo livello, personale cordiale, prezzi onesti. Un must!",
-    text_en: "I came all the way from Barcelona to visit the Basilica and found this gem right next to it. High-quality traditional Lombard cuisine, friendly staff, fair prices. A must!",
-    date_it: "Novembre 2024",
-    date_en: "November 2024"
-  },
-  {
-    author: "Alessia F.",
-    rating: 5,
-    text_it: "Finalmente un ristorante che rispetta la tradizione milanese senza essere banale. I tajarin al ragù di cinghiale erano spettacolari. L'ambiente è elegante ma informale, perfetto per ogni occasione.",
-    text_en: "Finally a restaurant that respects Milanese tradition without being trivial. The tajarin with wild boar ragù were spectacular. The ambiance is elegant yet informal, perfect for any occasion.",
-    date_it: "Ottobre 2024",
-    date_en: "October 2024"
+    date_en: "Febbraio 2025"
   }
 ];
 
