@@ -113,7 +113,7 @@ window.addEventListener('resize', checkNavOverflow);
     setTimeout(closeModalFn, 3000);
   });
 
-  // ── Gallery carousel ────────────────────────────────────────
+// ── Gallery carousel ────────────────────────────────────────
   const galleryTrack = document.getElementById("gallery-track");
   const galleryPrev  = document.getElementById("gallery-prev");
   const galleryNext  = document.getElementById("gallery-next");
@@ -128,36 +128,52 @@ window.addEventListener('resize', checkNavOverflow);
       return item.offsetWidth + parseInt(style.marginRight || 0);
     }
 
-    function updateGallery(dir) {
-      const items     = galleryTrack.querySelectorAll(".gallery-item");
-      const visible   = Math.floor(galleryTrack.parentElement.offsetWidth / getSlideWidth());
-      const maxPos    = Math.max(0, items.length - visible);
-      galleryPos      = Math.max(0, Math.min(galleryPos + dir, maxPos));
-      galleryTrack.style.transform = `translateX(-${galleryPos * getSlideWidth()}px)`;
+    function updateGalleryDots() {
+      const dotsContainer = document.getElementById("gallery-dots");
+      if (!dotsContainer) return;
+      const items = galleryTrack.querySelectorAll(".gallery-item");
+      dotsContainer.innerHTML = "";
+      items.forEach((_, i) => {
+        const dot = document.createElement("button");
+        dot.style.cssText = "width:8px;height:8px;border-radius:50%;border:2px solid rgba(255,255,255,.7);background:transparent;cursor:pointer;padding:0;transition:.3s;";
+        if (i === galleryPos) dot.style.background = "white";
+        dot.addEventListener("click", () => {
+          galleryPos = i;
+          galleryTrack.style.transform = `translateX(-${galleryPos * getSlideWidth()}px)`;
+          updateGalleryDots();
+        });
+        dotsContainer.appendChild(dot);
+      });
     }
+
+    function updateGallery(dir) {
+      const items   = galleryTrack.querySelectorAll(".gallery-item");
+      const visible = Math.floor(galleryTrack.parentElement.offsetWidth / getSlideWidth());
+      const maxPos  = Math.max(0, items.length - visible);
+      galleryPos    = Math.max(0, Math.min(galleryPos + dir, maxPos));
+      galleryTrack.style.transform = `translateX(-${galleryPos * getSlideWidth()}px)`;
+      updateGalleryDots();
+    }
+
+    updateGalleryDots();
 
     galleryPrev?.addEventListener("click", () => updateGallery(-1));
     galleryNext?.addEventListener("click", () => updateGallery(1));
 
-    // Auto-scroll gallery — parte solo quando visibile
     const gallerySection = document.querySelector('.gallery-section');
     if (gallerySection && galleryTrack) {
       const startGalleryAuto = () => {
         galleryAuto = setInterval(() => updateGallery(1), 2000);
       };
-
       const galleryObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            startGalleryAuto();
-          } else {
-            clearInterval(galleryAuto);
-          }
+          if (entry.isIntersecting) { startGalleryAuto(); }
+          else { clearInterval(galleryAuto); }
         });
       }, { threshold: 0.2 });
-
       galleryObserver.observe(gallerySection);
     }
+
     galleryTrack.parentElement.addEventListener("mouseenter", () => clearInterval(galleryAuto));
     galleryTrack.parentElement.addEventListener("mouseleave", () => {
       galleryAuto = setInterval(() => updateGallery(1), 2000);
