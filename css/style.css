@@ -376,7 +376,7 @@ background: url('../img/biglietto_da_visita.jpg') center/cover no-repeat;  trans
 }
 
 .hero-cta {
-  margin-top: 36px;
+  margin-top: 60px;
   animation:  heroFadeUp .9s .3s ease both;
 }
 
