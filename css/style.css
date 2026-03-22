@@ -1259,13 +1259,13 @@ footer {
   align-items:   baseline;
   gap:           8px;
   padding:       14px 0;
-  border-bottom: 1px solid rgba(0,0,0,.07);
 }
 .menu-dish:last-child { border-bottom: none; }
 
 .menu-dish-left {
-  flex:        1;
-  min-width:   0;
+  flex:      ;
+  min-width: 0;
+  max-width: %;
 }
 .menu-dish-name {
   font-family: var(--font-display);
