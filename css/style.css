@@ -7,7 +7,7 @@
 :root {
   --color-primary:   #A3B898;   /* Verde principale */
   --color-primary-dark: #8aa07e;
-  --color-primary-light: #c2d0bb;
+  --color-primary-light: #73ad56;
   --color-bg:        #faf9f6;   /* Sfondo pagina */
   --color-surface:   #ffffff;
   --color-text:      #1a1a1a;   /* Testo scuro */
@@ -449,13 +449,13 @@ background: url('../img/biglietto_da_visita.jpg') center/cover no-repeat;  trans
 .feature-text h2 {
   font-size:   clamp(1.8rem, 3vw, 2.6rem);
   margin-bottom:8px;
-  color:       var(--color-text);
+  color:       var(--color-primary-dark);
 }
 .feature-text .subtitle {
   font-family: var(--font-display);
   font-size:   1.1rem;
   font-style:  italic;
-  color:       var(--color-gold);
+  color:       var(--color-primary);
   margin-bottom:20px;
 }
 .feature-text p {
