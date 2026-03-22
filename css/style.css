@@ -2057,3 +2057,22 @@ footer {
   padding-top:    80px;
   padding-bottom: 80px;
 }
+/* Margini uniformi tutte le pagine */
+.about-threecol,
+.cantina-section,
+.eventi-section,
+.locale-section,
+.cucina-intro,
+.cucina-feature,
+.about-story,
+.about-split,
+.menu-section,
+.contatti-section,
+.about-split,
+.locale-intro,
+.page-content {
+  padding-top:    80px !important;
+  padding-bottom: 80px !important;
+  padding-left:   24px !important;
+  padding-right:  24px !important;
+}
