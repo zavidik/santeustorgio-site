@@ -24,7 +24,16 @@
       <li role="none"><a href="${base}pages/eventi.html"     class="nav-link" role="menuitem" data-i18n="nav_events">Eventi</a></li>
       <li role="none"><a href="${base}pages/locale.html"     class="nav-link" role="menuitem" data-i18n="nav_venue">Locale</a></li>
       <li role="none"><a href="${base}pages/contatti.html"   class="nav-link" role="menuitem" data-i18n="nav_contacts">Contatti</a></li>
-    </ul>
+    <li role="none" class="nav-mobile-only">
+  <button class="btn-book-nav-mobile btn-book" data-i18n="nav_book">Prenota un tavolo</button>
+</li>
+<li role="none" class="nav-mobile-only">
+  <div class="lang-switcher-mobile">
+    <button class="lang-btn" data-lang="it" aria-label="Italiano">IT</button>
+    <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+  </div>
+</li>
+      </ul>
     <div class="nav-right">
       <button class="btn-book-nav btn-book" data-i18n="nav_book">Prenota un tavolo</button>
       <button id="hamburger" aria-label="Apri menu" aria-expanded="false" aria-controls="nav-links">
