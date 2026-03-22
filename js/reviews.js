@@ -56,7 +56,7 @@ const reviews = [
     text_it: "Esperienza sempre meravigliosa. Cibo delizioso, accostamenri creativi, piatti gustosi ma delicati. Atmosfera di casa in un contesto curato nel pieno centro di Milano. Matteo, il gestore, ti accoglie sempre in maniera squisita e gentile, venendo incontro ad ogni tua esigenza. Piatti anche vegetariani. Molto consigliato. Anche la nostra bassottina e’ sempre molto ben accolta.",
     text_en: "Always a wonderful experience. Delicious food, creative combinations, and dishes that are flavorful yet delicate. A homely atmosphere in a refined setting in the heart of Milan. Matteo, the manager, always welcomes you with great kindness and warmth, accommodating every need. Vegetarian options are also available. Highly recommended. Even our little dachshund is always very well welcomed.",
     date_it: "Febbraio 2025",
-    date_en: "Febbraio 2025"
+    date_en: "February 2025"
   }
 ];
 
