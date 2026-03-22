@@ -2073,3 +2073,8 @@ footer {
   padding-left:   24px !important;
   padding-right:  24px !important;
 }
+@media (max-width: 768px) {
+  .hero-bg {
+    background-position: left center;
+  }
+}
