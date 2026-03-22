@@ -1295,10 +1295,11 @@ footer {
 
 /* Dots between name and price */
 .menu-dish-dots {
-  flex:        1;
-  min-width:   16px;
+  flex-grow:     1;
+  min-width:     24px;
   border-bottom: 1px dotted rgba(0,0,0,.2);
   margin-bottom: 4px;
+  flex-shrink:   0;
 }
 
 @media (max-width: 480px) {
