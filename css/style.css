@@ -329,6 +329,7 @@ background: url('../img/biglietto_da_visita.jpg') center/cover no-repeat;  trans
 
 /* Curve top */
 .hero::before {
+  display: none;
   content:  '';
   position: absolute;
   top:      -1px; left: -2%; right: -2%;
