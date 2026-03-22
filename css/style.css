@@ -1263,9 +1263,7 @@ footer {
 .menu-dish:last-child { border-bottom: none; }
 
 .menu-dish-left {
-  flex:      ;
   min-width: 0;
-  max-width: %;
 }
 .menu-dish-name {
   font-family: var(--font-display);
