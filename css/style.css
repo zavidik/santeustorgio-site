@@ -2075,6 +2075,15 @@ footer {
 }
 @media (max-width: 768px) {
   .hero-bg {
-    background-position: left center;
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-color: #faf9f6;
+  }
+  .hero {
+    height: auto;
+    min-height: unset;
+    aspect-ratio: 10 / 7;
+    max-height: unset;
   }
 }
