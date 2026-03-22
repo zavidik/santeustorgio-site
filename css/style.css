@@ -32,13 +32,12 @@
 
 html { scroll-behavior: smooth; }
 
-bbody {
+body {
   font-family: var(--font-body);
   background:  var(--color-bg);
   color:       var(--color-text);
   line-height: 1.7;
   overflow-x:  hidden;
-  padding-top: var(--nav-height);
 }
 
 img { display: block; max-width: 100%; height: auto; }
@@ -307,7 +306,7 @@ h1, h2, h3, h4 {
   justify-content:center;
   text-align:   center;
   overflow:     hidden;
-  margin-top: 12;}
+  margin-top: 0;}
 
 .hero-bg {
   position:   absolute;

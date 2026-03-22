@@ -4,6 +4,17 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
+  // ── Aggiusta altezza hero sotto navbar ──────────────────────
+function fixHeroOffset() {
+  const navbar = document.getElementById("navbar");
+  const hero = document.querySelector(".hero");
+  if (navbar && hero) {
+    hero.style.marginTop = navbar.offsetHeight + "px";
+  }
+}
+fixHeroOffset();
+window.addEventListener("resize", fixHeroOffset);
+
 // ── Hamburger menu ──────────────────────────────────────────
   const hamburger = document.getElementById("hamburger");
   const navLinks  = document.getElementById("nav-links");
