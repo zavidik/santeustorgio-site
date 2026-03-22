@@ -80,7 +80,7 @@
   </div>
   <div class="footer-bottom">
   <p>
-    <span data-i18n="© 2025 site_name">© 2025 Ristorante Sant'Eustorgio</span>
+    <span data-i18n="© 2025 Ristorante Sant'Eustorgio">© 2025 Ristorante Sant'Eustorgio</span>
     &nbsp;|&nbsp; P.IVA 13872400968
     &nbsp;|&nbsp; <span data-i18n="footer_rights_reserved">Tutti i diritti riservati</span>
     &nbsp;|&nbsp; <a href="${base}pages/privacy.html" target="_blank" style="color:inherit;text-decoration:underline;" data-i18n="footer_privacy">Informativa Privacy</a>
