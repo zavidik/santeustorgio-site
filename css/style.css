@@ -644,11 +644,11 @@ background: url('../img/biglietto_da_visita.jpg') center/cover no-repeat;  trans
 footer {
   background: var(--color-primary);
   color:      var(--color-white);
-  padding:    56px 24px 32px;
+  padding:    50px 24px 32px;
 }
 
 .footer-inner {
-  max-width:   1100px;
+  max-width:   1110px;
   margin:      0 auto;
   display:     grid;
   grid-template-columns: auto 1fr auto auto;
