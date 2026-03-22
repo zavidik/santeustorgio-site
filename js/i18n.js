@@ -24,19 +24,19 @@ const translations = {
     hero_book: "Prenota un tavolo",
 
     // INTRO
-    intro_text: "Nel cuore di Milano, a pochi passi dalla Basilica di Sant'Eustorgio, la nostra osteria custodisce i sapori autentici della tradizione lombarda e piemontese. La nuova gestione 2025 rinnova un luogo amato, mantenendo l'anima conviviale e inserendo una vena contemporanea nei piatti e nell'atmosfera.",
+    intro_text: "",
 
     // SECTION 1 — Cucina
     section1_title: "La nostra cucina",
     section1_subtitle: "Un equilibrio tra tradizione e creatività.",
-    section1_text: "La cucina dell'Osteria Sant'Eustorgio è un viaggio tra Milano e il Piemonte, dove gli ingredienti locali incontrano la cura del dettaglio. Tutto è preparato al momento, con materie prime selezionate e un tocco moderno che non snatura la tradizione.",
+    section1_text: "La cucina del'Ristorante Sant'Eustorgio è un viaggio tra Milano e il Piemonte, dove gli ingredienti locali incontrano la cura del dettaglio. Tutto è preparato al momento, con materie prime selezionate e un tocco moderno che non snatura la tradizione.",
     section1_btn: "Scopri di più",
     section1_link: "pages/cucina.html",
 
     // SECTION 2 — Locale
     section2_title: "Ristorante nel cuore di Milano",
     section2_subtitle: "Con vista sulla storia e profumo di casa.",
-    section2_text: "La cucina dell'Osteria Sant'Eustorgio è un viaggio tra Milano e il Piemonte, dove gli ingredienti locali incontrano la cura del dettaglio. Tutto è preparato al momento, con materie prime selezionate e un tocco moderno che non snatura la tradizione.",
+    section2_text: "Nel cuore di Milano, a pochi passi dalla Basilica di Sant’Eustorgio, la nostra osteria custodisce i sapori autentici della tradizione lombarda e piemontese. La nuova gestione 2025 rinnova un luogo amato, mantenendo l’anima conviviale e inserendo una vena contemporanea nei piatti e nell’atmosfera.",
     section2_btn: "Scopri di più",
     section2_link: "pages/locale.html",
 
@@ -300,19 +300,19 @@ const translations = {
     hero_book: "Book a table",
 
     // INTRO
-    intro_text: "In the heart of Milan, steps from the Basilica di Sant'Eustorgio, our osteria preserves the authentic flavors of Lombard and Piedmontese tradition. The new 2025 management renews a beloved place, keeping its convivial spirit while introducing a contemporary touch to the dishes and atmosphere.",
+    intro_text: "",
 
     // SECTION 1 — Kitchen
     section1_title: "Our kitchen",
     section1_subtitle: "A balance between tradition and creativity.",
-    section1_text: "The kitchen of Osteria Sant'Eustorgio is a journey between Milan and Piedmont, where local ingredients meet attention to detail. Everything is prepared fresh, with selected raw materials and a modern touch that does not alter tradition.",
+    section1_text: "The kitchen of Ristorante Sant'Eustorgio is a journey between Milan and Piedmont, where local ingredients meet attention to detail. Everything is prepared fresh, with selected raw materials and a modern touch that does not alter tradition.",
     section1_btn: "Discover more",
     section1_link: "pages/cucina.html",
 
     // SECTION 2 — Venue
     section2_title: "Restaurant in the heart of Milan",
     section2_subtitle: "With a view of history and the scent of home.",
-    section2_text: "The kitchen of Osteria Sant'Eustorgio is a journey between Milan and Piedmont, where local ingredients meet attention to detail. Everything is prepared fresh, with selected raw materials and a modern touch that does not alter tradition.",
+    section2_text: "In the heart of Milan, steps from the Basilica di Sant'Eustorgio, our osteria preserves the authentic flavors of Lombard and Piedmontese tradition. The new 2025 management renews a beloved place, keeping its convivial spirit while introducing a contemporary touch to the dishes and atmosphere.",
     section2_btn: "Discover more",
     section2_link: "pages/locale.html",
 
