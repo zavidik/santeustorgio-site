@@ -29,7 +29,7 @@ const translations = {
     // SECTION 1 — Cucina
     section1_title: "La nostra cucina",
     section1_subtitle: "Un equilibrio tra tradizione e creatività.",
-    section1_text: "La cucina del'Ristorante Sant'Eustorgio è un viaggio tra Milano e il Piemonte, dove gli ingredienti locali incontrano la cura del dettaglio. Tutto è preparato al momento, con materie prime selezionate e un tocco moderno che non snatura la tradizione.",
+    section1_text: "La cucina del Ristorante Sant'Eustorgio è un viaggio tra Milano e il Piemonte, dove gli ingredienti locali incontrano la cura del dettaglio. Tutto è preparato al momento, con materie prime selezionate e un tocco moderno che non snatura la tradizione.",
     section1_btn: "Scopri di più",
     section1_link: "pages/cucina.html",
 
