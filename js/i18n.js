@@ -24,7 +24,7 @@ const translations = {
     hero_book: "Prenota un tavolo",
 
     // INTRO
-    intro_text: "",
+    intro_text: "Nel cuore di Milano, le tradizioni culinarie milanesi e piemontesi incontrano la cucina moderna, tra piatti e vini d’autore.",
 
     // SECTION 1 — Cucina
     section1_title: "La nostra cucina",
