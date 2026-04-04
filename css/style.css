@@ -390,17 +390,17 @@ h1, h2, h3, h4 {
 /* ════════════════════════════════════════════════════════════
    HERO
    ════════════════════════════════════════════════════════════ */
-.hero {
-  position: relative;
-  height: 85vh;
-  min-height: 500px;
-  max-height: 750px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  overflow: hidden;
-  margin-top: 0;
+.hero { 
+  position: relative; 
+  height: 85vh; 
+  min-height: 500px; 
+  max-height: 750px; 
+  display: flex; 
+  align-items: center; 
+  justify-content:center; 
+  text-align: center; 
+  overflow: hidden; 
+  margin-top: 0; 
 }
 
 .hero-bg {
