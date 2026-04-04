@@ -1,5 +1,5 @@
 // ============================================================
-// navbar.js — Inietta navbar e footer nelle sottopagine
+// navbar.js — Inietta navbar, footer e modal nelle pagine
 // ============================================================
 
 (function() {
@@ -10,19 +10,24 @@
 <nav id="navbar" role="navigation" aria-label="Navigazione principale">
   <div class="nav-inner">
     <a href="${base}index.html" class="nav-brand">
-      <span class="nav-brand-name">Ristorante <br> Sant'Eustorgio</span>
-      <span class="nav-brand-city" data-i18n="nav_city">Milano</span>
+      <img src="${base}/img/logo.png" alt="Logo Ristorante Sant'Eustorgio" class="nav-brand-logo">
+      <div class="nav-brand-text">
+        <span class="nav-brand-name">Ristorante <br> Sant'Eustorgio</span>
+        <span class="nav-brand-city" data-i18n="nav_city">Milano</span>
+      </div>
     </a>
+
     <ul id="nav-links" role="menubar">
-      <li role="none"><a href="${base}index.html"            class="nav-link" role="menuitem" data-i18n="nav_home">Homepage</a></li>
-      <li role="none"><a href="${base}pages/chi-siamo.html"  class="nav-link" role="menuitem" data-i18n="nav_about">Chi siamo</a></li>
-      <li role="none"><a href="${base}pages/cucina.html"     class="nav-link" role="menuitem" data-i18n="nav_kitchen">Cucina</a></li>
-      <li role="none"><a href="${base}pages/menu.html"       class="nav-link" role="menuitem" data-i18n="nav_menu">Menù</a></li>
-      <li role="none"><a href="${base}pages/cantina.html"    class="nav-link" role="menuitem" data-i18n="nav_cellar">Cantina</a></li>
-      <li role="none"><a href="${base}pages/eventi.html"     class="nav-link" role="menuitem" data-i18n="nav_events">Eventi</a></li>
-      <li role="none"><a href="${base}pages/locale.html"     class="nav-link" role="menuitem" data-i18n="nav_venue">Locale</a></li>
-      <li role="none"><a href="${base}pages/contatti.html"   class="nav-link" role="menuitem" data-i18n="nav_contacts">Contatti</a></li>
+      <li role="none"><a href="${base}index.html" class="nav-link" role="menuitem" data-i18n="nav_home">Homepage</a></li>
+      <li role="none"><a href="${base}pages/chi-siamo.html" class="nav-link" role="menuitem" data-i18n="nav_about">Chi siamo</a></li>
+      <li role="none"><a href="${base}pages/cucina.html" class="nav-link" role="menuitem" data-i18n="nav_kitchen">Cucina</a></li>
+      <li role="none"><a href="${base}pages/menu.html" class="nav-link" role="menuitem" data-i18n="nav_menu">Menù</a></li>
+      <li role="none"><a href="${base}pages/cantina.html" class="nav-link" role="menuitem" data-i18n="nav_cellar">Cantina</a></li>
+      <li role="none"><a href="${base}pages/eventi.html" class="nav-link" role="menuitem" data-i18n="nav_events">Eventi</a></li>
+      <li role="none"><a href="${base}pages/locale.html" class="nav-link" role="menuitem" data-i18n="nav_venue">Locale</a></li>
+      <li role="none"><a href="${base}pages/contatti.html" class="nav-link" role="menuitem" data-i18n="nav_contacts">Contatti</a></li>
     </ul>
+
     <div id="nav-mobile-extras" class="nav-mobile-extras">
       <button class="btn-book nav-mobile-book" data-i18n="nav_book">Prenota un tavolo</button>
       <div class="nav-mobile-langs">
@@ -30,6 +35,7 @@
         <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
       </div>
     </div>
+
     <div class="nav-right">
       <button class="btn-book-nav btn-book" data-i18n="nav_book">Prenota un tavolo</button>
       <button id="hamburger" aria-label="Apri menu" aria-expanded="false" aria-controls="nav-links">
@@ -49,17 +55,20 @@
   <div class="footer-inner">
 
     <div class="footer-logo">
-      Ristorante<br>Sant'Eustorgio
-      <span data-i18n="nav_city">Milano</span>
+      <img src="${base}/img/logo.png" alt="Logo Ristorante Sant'Eustorgio" class="footer-logo-img">
+      <div class="footer-logo-text">
+        Ristorante<br>Sant'Eustorgio
+        <span data-i18n="nav_city">Milano</span>
+      </div>
     </div>
 
     <div class="footer-col">
-    </div> 
+    </div>
 
-   <div class="footer-col">
+    <div class="footer-col">
       <h4 data-i18n="footer_hours_title">Orari</h4>
-      <p data-i18n="footer_hours">Tutti i giorni 12:00 – 23:00</p>
-    </div> 
+      <p data-i18n="footer_hours">Tutti i giorni 12:00 - 23:00</p>
+    </div>
 
     <div class="footer-col">
       <h4 data-i18n="footer_contacts_title">Contatti</h4>
@@ -71,8 +80,6 @@
         <span data-i18n="footer_instagram">ristorante_santeustorgiomilano</span>
       </a>
     </div>
-
-    
 
   </div>
 
