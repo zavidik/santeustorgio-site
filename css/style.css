@@ -2161,3 +2161,12 @@ h3 {
   display: none;
   content: none;
 }
+.intro-section p {
+  display: block !important;
+}
+
+.intro-section p::before,
+.intro-section p::after {
+  content: none !important;
+  display: none !important;
+}
