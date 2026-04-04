@@ -2170,3 +2170,22 @@ h3 {
   content: none !important;
   display: none !important;
 }
+.intro-section,
+.intro-section.reveal,
+.intro-section p {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.intro-section::before,
+.intro-section::after,
+.intro-section.reveal::before,
+.intro-section.reveal::after,
+.intro-section p::before,
+.intro-section p::after {
+  content: none !important;
+  display: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
