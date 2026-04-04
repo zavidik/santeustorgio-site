@@ -934,16 +934,18 @@ footer {
    CHI SIAMO — PAGE HERO (banner più basso)
    ════════════════════════════════════════════════════════════ */
 .page-banner {
-  position:     relative;
-  height:       72vh;
-  min-height:   320px;
-  max-height:   520px;
-  display:      flex;
-  align-items:  center;
+  height:       65vh;
+  min-height:   400px;
+  max-height:   700px;
+
+  display: flex;
+  align-items: center;
   justify-content: center;
-  text-align:   center;
-  overflow:     hidden;
-  margin-top:   calc(-1 * var(--nav-height));
+
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin-top: calc(-1 * var(--nav-height));
 }
 
 .page-banner-bg {
@@ -991,16 +993,14 @@ footer {
   height: 100%;
   padding: 0 24px;
 }
+
 .page-banner-content h1 {
-  font-family: var(--font-display);
-  font-size:   clamp(2rem, 5vw, 3.8rem);
-  font-weight: 700;
-  text-shadow: 0 2px 12px rgba(0,0,0,.4);
-  animation:   heroFadeUp .8s ease both;
+  text-align: center;
+  margin-bottom: 12px;
 }
+
 .page-banner-content .page-banner-cta {
-  margin-top: 28px;
-  animation:  heroFadeUp .8s .2s ease both;
+  margin-top: 20px;
 }
 
 /* ════════════════════════════════════════════════════════════
