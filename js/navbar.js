@@ -10,7 +10,7 @@
 <nav id="navbar" role="navigation" aria-label="Navigazione principale">
   <div class="nav-inner">
     <a href="${base}index.html" class="nav-brand">
-      <img src="${base}/img/logo.png" alt="Logo Ristorante Sant'Eustorgio" class="nav-brand-logo">
+      <img src="${base}img/logo.png" alt="Logo Ristorante Sant'Eustorgio" class="nav-brand-logo">
       <div class="nav-brand-text">
         <span class="nav-brand-name">Ristorante <br> Sant'Eustorgio</span>
         <span class="nav-brand-city" data-i18n="nav_city">Milano</span>
@@ -55,7 +55,7 @@
   <div class="footer-inner">
 
     <div class="footer-logo">
-      <img src="${base}/img/logo.png" alt="Logo Ristorante Sant'Eustorgio" class="footer-logo-img">
+      <img src="${base}img/logo.png" alt="Logo Ristorante Sant'Eustorgio" class="footer-logo-img">
       <div class="footer-logo-text">
         Ristorante<br>Sant'Eustorgio
         <span data-i18n="nav_city">Milano</span>
