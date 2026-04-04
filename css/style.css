@@ -531,7 +531,6 @@ h1, h2, h3, h4 {
     border-color: var(--color-primary);
   }
 }
-}
 
 /* Mobile invariato */
 @media (max-width: 768px) {
