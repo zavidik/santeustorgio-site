@@ -2154,3 +2154,10 @@ h3 {
     height: 80vh; /* prima era 85vh */
   }
 }
+.intro-section::before,
+.intro-section::after,
+.intro-section p::before,
+.intro-section p::after {
+  display: none;
+  content: none;
+}
