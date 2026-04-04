@@ -390,31 +390,36 @@ h1, h2, h3, h4 {
 /* ════════════════════════════════════════════════════════════
    HERO
    ════════════════════════════════════════════════════════════ */
+/* ════════════════════════════════════════════════════════════
+   HERO
+   ════════════════════════════════════════════════════════════ */
 .hero {
-  position:     relative;
-  height:       85vh;
-  min-height:   500px;
-  max-height:   750px;
-
-  display:      flex;
-  align-items:  center;
-  justify-content:center;
-  text-align:   center;
-  overflow:     hidden;
+  position: relative;
+  height: 85vh;
+  min-height: 500px;
+  max-height: 750px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
   margin-top: 0;
 }
 
 .hero-bg {
-  position:   absolute;
-  inset:      0;
-background: url('../img/biglietto_da_visita.jpg') center/cover no-repeat;  transform:  scale(1.05);
+  position: absolute;
+  inset: 0;
+  background: url('../img/biglietto_da_visita.jpg') center/cover no-repeat;
+  transform: scale(1.05);
   transition: transform 8s ease;
 }
-.hero:hover .hero-bg { transform: scale(1); }
+.hero:hover .hero-bg {
+  transform: scale(1);
+}
 
 .hero-overlay {
-  position:   absolute;
-  inset:      0;
+  position: absolute;
+  inset: 0;
   background: linear-gradient(
     to bottom,
     rgba(0,0,0,.35) 0%,
@@ -425,25 +430,29 @@ background: url('../img/biglietto_da_visita.jpg') center/cover no-repeat;  trans
 
 /* Curve top */
 .hero::before {
-  content:  '';
+  content: '';
   position: absolute;
-  top:      -1px; left: -2%; right: -2%;
-  height:   80px;
+  top: -1px;
+  left: -2%;
+  right: -2%;
+  height: 80px;
   background: var(--color-primary);
   border-radius: 0 0 50% 50%;
-  z-index:  2;
-  display:  none;
+  z-index: 2;
+  display: none;
 }
 
 /* Curve bottom */
 .hero::after {
-  content:  '';
+  content: '';
   position: absolute;
-  bottom:   -1px; left: -2%; right: -2%;
-  height:   80px;
+  bottom: -1px;
+  left: -2%;
+  right: -2%;
+  height: 80px;
   background: var(--color-bg);
   border-radius: 50% 50% 0 0;
-  z-index:  2;
+  z-index: 2;
 }
 
 .hero-content {
@@ -458,36 +467,94 @@ background: url('../img/biglietto_da_visita.jpg') center/cover no-repeat;  trans
 
   text-align: center;
   padding: 0 24px;
+  width: 100%;
 }
 
 .hero-title {
   font-family: var(--font-display);
-  font-size:   clamp(2.4rem, 6vw, 5rem);
+  font-size: clamp(2.4rem, 6vw, 5rem);
   font-weight: 700;
-  letter-spacing:.02em;
+  letter-spacing: .02em;
   text-shadow: 0 2px 16px rgba(0,0,0,.4);
-  animation:   heroFadeUp .9s ease both;
+  animation: heroFadeUp .9s ease both;
 }
 
 .hero-subtitle {
-  font-size:    clamp(.9rem, 2vw, 1.2rem);
-  letter-spacing:.28em;
-  text-transform:uppercase;
-  opacity:      .9;
-  margin-top:   8px;
-  animation:    heroFadeUp .9s .15s ease both;
+  font-size: clamp(.9rem, 2vw, 1.2rem);
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  opacity: .9;
+  margin-top: 8px;
+  animation: heroFadeUp .9s .15s ease both;
 }
 
 .hero-cta {
-  margin-top: 180px;
-  animation:  heroFadeUp .9s .3s ease both;
+  z-index: 4;
+}
+
+/* Desktop: bottone metà dentro e metà fuori */
+@media (min-width: 769px) {
+  .hero-content {
+    height: 100%;
+  }
+
+  .hero-cta {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 5%);
+    margin-top: 0;
+    z-index: 4;
+    animation: none;
+  }
+
+  .intro-section {
+    padding-top: 110px;
+  }
+}
+
+/* Mobile invariato */
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    min-height: unset;
+    max-height: unset;
+    margin-top: 0;
+    aspect-ratio: 10 / 7;
+  }
+
+  .hero-bg {
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-color: #faf9f6;
+  }
+
+  .hero::before {
+    display: none;
+  }
+
+  .hero::after {
+    height: 48px;
+  }
+
+  .hero-cta .btn-white {
+    background: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-primary);
+  }
 }
 
 @keyframes heroFadeUp {
-  from { opacity: 0; transform: translateY(24px); }
-  to   { opacity: 1; transform: none; }
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
-
 /* ════════════════════════════════════════════════════════════
    INTRO TEXT
    ════════════════════════════════════════════════════════════ */
