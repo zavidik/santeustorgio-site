@@ -130,6 +130,7 @@ window.addEventListener('resize', checkNavOverflow);
   const galleryNext  = document.getElementById("gallery-next");
 
   if (galleryTrack) {
+    let galleryAuto = null;
     let galleryPos = 0;
 
     function getSlideWidth() {

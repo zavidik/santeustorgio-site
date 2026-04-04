@@ -22,21 +22,12 @@
       <li role="none"><a href="${base}pages/eventi.html"     class="nav-link" role="menuitem" data-i18n="nav_events">Eventi</a></li>
       <li role="none"><a href="${base}pages/locale.html"     class="nav-link" role="menuitem" data-i18n="nav_venue">Locale</a></li>
       <li role="none"><a href="${base}pages/contatti.html"   class="nav-link" role="menuitem" data-i18n="nav_contacts">Contatti</a></li>
-      <li role="none" id="nav-book-mobile" style="display:none; width:100%; margin-top:16px;">
-        <button class="btn-book" data-i18n="nav_book" style="width:100%; padding:12px 20px; text-align:center; border-radius:40px; background:white; color:#8aa07e; font-weight:700; font-size:.85rem; letter-spacing:.06em; text-transform:uppercase; border:none; cursor:pointer;">Prenota un tavolo</button>
-      </li>
-      <li role="none" id="nav-lang-mobile" style="display:none; width:100%; margin-top:12px;">
-        <div style="display:flex; gap:8px; padding:0 14px;">
-          <button class="lang-btn" data-lang="it" aria-label="Italiano">IT</button>
-          <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
-        </div>
-      </li>
     </ul>
-    <div id="nav-mobile-extras" style="display:none; position:fixed; bottom:40px; right:0; width:min(80vw,300px); padding:0 28px; z-index:1000;">
-      <button class="btn-book" data-i18n="nav_book" style="width:100%; padding:12px 20px; text-align:center; border-radius:40px; background:white; color:#8aa07e; font-weight:700; font-size:.85rem; letter-spacing:.06em; text-transform:uppercase; border:none; cursor:pointer; margin-bottom:12px;">Prenota un tavolo</button>
-      <div style="display:flex; gap:8px;">
-        <button class="lang-btn" data-lang="it" style="flex:1; padding:8px; border-radius:4px; border:1px solid rgba(255,255,255,.4); background:transparent; color:white; font-weight:700; font-size:.72rem; cursor:pointer;">IT</button>
-        <button class="lang-btn" data-lang="en" style="flex:1; padding:8px; border-radius:4px; border:1px solid rgba(255,255,255,.4); background:transparent; color:white; font-weight:700; font-size:.72rem; cursor:pointer;">EN</button>
+    <div id="nav-mobile-extras" class="nav-mobile-extras">
+      <button class="btn-book nav-mobile-book" data-i18n="nav_book">Prenota un tavolo</button>
+      <div class="nav-mobile-langs">
+        <button class="lang-btn" data-lang="it" aria-label="Italiano">IT</button>
+        <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
       </div>
     </div>
     <div class="nav-right">
@@ -90,8 +81,8 @@
       © 2025 Ristorante Sant'Eustorgio
       &nbsp;|&nbsp; P.IVA 13872400968
       &nbsp;|&nbsp; <span data-i18n="footer_rights_reserved">Tutti i diritti riservati</span>
-      &nbsp;|&nbsp; <a href="${base}pages/privacy.html" target="_blank" style="color:inherit;text-decoration:underline;" data-i18n="footer_privacy">Informativa Privacy</a>
-      &nbsp;|&nbsp; <a href="${base}pages/cookie-policy.html" target="_blank" style="color:inherit;text-decoration:underline;">Cookie Policy</a>
+      &nbsp;|&nbsp; <a href="${base}pages/privacy.html" target="_blank" class="footer-inline-link" data-i18n="footer_privacy">Informativa Privacy</a>
+      &nbsp;|&nbsp; <a href="${base}pages/cookie-policy.html" target="_blank" class="footer-inline-link">Cookie Policy</a>
     </p>
   </div>
 

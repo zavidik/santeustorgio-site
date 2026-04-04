@@ -42,11 +42,11 @@
       <li role="none"><a href="pages/locale.html"     class="nav-link" role="menuitem" data-i18n="nav_venue">Locale</a></li>
       <li role="none"><a href="pages/contatti.html"   class="nav-link" role="menuitem" data-i18n="nav_contacts">Contatti</a></li>
     </ul>
-<div id="nav-mobile-extras" style="display:none; position:fixed; bottom:40px; right:0; width:min(80vw,300px); padding:0 28px; z-index:1000;">
-  <button class="btn-book" data-i18n="nav_book" style="width:100%; padding:12px 20px; text-align:center; border-radius:40px; background:white; color:#8aa07e; font-weight:700; font-size:.85rem; letter-spacing:.06em; text-transform:uppercase; border:none; cursor:pointer; margin-bottom:12px;">Prenota un tavolo</button>
-  <div style="display:flex; gap:8px;">
-    <button class="lang-btn" data-lang="it" style="flex:1; padding:8px; border-radius:4px; border:1px solid rgba(255,255,255,.4); background:transparent; color:white; font-weight:700; font-size:.72rem; cursor:pointer;">IT</button>
-    <button class="lang-btn" data-lang="en" style="flex:1; padding:8px; border-radius:4px; border:1px solid rgba(255,255,255,.4); background:transparent; color:white; font-weight:700; font-size:.72rem; cursor:pointer;">EN</button>
+<div id="nav-mobile-extras" class="nav-mobile-extras">
+  <button class="btn-book nav-mobile-book" data-i18n="nav_book">Prenota un tavolo</button>
+  <div class="nav-mobile-langs">
+    <button class="lang-btn" data-lang="it" aria-label="Italiano">IT</button>
+    <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
   </div>
 </div>
     <!-- Right controls -->
@@ -103,13 +103,13 @@
     </div>
 
     <div class="feature-text">
-      <span class="feature-label"><span style="display:inline-flex; align-items:center; margin-right:10px;">
+      <span class="feature-label"><span class="feature-icon">
   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M8 3V9M6.5 3V7M9.5 3V7M8 9V21" stroke="#8FA083" stroke-width="1.4" stroke-linecap="round"/>
     <path d="M16 3V21" stroke="#8FA083" stroke-width="1.4" stroke-linecap="round"/>
   </svg>
 </span></span>
-      <h2 id="feature1-title" data-i18n="section1_title">La nostra cucina</h2>
+      <h2 data-i18n="section1_title">La nostra cucina</h2>
       <p class="subtitle" data-i18n="section1_subtitle">Un equilibrio tra tradizione e creatività.</p>
       <p data-i18n="section1_text">La cucina dell'Osteria Sant'Eustorgio è un viaggio tra Milano e il Piemonte, dove gli ingredienti locali incontrano la cura del dettaglio. Tutto è preparato al momento, con materie prime selezionate e un tocco moderno che non snatura la tradizione.</p>
       <a href="pages/cucina.html" class="btn btn-outline" data-i18n="section1_btn">Scopri di più</a>
@@ -121,7 +121,7 @@
 <!-- ══════════════════════════════════════════════════════════
      FEATURE 2 — Il locale
      ══════════════════════════════════════════════════════════ -->
-<section class="feature-section" style="background: var(--color-surface);" aria-labelledby="feature2-title">
+<section class="feature-section" aria-labelledby="feature2-title">
   <div class="feature-grid reverse reveal">
 
     <div class="feature-img-wrap">
@@ -135,13 +135,13 @@
     </div>
 
     <div class="feature-text">
-      <span class="feature-label"><span style="display:inline-flex; align-items:center; margin-right:10px;">
+      <span class="feature-label"><span class="feature-icon">
   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M8 3V9M6.5 3V7M9.5 3V7M8 9V21" stroke="#8FA083" stroke-width="1.4" stroke-linecap="round"/>
     <path d="M16 3V21" stroke="#8FA083" stroke-width="1.4" stroke-linecap="round"/>
   </svg>
 </span></span>
-      <h2 id="feature2-title" data-i18n="section2_title">Ristorante nel cuore di Milano</h2>
+      <h2 class="feature-label" data-i18n="section2_title">Ristorante nel cuore di Milano</h2>
       <p class="subtitle" data-i18n="section2_subtitle">Con vista sulla storia e profumo di casa.</p>
       <p data-i18n="section2_text">Nel cuore di Milano, a pochi passi dalla Basilica di Sant’Eustorgio, la nostra osteria custodisce i sapori autentici della tradizione lombarda e piemontese. La nuova gestione 2025 rinnova un luogo amato, mantenendo l’anima conviviale e inserendo una vena contemporanea nei piatti e nell’atmosfera.</p>
       <a href="pages/locale.html" class="btn btn-outline" data-i18n="section2_btn">Scopri di più</a>
@@ -207,7 +207,7 @@
       </div>
     </div>
   </div>
-<div id="gallery-dots" style="display:flex; justify-content:center; gap:8px; margin-top:16px;"></div>
+<div id="gallery-dots" class="gallery-dots"></div>
   
 <div class="gallery-controls">
     <button id="gallery-prev" class="gallery-btn" aria-label="Immagine precedente">&#8592;</button>
@@ -272,12 +272,12 @@
       © 2025 Ristorante Sant'Eustorgio
       &nbsp;|&nbsp; P.IVA 13872400968
       &nbsp;|&nbsp; <span data-i18n="footer_rights_reserved">Tutti i diritti riservati</span>
-      &nbsp;|&nbsp; <a href="${base}pages/privacy.html" target="_blank" style="color:inherit;text-decoration:underline;" data-i18n="footer_privacy">Informativa Privacy</a>
-      &nbsp;|&nbsp; <a href="${base}pages/cookie-policy.html" target="_blank" style="color:inherit;text-decoration:underline;">Cookie Policy</a>
+      &nbsp;|&nbsp; <a href="pages/privacy.html" target="_blank" class="footer-inline-link" data-i18n="footer_privacy">Informativa Privacy</a>
+      &nbsp;|&nbsp; <a href="pages/cookie-policy.html" target="_blank" class="footer-inline-link">Cookie Policy</a>
     </p>
   </div>
 
-</footer>`;
+</footer>
 
 <!-- ══════════════════════════════════════════════════════════
      BOOKING MODAL

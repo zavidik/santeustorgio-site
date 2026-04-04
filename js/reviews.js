@@ -142,5 +142,4 @@ function resetInterval() {
 document.addEventListener("DOMContentLoaded", initReviews);
 
 // Aggiorna le recensioni quando cambia la lingua
-const _origSetLang = typeof setLang !== "undefined" ? setLang : null;
 document.addEventListener("langchange", () => showReview(currentReviewIndex));
