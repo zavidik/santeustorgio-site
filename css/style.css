@@ -1925,3 +1925,23 @@ footer {
     border-color: var(--color-primary);
   }
 }
+/* Tutti i titoli */
+h1, h2, h3 {
+    text-transform: uppercase;
+}
+
+/* Titolo principale */
+.section-title-main {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+
+}
+
+/* Titoli secondari */
+h2:not(.section-title-main),
+h3 {
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+}
