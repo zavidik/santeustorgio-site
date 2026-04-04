@@ -513,8 +513,11 @@ h1, h2, h3, h4 {
 }
 
   .intro-section {
-    padding-top: 110px;
-  }
+  padding: 20px 24px 60px;
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
+}
   @media (min-width: 769px) {
   .hero-cta .btn {
     background: var(--color-primary);
@@ -559,7 +562,7 @@ h1, h2, h3, h4 {
   position: relative;
   transform: none;
   margin-top: 0;
-  top: 110px;
+  top: 90px;
 }
 
   .hero-cta .btn-white {
