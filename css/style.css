@@ -502,15 +502,32 @@ h1, h2, h3, h4 {
     position: absolute;
     left: 50%;
     bottom: 0;
-    transform: translate(-50%, 5%);
+    transform: translate(-50%, -30px);
     margin-top: 0;
     z-index: 4;
     animation: none;
   }
+  .hero-cta .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(163,184,152,.4);
+}
 
   .intro-section {
     padding-top: 110px;
   }
+  @media (min-width: 769px) {
+  .hero-cta .btn {
+    background: var(--color-primary);
+    color: var(--color-white);
+    border: 2px solid var(--color-primary);
+  }
+
+  .hero-cta .btn:hover {
+    background: var(--color-white);
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+}
 }
 
 /* Mobile invariato */
@@ -536,6 +553,12 @@ h1, h2, h3, h4 {
 
   .hero::after {
     height: 48px;
+  }
+
+  .hero-cta {
+    position: relative;
+    transform: none;
+    margin-top: 99px;
   }
 
   .hero-cta .btn-white {
