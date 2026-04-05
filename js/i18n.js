@@ -299,7 +299,7 @@ intro_text: "Nel cuore di Milano, le tradizioni culinarie milanesi e piemontesi 
     hero_book: "Book a table",
 
     // INTRO
-    intro_text: "",
+    intro_text: "In the heart of Milan, Milanese and Piedmontese culinary traditions meet modern cuisine,<br> through signature dishes and fine wines.",
 
     // SECTION 1 — Kitchen
     section1_title: "Our kitchen",
