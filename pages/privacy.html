@@ -290,20 +290,6 @@
 <script src="../js/i18n.js"></script>
 <script src="../js/main.js"></script>
 
-<script>
-  function updatePrivacyLang() {
-    const lang = localStorage.getItem('lang') || 'it';
-    document.querySelectorAll('.lang-it').forEach(el => el.style.display = lang === 'it' ? 'block' : 'none');
-    document.querySelectorAll('.lang-en').forEach(el => el.style.display = lang === 'en' ? 'block' : 'none');
-    document.documentElement.lang = lang;
-  }
-  document.addEventListener('DOMContentLoaded', () => {
-    updatePrivacyLang();
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.addEventListener('click', () => setTimeout(updatePrivacyLang, 50));
-    });
-  });
-</script>
 
 </body>
 </html>

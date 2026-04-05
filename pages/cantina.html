@@ -21,7 +21,7 @@
      ══════════════════════════════════════════════════════════ -->
 <header class="page-banner" role="banner">
   <div class="page-banner-bg"
-       style="background-image: url('../img/acquarello_chiesa.jpeg'),
+       style="background-image: url('../img/cantina_paesaggio.jpg'),
               url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1600&q=80');">
   </div>
   <div class="page-banner-overlay"></div>
@@ -32,7 +32,7 @@
 
 <!-- ══════════════════════════════════════════════════════════
      SEZIONE 1 — Vini di nostra produzione: testo sx | foto dx
-     Inserisci: ../images/cantina-produzione.jpg (min 800x600px)
+     Inserisci: ../img/bottiglia_bicchiere.jpeg (min 800x600px)
      Inserisci: ../images/cantina-logo-medolago.png (logo cantina)
      ══════════════════════════════════════════════════════════ -->
 <section class="cantina-section" aria-labelledby="production-title">
@@ -77,7 +77,7 @@
 
     <div class="cantina-img-wrap">
       <img
-        src="../images/cantina-produzione.jpg"
+        src="../img/bottiglie.jpeg"
         alt="Vigneti Medolago Albani"
         loading="lazy"
         onerror="this.src='https://images.unsplash.com/photo-1474722883778-792e7990302f?w=800&q=80'; this.onerror=null;"
@@ -89,14 +89,14 @@
 
 <!-- ══════════════════════════════════════════════════════════
      SEZIONE 2 — Abbinamenti: foto sx | testo dx
-     Inserisci: ../images/cantina-abbinamenti.jpg (min 800x600px)
+     Inserisci: ../img/bottiglie.jpeg (min 800x600px)
      ══════════════════════════════════════════════════════════ -->
 <section class="cantina-section" aria-labelledby="pairings-title">
   <div class="cantina-grid reverse reveal">
 
     <div class="cantina-img-wrap">
       <img
-        src="../images/cantina-abbinamenti.jpg"
+        src="../img/plin_bottiglia.jpeg"
         alt="Abbinamenti cibo e vino"
         loading="lazy"
         onerror="this.src='https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=800&q=80'; this.onerror=null;"
@@ -142,7 +142,7 @@
 
 <!-- ══════════════════════════════════════════════════════════
      SEZIONE 3 — Esperienza culturale: testo sx | foto dx
-     Inserisci: ../images/cantina-cultura.jpg (min 800x600px)
+     Inserisci: ../img/cantina_paesaggio.jpg (min 800x600px)
      ══════════════════════════════════════════════════════════ -->
 <section class="cantina-section" aria-labelledby="culture-title">
   <div class="cantina-grid reveal">
@@ -182,7 +182,7 @@
 
     <div class="cantina-img-wrap">
       <img
-        src="../images/cantina-cultura.jpg"
+        src="../img/bottiglia_bicchiere.jpeg"
         alt="Lo staff del Ristorante Sant'Eustorgio con i vini"
         loading="lazy"
         onerror="this.src='https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=800&q=80'; this.onerror=null;"
@@ -198,26 +198,6 @@
 <script src="../js/i18n.js"></script>
 <script src="../js/main.js"></script>
 
-<script>
-  // Gestione del paragrafo con link (non traducibile via data-i18n standard)
-  // Mostra la versione corretta in base alla lingua selezionata
-  function updateCantinaLink() {
-    const lang = localStorage.getItem("lang") || "it";
-    const itEl = document.getElementById("cantina-p1-full");
-    const enEl = document.getElementById("cantina-p1-full-en");
-    // Nascondi il paragrafo generico data-i18n per il p1 (già rimosso dall'HTML)
-    if (itEl) itEl.style.display = lang === "it" ? "block" : "none";
-    if (enEl) enEl.style.display = lang === "en" ? "block" : "none";
-  }
-
-  document.addEventListener("DOMContentLoaded", () => {
-    updateCantinaLink();
-    // Aggiorna quando cambia la lingua
-    document.querySelectorAll(".lang-btn").forEach(btn => {
-      btn.addEventListener("click", () => setTimeout(updateCantinaLink, 50));
-    });
-  });
-</script>
 
 </body>
 </html>

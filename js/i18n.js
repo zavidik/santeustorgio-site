@@ -596,6 +596,7 @@ function setLang(lang) {
   document.querySelectorAll(".lang-btn").forEach(btn => {
     btn.classList.toggle("active", btn.dataset.lang === lang);
   });
+  document.dispatchEvent(new CustomEvent("langchange", { detail: { lang } }));
 }
 
 document.addEventListener("DOMContentLoaded", () => {

@@ -24,7 +24,7 @@ const reviews = [
     text_it: "Una serata davvero piacevole, condivisa con amici, in un ambiente curato e accogliente. Il risotto è stato eccellente, equilibrato e raffinato, mentre lo zabaione finale ha conquistato tutti, regalando una chiusura memorabile. Ottima anche la macedonia con gelato, preparata con frutta freschissima, leggera e piacevolmente armoniosa. Il personale si è dimostrato estremamente gentile e attento, contribuendo a creare un clima rilassato e piacevole per tutta la durata della cena. La location, in Piazza Sant’Eustorgio, aggiunge un valore ulteriore all’esperienza grazie a un’atmosfera calda ed elegante. Un ristorante che unisce qualità, professionalità e un’autentica attenzione al cliente. Un luogo in cui tornare con grande piacere.",
     text_en: "A truly pleasant evening, shared with friends, in a refined and welcoming setting. The risotto was excellent, balanced and refined, while the final zabaglione won everyone over, providing a memorable ending. The fruit salad with ice cream was also excellent, prepared with very fresh fruit, light and pleasantly harmonious. The staff proved to be extremely kind and attentive, helping to create a relaxed and enjoyable atmosphere throughout the dinner. The location, in Piazza Sant’Eustorgio, adds further value to the experience thanks to its warm and elegant ambiance. A restaurant that combines quality, professionalism, and genuine attention to the customer. A place to return to with great pleasure.",
     date_it: "Gennaio 2025",
-    date_en: "Jenuary 2025"
+    date_en: "January 2025"
   },
   {
     author: "Marta Z.",
@@ -46,7 +46,7 @@ const reviews = [
     author: "Maddalena M.",
     rating: 5,
     text_it: "Ristorante storico milanese con nuova gestione, menù vario (piatti della tradizione più proposte piemontesi e lombarde), locale tranquillo e accogliente, personale attento e disponibile. Abbiamo mangiato e bevuto benissimo, non vediamo l’ora di tornare per poter mangiare anche all’esterno con la bella stagione!",
-    text_en: "A historic Milanese restaurant under new management, offering a varied menu (traditional dishes along with Piedmontese and Lombard specialties). The place is მშვიდ and welcoming, with attentive and helpful staff. We ate and drank very well, and we can’t wait to come back to enjoy dining outdoors during the warmer season!",
+    text_en: "A historic Milanese restaurant under new management, offering a varied menu (traditional dishes along with Piedmontese and Lombard specialties). The place is calm and welcoming, with attentive and helpful staff. We ate and drank very well, and we can’t wait to come back to enjoy dining outdoors during the warmer season!",
     date_it: "Giugno 2025",
     date_en: "June 2025"
   },
@@ -117,8 +117,14 @@ function initReviews() {
   if (!dotsContainer) return;
 
   dotsContainer.innerHTML = reviews.map((_, i) =>
-    `<button class="review-dot ${i === 0 ? "active" : ""}" onclick="goToReview(${i})" aria-label="Recensione ${i + 1}"></button>`
+    `<button class="review-dot ${i === 0 ? "active" : ""}" type="button" data-review-index="${i}" aria-label="Recensione ${i + 1}"></button>`
   ).join("");
+
+  dotsContainer.querySelectorAll(".review-dot").forEach((dot) => {
+    dot.addEventListener("click", () => {
+      goToReview(Number(dot.dataset.reviewIndex));
+    });
+  });
 
   showReview(0);
 

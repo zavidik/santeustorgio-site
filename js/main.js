@@ -279,11 +279,10 @@ document.addEventListener("DOMContentLoaded", () => {
       items.forEach((_, i) => {
         const dot = document.createElement("button");
         dot.type = "button";
-        dot.style.cssText =
-          "width:8px;height:8px;border-radius:50%;border:2px solid rgba(255,255,255,.7);background:transparent;cursor:pointer;padding:0;transition:.3s;";
+        dot.className = "gallery-dot";
 
         if (i === galleryPos) {
-          dot.style.background = "white";
+          dot.classList.add("active");
         }
 
         dot.addEventListener("click", () => {
@@ -391,17 +390,26 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ──────────────────────────────────────────────────────────
-  // LANG SWITCHER HOOK
+  // PAGE-SPECIFIC LANGUAGE TOGGLES
   // ──────────────────────────────────────────────────────────
-  document.querySelectorAll(".lang-btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      setTimeout(() => {
-        if (typeof showReview === "function" && typeof currentReviewIndex !== "undefined") {
-          showReview(currentReviewIndex);
-        }
-      }, 50);
+  function updateLanguageDependentContent() {
+    const lang = localStorage.getItem("lang") || "it";
+
+    document.querySelectorAll(".lang-it").forEach((el) => {
+      el.style.display = lang === "it" ? "block" : "none";
     });
-  });
+    document.querySelectorAll(".lang-en").forEach((el) => {
+      el.style.display = lang === "en" ? "block" : "none";
+    });
+
+    const cantinaIt = document.getElementById("cantina-p1-full");
+    const cantinaEn = document.getElementById("cantina-p1-full-en");
+    if (cantinaIt) cantinaIt.style.display = lang === "it" ? "block" : "none";
+    if (cantinaEn) cantinaEn.style.display = lang === "en" ? "block" : "none";
+  }
+
+  updateLanguageDependentContent();
+  document.addEventListener("langchange", updateLanguageDependentContent);
 
   // ──────────────────────────────────────────────────────────
   // SMOOTH ANCHOR SCROLL
