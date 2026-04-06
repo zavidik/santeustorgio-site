@@ -25,6 +25,10 @@
   --shadow-lg:       0 8px 48px rgba(0,0,0,.16);
 
   --transition:      .3s cubic-bezier(.4,0,.2,1);
+
+  --section-title-size: clamp(2rem, 4vw, 3.35rem);
+  --section-subtitle-size: clamp(1.18rem, 2vw, 1.7rem);
+  --section-title-color: var(--color-primary-dark);
 }
 
 /* ── Reset & base ───────────────────────────────────────────── */
@@ -2160,22 +2164,56 @@ footer {
 .section-heading__title {
   margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(2.4rem, 5vw, 4,8rem);
+  font-size: var(--section-title-size);
   line-height: 1.05;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: var(--color-primary-dark);
+  color: var(--section-title-color);
   text-wrap: pretty;
 }
 
 .section-heading__subtitle {
   margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(1.6rem, 2.2vw, 2.4rem);
+  font-size: var(--section-subtitle-size);
   line-height: 1.2;
   font-style: italic;
-  color: var(--color-primary-dark);
+  color: var(--section-title-color);
+  text-wrap: pretty;
+}
+
+
+/* Titoli e sottotitoli sezione uniformati su tutto il sito */
+.gallery-header h2,
+.reviews-section h2,
+.modal-header h2,
+.eventi-form-left h2,
+.eventi-form-card h3,
+.privacy-wrap h2,
+.cookie-content h2 {
+  font-family: var(--font-display);
+  font-size: var(--section-title-size);
+  line-height: 1.08;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--section-title-color);
+  text-wrap: pretty;
+}
+
+.privacy-wrap h3,
+.cookie-content h3,
+.privacy-wrap .privacy-subtitle,
+.cookie-date,
+.feature-text .subtitle,
+.cucina-intro-text .subtitle,
+.cantina-subtitle,
+.reviews-section .sub {
+  font-family: var(--font-display);
+  font-size: var(--section-subtitle-size);
+  line-height: 1.25;
+  font-style: italic;
+  color: var(--section-title-color);
   text-wrap: pretty;
 }
 
