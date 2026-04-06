@@ -2203,3 +2203,49 @@ h3 {
   border: 0 !important;
   box-shadow: none !important;
 }
+.section-heading {
+  margin-bottom: 2rem;
+}
+
+.section-heading__label {
+  display: block;
+  margin-bottom: 1rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.8rem;
+  line-height: 1;
+  color: #9baa8a;
+}
+
+.section-heading {
+  margin-bottom: 2rem;
+}
+
+.section-heading__label {
+  display: block;
+  margin-bottom: 0.4rem; /* prima era troppo largo */
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: #9baa8a;
+}
+
+.section-heading__title {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.4rem, 5vw, 4.8rem);
+  line-height: 1.05;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #8fa27f;
+}
+
+.section-heading__subtitle {
+  margin-top: 0.6rem; /* molto più vicino al titolo */
+  margin-bottom: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.6rem, 2.2vw, 2.4rem);
+  line-height: 1.2;
+  font-style: italic;
+  color: #9fb28d !important;
+}
