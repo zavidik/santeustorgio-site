@@ -279,11 +279,7 @@ document.addEventListener("DOMContentLoaded", () => {
       items.forEach((_, i) => {
         const dot = document.createElement("button");
         dot.type = "button";
-        dot.className = "gallery-dot";
-
-        if (i === galleryPos) {
-          dot.classList.add("active");
-        }
+        dot.className = "gallery-dot" + (i === galleryPos ? " active" : "");
 
         dot.addEventListener("click", () => {
           galleryPos = i;
@@ -390,26 +386,17 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ──────────────────────────────────────────────────────────
-  // PAGE-SPECIFIC LANGUAGE TOGGLES
+  // LANG SWITCHER HOOK
   // ──────────────────────────────────────────────────────────
-  function updateLanguageDependentContent() {
-    const lang = localStorage.getItem("lang") || "it";
-
-    document.querySelectorAll(".lang-it").forEach((el) => {
-      el.style.display = lang === "it" ? "block" : "none";
+  document.querySelectorAll(".lang-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      setTimeout(() => {
+        if (typeof showReview === "function" && typeof currentReviewIndex !== "undefined") {
+          showReview(currentReviewIndex);
+        }
+      }, 50);
     });
-    document.querySelectorAll(".lang-en").forEach((el) => {
-      el.style.display = lang === "en" ? "block" : "none";
-    });
-
-    const cantinaIt = document.getElementById("cantina-p1-full");
-    const cantinaEn = document.getElementById("cantina-p1-full-en");
-    if (cantinaIt) cantinaIt.style.display = lang === "it" ? "block" : "none";
-    if (cantinaEn) cantinaEn.style.display = lang === "en" ? "block" : "none";
-  }
-
-  updateLanguageDependentContent();
-  document.addEventListener("langchange", updateLanguageDependentContent);
+  });
 
   // ──────────────────────────────────────────────────────────
   // SMOOTH ANCHOR SCROLL

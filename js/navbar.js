@@ -67,7 +67,7 @@
 
     <div class="footer-col">
       <h4 data-i18n="footer_hours_title">Orari</h4>
-      <p data-i18n="footer_hours">Tutti i giorni 12:00 - 23:00</p>
+      <p data-i18n="footer_hours" data-i18n-html>Tutti i giorni<br>12:00 - 23:00</p>
     </div>
 
     <div class="footer-col">

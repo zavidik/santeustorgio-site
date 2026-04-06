@@ -117,13 +117,11 @@ function initReviews() {
   if (!dotsContainer) return;
 
   dotsContainer.innerHTML = reviews.map((_, i) =>
-    `<button class="review-dot ${i === 0 ? "active" : ""}" type="button" data-review-index="${i}" aria-label="Recensione ${i + 1}"></button>`
+    `<button class="review-dot ${i === 0 ? "active" : ""}" aria-label="Recensione ${i + 1}"></button>`
   ).join("");
 
-  dotsContainer.querySelectorAll(".review-dot").forEach((dot) => {
-    dot.addEventListener("click", () => {
-      goToReview(Number(dot.dataset.reviewIndex));
-    });
+  dotsContainer.querySelectorAll(".review-dot").forEach((dot, i) => {
+    dot.addEventListener("click", () => goToReview(i));
   });
 
   showReview(0);

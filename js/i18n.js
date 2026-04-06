@@ -24,7 +24,8 @@ const translations = {
     hero_book: "Prenota un tavolo",
 
     // INTRO
-    intro_text: "Nel cuore di Milano, le tradizioni culinarie milanesi e piemontesi incontrano la cucina moderna,<br>tra piatti e vini d’autore.",
+    intro_text: "Nel cuore di Milano, le tradizioni culinarie milanesi e piemontesi incontrano la cucina moderna, tra piatti e vini d’autore.",
+
     // SECTION 1 — Cucina
     section1_title: "La nostra cucina",
     section1_subtitle: "Un equilibrio tra tradizione e creatività.",
@@ -48,7 +49,7 @@ const translations = {
 
     // FOOTER
     footer_hours_title: "Orari",
-    footer_hours: "Tutti i giorni 12:00 – 23:00",
+    footer_hours: "Tutti i giorni<br>12:00 – 23:00",
     footer_contacts_title: "Contatti",
     footer_address: "Piazza Sant'Eustorgio, 6, 20122 Milano MI",
     footer_phone: "02 5810 1396",
@@ -246,7 +247,7 @@ const translations = {
     contatti_map_title: "Scopri dove siamo",
     contatti_map_open: "Apri in Google Maps",
     contatti_hours_title: "Orari",
-    contatti_hours: "Tutti i giorni 12:00 – 23:00",
+    contatti_hours: "Tutti i giorni<br>12:00 – 23:00",
 
     // LOCALE PAGE
     eventi_hero_title: "Eventi",
@@ -299,7 +300,7 @@ const translations = {
     hero_book: "Book a table",
 
     // INTRO
-    intro_text: "In the heart of Milan, Milanese and Piedmontese culinary traditions meet modern cuisine,<br> through signature dishes and fine wines.",
+    intro_text: "",
 
     // SECTION 1 — Kitchen
     section1_title: "Our kitchen",
@@ -324,7 +325,7 @@ const translations = {
 
     // FOOTER
     footer_hours_title: "Hours",
-    footer_hours: "Every day 12:00 – 23:00",
+    footer_hours: "Every day<br>12:00 – 23:00",
     footer_contacts_title: "Contacts",
     footer_address: "Piazza Sant'Eustorgio, 6, 20122 Milan MI",
     footer_phone: "+39 02 5810 1396",
@@ -523,7 +524,7 @@ const translations = {
     contatti_map_title: "Find out where we are",
     contatti_map_open: "Open in Google Maps",
     contatti_hours_title: "Hours",
-    contatti_hours: "Every day 12:00 – 23:00",
+    contatti_hours: "Every day<br>12:00 – 23:00",
 
     // EVENTI PAGE
     eventi_hero_title: "Events",
@@ -572,30 +573,38 @@ function t(key) {
 function applyTranslations() {
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.getAttribute("data-i18n");
+    const value = t(key);
+    const shouldUseHTML = el.hasAttribute("data-i18n-html") || /<br\s*\/?\s*>/i.test(value);
 
-    if (key === "intro_text") {
-      el.innerHTML = t(key);
+    if (shouldUseHTML) {
+      el.innerHTML = value;
     } else {
-      el.textContent = t(key);
+      el.textContent = value;
     }
   });
+
   document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
     el.placeholder = t(el.getAttribute("data-i18n-placeholder"));
   });
+
   document.querySelectorAll("[data-i18n-href]").forEach(el => {
     el.href = t(el.getAttribute("data-i18n-href"));
   });
+
   document.documentElement.lang = currentLang;
 }
 
 function setLang(lang) {
   if (!translations[lang]) return;
+
   currentLang = lang;
   localStorage.setItem("lang", lang);
   applyTranslations();
+
   document.querySelectorAll(".lang-btn").forEach(btn => {
     btn.classList.toggle("active", btn.dataset.lang === lang);
   });
+
   document.dispatchEvent(new CustomEvent("langchange", { detail: { lang } }));
 }
 

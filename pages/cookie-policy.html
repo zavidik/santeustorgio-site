@@ -460,6 +460,19 @@
 <script src="../js/i18n.js"></script>
 <script src="../js/main.js"></script>
 
+<script>
+  function updateCookieLang() {
+    const lang = localStorage.getItem('lang') || 'it';
+    document.querySelectorAll('.lang-it').forEach(el => el.style.display = lang === 'it' ? 'block' : 'none');
+    document.querySelectorAll('.lang-en').forEach(el => el.style.display = lang === 'en' ? 'block' : 'none');
+  }
+  document.addEventListener('DOMContentLoaded', () => {
+    updateCookieLang();
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => setTimeout(updateCookieLang, 50));
+    });
+  });
+</script>
 
 </body>
 </html>
