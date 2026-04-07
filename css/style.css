@@ -1100,6 +1100,7 @@ footer {
 .page-banner-content h1 {
   text-align: center;
   margin-bottom: 12px;
+  text-transform: uppercase;
 }
 
 .page-banner-content .page-banner-cta {
@@ -1336,7 +1337,7 @@ footer {
 }
 
 /* ════════════════════════════════════════════════════════════
-   CUCINA — intro 3 colonne (4 foto | testo | 4 foto)
+   CUCINA — intro 3 colonne (2 foto | testo | 2 foto)
    ════════════════════════════════════════════════════════════ */
 .cucina-intro {
   padding:    80px 24px;
