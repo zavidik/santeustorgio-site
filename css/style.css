@@ -1882,6 +1882,7 @@ footer {
   color:       var(--color-text-light);
   font-size:   .97rem;
   line-height: 1.8;
+  align-items: center;
 }
 
 /* Feature sections riusano .cantina-grid */
@@ -2231,4 +2232,25 @@ footer {
     margin-top: 0.6rem;
     max-width: 100px;
   }
+}
+.about-story-text .section-heading,
+.cucina-intro-text .section-heading,
+.locale-intro-text .section-heading {
+  align-items: center;
+  text-align: center;
+}
+
+.about-story-text .section-heading::before,
+.cucina-intro-text .section-heading::before,
+.locale-intro-text .section-heading::before {
+  display: none;
+}
+
+.section-heading--with-logo .section-heading__title {
+  text-align: left;
+  width: 100%;
+}
+
+.locale-intro-text > p {
+  text-align: center;
 }
