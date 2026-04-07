@@ -2452,3 +2452,173 @@ footer {
     border-radius: 70px 22px 22px 22px;
   }
 }
+
+
+/* ════════════════════════════════════════════════════════════
+   IMAGE SHAPES — classi manuali per modificare facilmente le forme
+   Cambia semplicemente variant-1 / variant-2 / variant-3 / variant-4 nell'HTML
+   ════════════════════════════════════════════════════════════ */
+.image-shape {
+  overflow: hidden;
+}
+
+.image-shape.variant-1 {
+  border-radius: 34% 66% 42% 58% / 24% 34% 66% 76%;
+  transform: rotate(-2deg);
+}
+
+.image-shape.variant-2 {
+  border-radius: 24px 96px 24px 96px;
+  transform: rotate(1.8deg);
+}
+
+.image-shape.variant-3 {
+  border-radius: 92px 24px 92px 24px;
+  transform: rotate(-1.6deg);
+}
+
+.image-shape.variant-4 {
+  border-radius: 30px 30px 110px 30px;
+  transform: rotate(1.2deg);
+}
+
+.image-shape > img,
+.gallery-item.image-shape img,
+.photo-item.image-shape img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 860px) {
+  .image-shape.variant-1,
+  .image-shape.variant-2,
+  .image-shape.variant-3,
+  .image-shape.variant-4 {
+    transform: none;
+  }
+
+  .image-shape.variant-1 {
+    border-radius: 34% 66% 44% 56% / 26% 34% 66% 74%;
+  }
+
+  .image-shape.variant-2 {
+    border-radius: 22px 68px 22px 68px;
+  }
+
+  .image-shape.variant-3 {
+    border-radius: 68px 22px 68px 22px;
+  }
+
+  .image-shape.variant-4 {
+    border-radius: 24px 24px 76px 24px;
+  }
+}
+
+
+/* Override finale per dare priorità alle classi variant-* anche nelle griglie playful */
+.about-photos-grid .photo-item.image-shape.variant-1,
+.feature-img-wrap.image-shape.variant-1,
+.cantina-img-wrap.image-shape.variant-1,
+.about-story-img.image-shape.variant-1,
+.locale-intro-img.image-shape.variant-1,
+.gallery-item.image-shape.variant-1 {
+  border-radius: 34% 66% 42% 58% / 24% 34% 66% 76%;
+  transform: rotate(-2deg);
+}
+
+.about-photos-grid .photo-item.image-shape.variant-2,
+.feature-img-wrap.image-shape.variant-2,
+.cantina-img-wrap.image-shape.variant-2,
+.about-story-img.image-shape.variant-2,
+.locale-intro-img.image-shape.variant-2,
+.gallery-item.image-shape.variant-2 {
+  border-radius: 24px 96px 24px 96px;
+  transform: rotate(1.8deg);
+}
+
+.about-photos-grid .photo-item.image-shape.variant-3,
+.feature-img-wrap.image-shape.variant-3,
+.cantina-img-wrap.image-shape.variant-3,
+.about-story-img.image-shape.variant-3,
+.locale-intro-img.image-shape.variant-3,
+.gallery-item.image-shape.variant-3 {
+  border-radius: 92px 24px 92px 24px;
+  transform: rotate(-1.6deg);
+}
+
+.about-photos-grid .photo-item.image-shape.variant-4,
+.feature-img-wrap.image-shape.variant-4,
+.cantina-img-wrap.image-shape.variant-4,
+.about-story-img.image-shape.variant-4,
+.locale-intro-img.image-shape.variant-4,
+.gallery-item.image-shape.variant-4 {
+  border-radius: 30px 30px 110px 30px;
+  transform: rotate(1.2deg);
+}
+
+@media (max-width: 860px) {
+  .about-photos-grid .photo-item.image-shape.variant-1,
+  .feature-img-wrap.image-shape.variant-1,
+  .cantina-img-wrap.image-shape.variant-1,
+  .about-story-img.image-shape.variant-1,
+  .locale-intro-img.image-shape.variant-1,
+  .gallery-item.image-shape.variant-1,
+  .about-photos-grid .photo-item.image-shape.variant-2,
+  .feature-img-wrap.image-shape.variant-2,
+  .cantina-img-wrap.image-shape.variant-2,
+  .about-story-img.image-shape.variant-2,
+  .locale-intro-img.image-shape.variant-2,
+  .gallery-item.image-shape.variant-2,
+  .about-photos-grid .photo-item.image-shape.variant-3,
+  .feature-img-wrap.image-shape.variant-3,
+  .cantina-img-wrap.image-shape.variant-3,
+  .about-story-img.image-shape.variant-3,
+  .locale-intro-img.image-shape.variant-3,
+  .gallery-item.image-shape.variant-3,
+  .about-photos-grid .photo-item.image-shape.variant-4,
+  .feature-img-wrap.image-shape.variant-4,
+  .cantina-img-wrap.image-shape.variant-4,
+  .about-story-img.image-shape.variant-4,
+  .locale-intro-img.image-shape.variant-4,
+  .gallery-item.image-shape.variant-4 {
+    transform: none;
+  }
+
+  .about-photos-grid .photo-item.image-shape.variant-1,
+  .feature-img-wrap.image-shape.variant-1,
+  .cantina-img-wrap.image-shape.variant-1,
+  .about-story-img.image-shape.variant-1,
+  .locale-intro-img.image-shape.variant-1,
+  .gallery-item.image-shape.variant-1 {
+    border-radius: 34% 66% 44% 56% / 26% 34% 66% 74%;
+  }
+
+  .about-photos-grid .photo-item.image-shape.variant-2,
+  .feature-img-wrap.image-shape.variant-2,
+  .cantina-img-wrap.image-shape.variant-2,
+  .about-story-img.image-shape.variant-2,
+  .locale-intro-img.image-shape.variant-2,
+  .gallery-item.image-shape.variant-2 {
+    border-radius: 22px 68px 22px 68px;
+  }
+
+  .about-photos-grid .photo-item.image-shape.variant-3,
+  .feature-img-wrap.image-shape.variant-3,
+  .cantina-img-wrap.image-shape.variant-3,
+  .about-story-img.image-shape.variant-3,
+  .locale-intro-img.image-shape.variant-3,
+  .gallery-item.image-shape.variant-3 {
+    border-radius: 68px 22px 68px 22px;
+  }
+
+  .about-photos-grid .photo-item.image-shape.variant-4,
+  .feature-img-wrap.image-shape.variant-4,
+  .cantina-img-wrap.image-shape.variant-4,
+  .about-story-img.image-shape.variant-4,
+  .locale-intro-img.image-shape.variant-4,
+  .gallery-item.image-shape.variant-4 {
+    border-radius: 24px 24px 76px 24px;
+  }
+}
