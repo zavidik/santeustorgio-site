@@ -672,11 +672,13 @@ h1, h2, h3, h4 {
 .gallery-header {
   text-align:  center;
   margin-bottom:36px;
-  padding:     0 24px;
+  padding: 24px;
+  text-transform: uppercase;
 }
+
 .gallery-header h2 {
   font-family: var(--font-display);
-  font-size:   clamp(1.8rem, 3vw, 2.4rem);
+  font-size:   clamp(1.5rem, 3vw, 1.5rem);
   color:       var(--color-white);
 }
 
@@ -742,8 +744,10 @@ h1, h2, h3, h4 {
 }
 .reviews-section h2 {
   font-family: var(--font-display);
-  font-size:   clamp(1.8rem, 3vw, 2.4rem);
+  font-size:   clamp(1.5rem, 3vw, 1.5rem);
   margin-bottom:8px;
+    text-transform: uppercase;
+
 }
 .reviews-section .sub {
   color:       var(--color-text-light);
@@ -1594,7 +1598,7 @@ footer {
 }
 .cantina-title-row h2 {
   font-family: var(--font-display);
-  font-size:   clamp(1.7rem, 2.6vw, 2.3rem);
+  font-size:   clamp(1.5rem, 3vw, 1.5rem);
   line-height: 1.2;
   text-transform: uppercase;
   color: var(--color-primary-dark);
@@ -2165,7 +2169,7 @@ footer {
 .section-heading__title {
   margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(2rem, 5vw, 3.6rem);
+  font-size: clamp(1,5rem, 3vw, 1,5rem);
   line-height: 1.2;
   font-weight: 500;
   letter-spacing: 0.01em;
@@ -2247,6 +2251,7 @@ footer {
 .cucina-intro-text .section-heading::before,
 .locale-intro-text .section-heading::before {
   display: none;
+  font-size: clamp(1.5rem, 3vw, 1.5rem);
 }
 
 .section-heading--with-logo .section-heading__title {
