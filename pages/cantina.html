@@ -44,12 +44,20 @@
         <!-- Logo cantina Medolago Albani
              Inserisci: ../images/cantina-logo-medolago.png
              Se non disponibile non appare (gestito con onerror) -->
-        <img
-          class="cantina-winery-logo"
-          src="../img/logo_medolago_albani.png"
-          alt="Logo cantina Medolago Albani"
-          onerror="this.style.display='none';"
-        />
+        <a
+          class="cantina-winery-logo-link"
+          href="https://www.medolagoalbani.it"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visita il sito di Medolago Albani"
+        >
+          <img
+            class="cantina-winery-logo"
+            src="../img/logo_medolago_albani.png"
+            alt="Logo cantina Medolago Albani"
+            onerror="this.parentElement.style.display='none';"
+          />
+        </a>
       </div>
 
 
@@ -75,7 +83,7 @@
       <a href="../CARTA_VINI_COMPLETA.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-i18n="cantina_production_btn">Carta vini</a>
     </div>
 
-    <div class="cantina-img-wrap">
+    <div class="cantina-img-wrap cantina-img-wrap--organic-a">
       <img
         src="../img/bottiglie.jpeg"
         alt="Vigneti Medolago Albani"
@@ -94,7 +102,7 @@
 <section class="cantina-section" aria-labelledby="pairings-title">
   <div class="cantina-grid reverse reveal">
 
-    <div class="cantina-img-wrap">
+    <div class="cantina-img-wrap cantina-img-wrap--organic-b">
       <img
         src="../img/plin_bottiglia.jpeg"
         alt="Abbinamenti cibo e vino"
@@ -104,7 +112,7 @@
     </div>
 
     <div class="about-threecol-text reveal">
-      <div class="section-heading">
+      <div class="section-heading section-heading--grape">
         <h2 class="section-heading__title" data-i18n="cantina_pairings_title">Abbinamenti studiati per ogni piatto</h2>
         <p class="section-heading__subtitle" data-i18n="cantina_pairings_subtitle">Cucina sincera, radici solide e un tocco contemporaneo.</p>
       </div>
@@ -123,14 +131,14 @@
   <div class="cantina-grid reveal">
 
     <div class="about-threecol-text reveal">
-      <div class="section-heading">
+      <div class="section-heading section-heading--grape">
         <h2 class="section-heading__title" data-i18n="cantina_culture_title">Il vino come un'esperienza culturale</h2>
         <p class="section-heading__subtitle" data-i18n="cantina_culture_subtitle">Non solo degustazione, ma scoperta.</p>
       </div>
       <p data-i18n="cantina_culture_text">L'approccio del Sant'Eustorgio Milano è educativo e appassionato. Lo staff, formato direttamente dal titolare, conosce i vitigni, le annate e le tecniche di vinificazione, trasformando la scelta del vino in un momento di dialogo e condivisione. Ogni servizio diventa occasione per far conoscere le eccellenze enologiche italiane e valorizzare il legame tra cucina e territorio.</p>
     </div>
 
-    <div class="cantina-img-wrap">
+    <div class="cantina-img-wrap cantina-img-wrap--organic-c">
       <img
         src="../img/bottiglia_bicchiere.jpeg"
         alt="Lo staff del Ristorante Sant'Eustorgio con i vini"
