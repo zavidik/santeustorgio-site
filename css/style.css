@@ -1598,7 +1598,7 @@ footer {
   line-height: 1.2;
   text-transform: uppercase;
   color: var(--color-primary-dark);
-
+  font-weight: 500;
 }
 .cantina-winery-logo {
   height:        52px;
